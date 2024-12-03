@@ -1,0 +1,38 @@
+<!-- prettier-ignore -->
+
+<div class="machine-control-wrapper">
+
+	<div class="machine-control">
+		<app-installation-control-buttons [settings]="controlSettings" [state]="controlState">
+		</app-installation-control-buttons>
+	</div>
+
+</div>
+
+<div class="dashboard-view">
+	<div class="machine-container machine-container-width">
+		<H4>ZONE OVERVIEW</H4>
+
+		<!-- ZONE 1 -->
+		<app-simple-zone [coreGrid]="[10,1,10,4]" [settings]="zone1" class="zone"></app-simple-zone>
+
+		<!-- ZONE 2 -->
+		<app-simple-zone [coreGrid]="[11,3]" [settings]="zone2" class="zone"></app-simple-zone>
+
+		<!-- ZONE 3 -->
+		<app-simple-zone [coreGrid]="[11,2]" [settings]="zone3" class="zone"></app-simple-zone>
+
+		<!-- ZONE 4 -->
+		<app-simple-zone [coreGrid]="[11,1]" [settings]="zone4" class="zone"></app-simple-zone>
+
+		<!-- ZONE 5 -->
+		<app-simple-zone [coreGrid]="[12,1,12,4]" [settings]="zone5" class="zone"></app-simple-zone>
+
+	</div>
+
+
+
+	<div class="counter-wrapper"></div>
+
+	<hmi-company-info></hmi-company-info>
+</div>

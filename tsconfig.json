@@ -1,0 +1,53 @@
+{
+	"compileOnSave": false,
+	"compilerOptions": {
+		"baseUrl": "./",
+		"outDir": "./dist/out-tsc",
+		"sourceMap": true,
+		"declaration": false,
+		"downlevelIteration": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"module": "es2020",
+		"moduleResolution": "node",
+		"importHelpers": true,
+		"target": "es2015",
+		"typeRoots": ["node_modules/@types"],
+		"lib": ["ES2015", "es2018", "dom"],
+		"paths": {
+			"plc/*": ["dist/plc/*"],
+			"plc": ["dist/plc"],
+			"@hmi-src/*": ["projects/hmi-app/src/*"],
+			"@hmi-app/*": ["projects/hmi-app/src/app/*"],
+			"@hmi-app/hmi": ["projects/hmi-app/src/app/hmi"],
+			"@hmi-app/auth": ["projects/hmi-app/src/app/auth"],
+			"@hmi-app/global": ["projects/hmi-app/src/app/global"],
+			"@hmi-app/app-store": ["projects/hmi-app/src/app/store"],
+			"@data-collector/*": ["projects/data-collector/*"],
+
+			// "@revotechiscool/revo-tech-automation-backend": ["projects/revo-tech-design-system/dist/@revotechiscool/revo-tech-automation-backend"],
+			// "@revotechiscool/revo-tech-automation-functions": ["projects/revo-tech-design-system/dist/@revotechiscool/revo-tech-automation-functions"],
+			// "@revotechiscool/revo-tech-automation-types": ["projects/revo-tech-design-system/dist/@revotechiscool/revo-tech-automation-types"],
+
+			// "@revotechiscool/revo-tech-core-types": ["projects/revo-tech-design-system/dist/@revotechiscool/revo-tech-core-types"],
+			// "@revotechiscool/revo-tech-dynamic-lib": ["projects/revo-tech-design-system/dist/@revotechiscool/revo-tech-dynamic-lib"],
+
+
+			// "@revotechiscool/revo-tech-core-lib": ["projects/revo-tech-design-system/dist/@revotechiscool/revo-tech-core-lib"],
+			// "@revotechiscool/revo-tech-hmi-lib": ["projects/revo-tech-design-system/dist/@revotechiscool/revo-tech-hmi-lib"],
+
+			// "@revotechiscool/revo-tech-core-lib": ["projects/revo-tech-design-system/projects/revo-tech-core-lib"],
+			// "@revotechiscool/revo-tech-hmi-lib": ["projects/revo-tech-design-system/projects/revo-tech-hmi-lib"],
+
+
+	
+	
+
+		}
+	},
+	"angularCompilerOptions": {
+		"enableIvy": true,
+		"fullTemplateTypeCheck": true,
+		"strictInjectionParameters": true
+	}
+}

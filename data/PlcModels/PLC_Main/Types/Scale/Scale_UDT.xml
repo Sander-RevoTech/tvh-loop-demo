@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V16" />
+  <DocumentInfo>
+    <Created>2024-12-03T15:41:45.1170652Z</Created>
+    <ExportSetting>WithReadOnly</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V16 Update 2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <CreationDate ReadOnly="true">2021-07-13T07:41:36.2278727Z</CreationDate>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v4">
+  <Section Name="None">
+    <Member Name="Cmd" Datatype="Struct">
+      <Member Name="Reset" Datatype="Bool" />
+      <Member Name="ResetDiagnostics" Datatype="Bool" />
+      <Member Name="Manual" Datatype="&quot;Scale_CMD_UDT&quot;" />
+      <Member Name="Auto" Datatype="&quot;Scale_CMD_UDT&quot;" />
+    </Member>
+    <Member Name="settings" Datatype="Struct">
+      <Member Name="offset" Datatype="Real" />
+      <Member Name="stabWeight" Datatype="Real" />
+      <Member Name="stabilizationTime" Datatype="Time" />
+    </Member>
+    <Member Name="status" Datatype="Struct">
+      <Member Name="ManualModeActive" Datatype="Bool" />
+      <Member Name="ReadyForNewCommand" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Ready”, thus status indicates a new command can be done. This includes “Zero”, “Tare”, “ResetTare” and “Command” inputs parameters. If you use other add-on instructions, the “Ready” status can also change when other blocs send commands to the scale. It is recommended to test “Ready” status before sending a command</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="ExecutingCommand" Datatype="Bool" />
+      <Member Name="GrossWeight" Datatype="Real" />
+      <Member Name="NetWeight" Datatype="Real" />
+    </Member>
+    <Member Name="diagnostics" Datatype="Struct">
+      <Member Name="stableMeasurements" Datatype="DInt" />
+      <Member Name="unstableMeasurements" Datatype="DInt" />
+      <Member Name="totalMeasurements" Datatype="DInt" />
+    </Member>
+    <Member Name="ReadResult" Datatype="Struct">
+      <Member Name="NewResult" Datatype="Bool" />
+      <Member Name="NewResult_Flag" Datatype="Bool" />
+      <Member Name="Stable" Datatype="Bool" />
+      <Member Name="netWeightGrams" Datatype="DInt" />
+      <Member Name="netWeightGrams_Flag" Datatype="DInt" />
+    </Member>
+    <Member Name="alarms" Datatype="Struct">
+      <Member Name="Error" Datatype="&quot;HmiAlarm&quot;" />
+      <Member Name="notConnected" Datatype="&quot;HmiAlarm&quot;" />
+      <Member Name="Status" Datatype="Word"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    </Member>
+    <Member Name="Name" Datatype="String[40]" />
+    <Member Name="zone" Datatype="Int" />
+  </Section>
+</Sections></Interface>
+      <InterfaceModifiedDate ReadOnly="true">2023-08-01T07:36:31.0856308Z</InterfaceModifiedDate>
+      <IsConsistent ReadOnly="true">true</IsConsistent>
+      <LibraryConformanceStatus ReadOnly="true">The object is library-conformant.</LibraryConformanceStatus>
+      <ModifiedDate ReadOnly="true">2023-08-01T07:36:31.0856308Z</ModifiedDate>
+      <Name>Scale_UDT</Name>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

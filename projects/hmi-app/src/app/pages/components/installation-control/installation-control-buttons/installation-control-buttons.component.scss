@@ -1,0 +1,16 @@
+:host {
+	flex: 1;
+}
+.buttons-wrapper {
+	display: flex;
+}
+@media (max-width: 576px) {
+	.buttons-wrapper {
+		flex-direction: column;
+	}
+}
+
+.buttons-label {
+	margin-left: 0.3rem;
+	opacity: 0.5;
+}

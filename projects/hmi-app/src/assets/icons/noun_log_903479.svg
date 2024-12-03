@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 30 37.5" xml:space="preserve">
+  <g transform="translate(-390 -640)">
+    <g xmlns="http://www.w3.org/2000/svg" 
+      xmlns:xlink="http://www.w3.org/1999/xlink">
+      <polygon fill="#74afbe" points="412,663 395,663 395,652 412,652 412,649 406,649 406,643 392,643 392,667 412,667   "/>
+      <polygon fill="#74afbe" points="412,648 407,643 407,648   "/>
+      <path fill="#74afbe" d="M416,662v-9h-20v9H416z M399,660h-1v-1h1V660z M404,660h-4v-5h1v4h3V660z M409,660h-4v-5h4V660z M410,655h4v1h-3v3h2v-1    h-1v-1h2v3h-4V655z"/>
+      <rect fill="#74afbe" x="406" y="656" width="2" height="3"/>
+    </g>
+  </g>
+</svg>

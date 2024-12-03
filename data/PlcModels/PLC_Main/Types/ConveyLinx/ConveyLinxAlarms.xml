@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V16" />
+  <DocumentInfo>
+    <Created>2024-12-03T15:41:45.0415446Z</Created>
+    <ExportSetting>WithReadOnly</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V16 Update 2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <CreationDate ReadOnly="true">2021-07-13T07:41:36.2278727Z</CreationDate>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v4">
+  <Section Name="None">
+    <Member Name="Overheat" Datatype="&quot;HmiAlarm&quot;"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The MDR 's temperature has exceeded 105 degrees Celsius</MultiLanguageText></Comment></Member>
+    <Member Name="ShortCircuit" Datatype="&quot;HmiAlarm&quot;"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">There is a short circuit on the MDR</MultiLanguageText></Comment></Member>
+    <Member Name="MDRNotConnected" Datatype="&quot;HmiAlarm&quot;"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The MDR is not connected</MultiLanguageText></Comment></Member>
+    <Member Name="Overload" Datatype="&quot;HmiAlarm&quot;"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The MDR has been overloaded - this means its speed is less than 10% of the selected speed</MultiLanguageText></Comment></Member>
+    <Member Name="Stalled" Datatype="&quot;HmiAlarm&quot;"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The MDR has stalled</MultiLanguageText></Comment></Member>
+    <Member Name="MDRBadHall" Datatype="&quot;HmiAlarm&quot;"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The MDR has a Hall Efect Sensor error</MultiLanguageText></Comment></Member>
+    <Member Name="OverVoltage" Datatype="&quot;HmiAlarm&quot;"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The sum of the module power supply voltage + the MDR-generated voltage has exceeded 30 volts</MultiLanguageText></Comment></Member>
+    <Member Name="LowVoltage" Datatype="&quot;HmiAlarm&quot;"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Module power supply is less than 18 Volts</MultiLanguageText></Comment></Member>
+    <Member Name="NotConnected" Datatype="&quot;HmiAlarm&quot;">
+      <Comment>
+        <MultiLanguageText Lang="en-US">The module is not connected</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ConnectionNotOK" Datatype="&quot;HmiAlarm&quot;">
+      <Comment>
+        <MultiLanguageText Lang="en-US">The Ethernet connections are not ok .</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="AnyErrorActive" Datatype="&quot;HmiAlarm&quot;">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Any Error is active</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="JamError" Datatype="&quot;HmiAlarm&quot;">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Jam Error</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SensorLowGain" Datatype="&quot;HmiAlarm&quot;">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Sensor Low gain</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Status_1" Datatype="Word">
+      <Comment>
+        <MultiLanguageText Lang="en-US">lsb =&gt; 0 overheat | 1 spare | 2 shortcircuit | 3 mdrn not connected | 4 overload | 5 stalled | 6 bad hall | 7 spare | 8 over voltage | 9 low voltage | 10 not connected | 11 conneciton nok | 12 anyError | 13 jam error | 14 Sensor log gain</MultiLanguageText>
+      </Comment>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <InterfaceModifiedDate ReadOnly="true">2020-02-08T17:11:40.2341278Z</InterfaceModifiedDate>
+      <IsConsistent ReadOnly="true">true</IsConsistent>
+      <LibraryConformanceStatus ReadOnly="true">The object is library-conformant.</LibraryConformanceStatus>
+      <ModifiedDate ReadOnly="true">2021-03-27T07:36:47.6287659Z</ModifiedDate>
+      <Name>ConveyLinxAlarms</Name>
+      <Number ReadOnly="true">22</Number>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

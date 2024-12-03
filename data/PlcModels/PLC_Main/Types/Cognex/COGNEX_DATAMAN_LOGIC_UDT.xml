@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V16" />
+  <DocumentInfo>
+    <Created>2024-12-03T15:41:45.3011474Z</Created>
+    <ExportSetting>WithReadOnly</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V16 Update 2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <CreationDate ReadOnly="true">2022-02-10T08:20:21.8932261Z</CreationDate>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v4">
+  <Section Name="None">
+    <Member Name="Cmd" Datatype="Struct">
+      <Member Name="Reset" Datatype="Bool" />
+      <Member Name="ScanAuto" Datatype="Bool" />
+      <Member Name="ScanManual" Datatype="Bool" />
+    </Member>
+    <Member Name="Status" Datatype="Struct">
+      <Member Name="ReadyForNewScan" Datatype="Bool" />
+      <Member Name="ReqDone" Datatype="Bool" />
+      <Member Name="ReqBusy" Datatype="Bool" />
+      <Member Name="ManualModeActive" Datatype="Bool" />
+    </Member>
+    <Member Name="Alarms" Datatype="Struct">
+      <Member Name="NotConnected" Datatype="&quot;HmiAlarm&quot;">
+        <Comment>
+          <MultiLanguageText Lang="en-US">The scanner is not connected</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="TimeOutReading" Datatype="&quot;HmiAlarm&quot;">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Timed out receiving barcode from scanner</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="TriggerGuard" Datatype="&quot;HmiAlarm&quot;">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Trigger received when scanner was parsing previous data</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="ErrorFromScanner" Datatype="&quot;HmiAlarm&quot;">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Error code from scanner</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="SerialBufferOverFlow" Datatype="&quot;HmiAlarm&quot;"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+      <Member Name="status" Datatype="Word"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    </Member>
+    <Member Name="DiagNostic" Datatype="Struct">
+      <Member Name="GoodReads" Datatype="UDInt" />
+      <Member Name="BadReads" Datatype="UDInt" />
+      <Member Name="TimeOuts" Datatype="UDInt" />
+      <Member Name="MissedTrigger" Datatype="UDInt" />
+      <Member Name="OutOfSync" Datatype="UDInt" />
+      <Member Name="Scans" Datatype="UDInt" />
+      <Member Name="ParsingTime" Datatype="Time" />
+    </Member>
+    <Member Name="Settings" Datatype="Struct">
+      <Member Name="OnDelay" Datatype="Time" />
+      <Member Name="OffDelay" Datatype="Time" />
+      <Member Name="TimeOut" Datatype="Time">
+        <StartValue>t#1s</StartValue>
+      </Member>
+    </Member>
+    <Member Name="ReadingResult" Datatype="Struct">
+      <Member Name="NewResult_Pulse" Datatype="Bool" />
+      <Member Name="GoodRead" Datatype="Bool" />
+      <Member Name="BadRead" Datatype="Bool" />
+      <Member Name="TimeOut" Datatype="Bool" />
+      <Member Name="MissedTrigger" Datatype="Bool" />
+      <Member Name="OutOfSync" Datatype="Bool" />
+      <Member Name="Barcode" Datatype="String[136]" />
+      <Member Name="GoodRead_Pulse" Datatype="Bool" />
+      <Member Name="BadRead_Pulse" Datatype="Bool" />
+      <Member Name="TimeOut_Pulse" Datatype="Bool" />
+      <Member Name="MissedTrigger_Pulse" Datatype="Bool" />
+      <Member Name="OutOfSync_Pulse" Datatype="Bool" />
+      <Member Name="Barcode_Pulse" Datatype="String[136]" />
+      <Member Name="Counter" Datatype="USInt">
+        <Comment>
+          <MultiLanguageText Lang="en-US">This counter is incremented if a new reading result has arrived (In)</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Length" Datatype="Int">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Byte length of the reading result (Out)</MultiLanguageText>
+        </Comment>
+        <StartValue>100</StartValue>
+      </Member>
+      <Member Name="chars" Datatype="Array[1..136] of Char">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Reading result data defined in the SOPAS output format (Out)</MultiLanguageText>
+        </Comment>
+      </Member>
+    </Member>
+    <Member Name="Tracking" Datatype="&quot;Tracking_UDT&quot;" />
+    <Member Name="Zone" Datatype="Int" />
+    <Member Name="Name" Datatype="String[40]" />
+  </Section>
+</Sections></Interface>
+      <InterfaceModifiedDate ReadOnly="true">2022-02-10T08:21:18.7143517Z</InterfaceModifiedDate>
+      <IsConsistent ReadOnly="true">true</IsConsistent>
+      <LibraryConformanceStatus ReadOnly="true">The object is library-conformant.</LibraryConformanceStatus>
+      <ModifiedDate ReadOnly="true">2022-02-10T08:21:18.7143517Z</ModifiedDate>
+      <Name>COGNEX_DATAMAN_LOGIC_UDT</Name>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>This data type includes arguments and results using by the SICK_Lector_CLV6xx_PNDP function block.</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>SICK Lector/CLV6xx data type</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

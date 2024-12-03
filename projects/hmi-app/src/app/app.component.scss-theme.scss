@@ -1,0 +1,11 @@
+@import "~@angular/material/theming";
+
+@mixin app-theme($theme) {
+	$primary: map-get($theme, primary);
+	h1 {
+		color: mat-color($primary);
+	}
+	mat-drawer {
+		background-color: mat-color($primary) !important;
+	}
+}

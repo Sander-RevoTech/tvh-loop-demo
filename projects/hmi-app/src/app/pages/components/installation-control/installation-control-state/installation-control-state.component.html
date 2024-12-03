@@ -1,0 +1,22 @@
+<div class="control-wrapper">
+	<div class="lines">
+		<core-label-led
+			*ngIf="_settings.showAuto"
+			[settings]="ledAutoModeOn"
+		></core-label-led>
+		<core-label-led
+			*ngIf="_settings.showEmpty"
+			[settings]="ledEmptyModeOn"
+		></core-label-led>
+		<core-label-led
+			*ngIf="_settings.showStandby"
+			[settings]="ledStandyModeOn"
+		></core-label-led>
+		<core-label-led
+			*ngIf="_settings.showManual"
+			[settings]="ledManualModeOn"
+		></core-label-led>
+		<core-label-led [settings]="ledEmergencyOk"></core-label-led>
+		<core-label-led [settings]="ledAlarmActive"></core-label-led>
+	</div>
+</div>

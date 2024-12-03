@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V16" />
+  <DocumentInfo>
+    <Created>2024-12-03T15:41:40.0441336Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V16 Update 2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v4">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="DRV_101_DRV_1" Datatype="&quot;Nord_DriveController&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="I_MotorData" Datatype="&quot;Nord_Drive_SK5xx_In_Data_UDT&quot;"><Sections><Section Name="None"><Member Name="MotorRunningOnSetpoint" Datatype="Bool" /><Member Name="BusControllerActive" Datatype="Bool" /><Member Name="Function4809" Datatype="Bool" /><Member Name="MotorIsRunningRight" Datatype="Bool" /><Member Name="MotorIsRunningLeft" Datatype="Bool" /><Member Name="Function4810_MovementDone" Datatype="Bool" /><Member Name="ParameterSetLsB" Datatype="Bool" /><Member Name="ParameterSetMSB" Datatype="Bool" /><Member Name="ReadyToStart" Datatype="Bool" /><Member Name="ReadyForOperation" Datatype="Bool" /><Member Name="Running" Datatype="Bool" /><Member Name="ErrorActive" Datatype="Bool" /><Member Name="PowerOn" Datatype="Bool" /><Member Name="EmergencyStoPActive" Datatype="Bool" /><Member Name="CannotStartError" Datatype="Bool" /><Member Name="WarningActive" Datatype="Bool" /><Member Name="ActualSpeed" Datatype="Int" /><Member Name="DigitalInputs" Datatype="Struct"><Member Name="Spare_5" Datatype="Byte" /><Member Name="Input_1" Datatype="Bool" /><Member Name="Input_2" Datatype="Bool" /><Member Name="Input_3" Datatype="Bool" /><Member Name="Input_4" Datatype="Bool" /><Member Name="Input_5" Datatype="Bool" /><Member Name="Input_6" Datatype="Bool" /><Member Name="Spare_3" Datatype="Bool" /><Member Name="Spare_4" Datatype="Bool" /></Member><Member Name="ActualCurrent" Datatype="Int" /><Member Name="ErrorNumber" Datatype="Int" /><Member Name="ActualSetpointFrequency" Datatype="Int" /></Section></Sections></Member><Member Name="I_Interlock" Datatype="Bool" /><Member Name="I_RunOverride" Datatype="Bool" /><Member Name="I_OverrideDirection" Datatype="Bool" /><Member Name="I_TimeNotRunning" Datatype="Time" /><Member Name="I_TimeNotStopping" Datatype="Time" /><Member Name="I_SlowStopMode" Datatype="Bool" /><Member Name="I_useExternalReset" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="IO_MotorStatus" Datatype="&quot;Nord_Drive_UDT&quot;"><Sections><Section Name="None" /></Sections></Member><Member Name="IO_MotorData" Datatype="&quot;Nord_Drive_SK5xx_Out_Data_UDT&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="S_TimeNotRunning" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="S_TimeNotStopping" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="S_TimeRunningFeedBack" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="S_Reset" Datatype="TOF_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="s_CannotStartDelay" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="S_SlowStopLeft" Datatype="TOF_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="S_SlowStopRight" Datatype="TOF_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="CannotStartErrorDelay" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="S_SpeedSetPoint" Datatype="Int" /><Member Name="cycleCounter" Datatype="&quot;CycleRun&quot;"><Sections><Section Name="Input"><Member Name="I_Start" Datatype="Int" /><Member Name="I_End" Datatype="Int" /></Section><Section Name="Output"><Member Name="O_Cycle" Datatype="Int" /></Section><Section Name="InOut" /><Section Name="Static" /></Sections></Member><Member Name="AlarmNotRunning" Datatype="Program_Alarm" Version="1.0"><Sections><Section Name="Base"><Sections Datatype="ALARM_BASE" Version="1.0"><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="Alarm_ID" Datatype="Event_ID" Version="1.0"><Sections><Section Name="None"><Member Name="ALID" Datatype="Word" /><Member Name="ARID" Datatype="Word" /></Section></Sections></Member><Member Name="HANDLE" Datatype="DWord" /></Section></Sections></Section><Section Name="Input"><Member Name="SIG" Datatype="Bool" /><Member Name="TIMESTAMP" Datatype="LDT" /><Member Name="SD_1" Datatype="Variant" /><Member Name="SD_2" Datatype="Variant" /><Member Name="SD_3" Datatype="Variant" /><Member Name="SD_4" Datatype="Variant" /><Member Name="SD_5" Datatype="Variant" /><Member Name="SD_6" Datatype="Variant" /><Member Name="SD_7" Datatype="Variant" /><Member Name="SD_8" Datatype="Variant" /><Member Name="SD_9" Datatype="Variant" /><Member Name="SD_10" Datatype="Variant" /></Section><Section Name="Output"><Member Name="Error" Datatype="Bool" /><Member Name="Status" Datatype="Word" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="SD_0" Datatype="AssocValue_0" Version="1.0"><Sections><Section Name="None"><Member Name="Syntax" Datatype="UInt" /><Member Name="Aap" Datatype="Byte" /></Section></Sections></Member><Member Name="SIG_Edge_History" Datatype="Bool" /><Member Name="INIT_FB_State" Datatype="DWord" /></Section></Sections></Member><Member Name="AlarmNotStopping" Datatype="Program_Alarm" Version="1.0"><Sections><Section Name="Base"><Sections Datatype="ALARM_BASE" Version="1.0"><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="Alarm_ID" Datatype="Event_ID" Version="1.0"><Sections><Section Name="None"><Member Name="ALID" Datatype="Word" /><Member Name="ARID" Datatype="Word" /></Section></Sections></Member><Member Name="HANDLE" Datatype="DWord" /></Section></Sections></Section><Section Name="Input"><Member Name="SIG" Datatype="Bool" /><Member Name="TIMESTAMP" Datatype="LDT" /><Member Name="SD_1" Datatype="Variant" /><Member Name="SD_2" Datatype="Variant" /><Member Name="SD_3" Datatype="Variant" /><Member Name="SD_4" Datatype="Variant" /><Member Name="SD_5" Datatype="Variant" /><Member Name="SD_6" Datatype="Variant" /><Member Name="SD_7" Datatype="Variant" /><Member Name="SD_8" Datatype="Variant" /><Member Name="SD_9" Datatype="Variant" /><Member Name="SD_10" Datatype="Variant" /></Section><Section Name="Output"><Member Name="Error" Datatype="Bool" /><Member Name="Status" Datatype="Word" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="SD_0" Datatype="AssocValue_0" Version="1.0"><Sections><Section Name="None"><Member Name="Syntax" Datatype="UInt" /><Member Name="Aap" Datatype="Byte" /></Section></Sections></Member><Member Name="SIG_Edge_History" Datatype="Bool" /><Member Name="INIT_FB_State" Datatype="DWord" /></Section></Sections></Member><Member Name="AlarmErrorActive" Datatype="Program_Alarm" Version="1.0"><Sections><Section Name="Base"><Sections Datatype="ALARM_BASE" Version="1.0"><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="Alarm_ID" Datatype="Event_ID" Version="1.0"><Sections><Section Name="None"><Member Name="ALID" Datatype="Word" /><Member Name="ARID" Datatype="Word" /></Section></Sections></Member><Member Name="HANDLE" Datatype="DWord" /></Section></Sections></Section><Section Name="Input"><Member Name="SIG" Datatype="Bool" /><Member Name="TIMESTAMP" Datatype="LDT" /><Member Name="SD_1" Datatype="Variant" /><Member Name="SD_2" Datatype="Variant" /><Member Name="SD_3" Datatype="Variant" /><Member Name="SD_4" Datatype="Variant" /><Member Name="SD_5" Datatype="Variant" /><Member Name="SD_6" Datatype="Variant" /><Member Name="SD_7" Datatype="Variant" /><Member Name="SD_8" Datatype="Variant" /><Member Name="SD_9" Datatype="Variant" /><Member Name="SD_10" Datatype="Variant" /></Section><Section Name="Output"><Member Name="Error" Datatype="Bool" /><Member Name="Status" Datatype="Word" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="SD_0" Datatype="AssocValue_0" Version="1.0"><Sections><Section Name="None"><Member Name="Syntax" Datatype="UInt" /><Member Name="Aap" Datatype="Byte" /></Section></Sections></Member><Member Name="SIG_Edge_History" Datatype="Bool" /><Member Name="INIT_FB_State" Datatype="DWord" /></Section></Sections></Member><Member Name="AlarmCannotStart" Datatype="Program_Alarm" Version="1.0"><Sections><Section Name="Base"><Sections Datatype="ALARM_BASE" Version="1.0"><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="Alarm_ID" Datatype="Event_ID" Version="1.0"><Sections><Section Name="None"><Member Name="ALID" Datatype="Word" /><Member Name="ARID" Datatype="Word" /></Section></Sections></Member><Member Name="HANDLE" Datatype="DWord" /></Section></Sections></Section><Section Name="Input"><Member Name="SIG" Datatype="Bool" /><Member Name="TIMESTAMP" Datatype="LDT" /><Member Name="SD_1" Datatype="Variant" /><Member Name="SD_2" Datatype="Variant" /><Member Name="SD_3" Datatype="Variant" /><Member Name="SD_4" Datatype="Variant" /><Member Name="SD_5" Datatype="Variant" /><Member Name="SD_6" Datatype="Variant" /><Member Name="SD_7" Datatype="Variant" /><Member Name="SD_8" Datatype="Variant" /><Member Name="SD_9" Datatype="Variant" /><Member Name="SD_10" Datatype="Variant" /></Section><Section Name="Output"><Member Name="Error" Datatype="Bool" /><Member Name="Status" Datatype="Word" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="SD_0" Datatype="AssocValue_0" Version="1.0"><Sections><Section Name="None"><Member Name="Syntax" Datatype="UInt" /><Member Name="Aap" Datatype="Byte" /></Section></Sections></Member><Member Name="SIG_Edge_History" Datatype="Bool" /><Member Name="INIT_FB_State" Datatype="DWord" /></Section></Sections></Member><Member Name="AlarmNotConnected" Datatype="Program_Alarm" Version="1.0"><Sections><Section Name="Base"><Sections Datatype="ALARM_BASE" Version="1.0"><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="Alarm_ID" Datatype="Event_ID" Version="1.0"><Sections><Section Name="None"><Member Name="ALID" Datatype="Word" /><Member Name="ARID" Datatype="Word" /></Section></Sections></Member><Member Name="HANDLE" Datatype="DWord" /></Section></Sections></Section><Section Name="Input"><Member Name="SIG" Datatype="Bool" /><Member Name="TIMESTAMP" Datatype="LDT" /><Member Name="SD_1" Datatype="Variant" /><Member Name="SD_2" Datatype="Variant" /><Member Name="SD_3" Datatype="Variant" /><Member Name="SD_4" Datatype="Variant" /><Member Name="SD_5" Datatype="Variant" /><Member Name="SD_6" Datatype="Variant" /><Member Name="SD_7" Datatype="Variant" /><Member Name="SD_8" Datatype="Variant" /><Member Name="SD_9" Datatype="Variant" /><Member Name="SD_10" Datatype="Variant" /></Section><Section Name="Output"><Member Name="Error" Datatype="Bool" /><Member Name="Status" Datatype="Word" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="SD_0" Datatype="AssocValue_0" Version="1.0"><Sections><Section Name="None"><Member Name="Syntax" Datatype="UInt" /><Member Name="Aap" Datatype="Byte" /></Section></Sections></Member><Member Name="SIG_Edge_History" Datatype="Bool" /><Member Name="INIT_FB_State" Datatype="DWord" /></Section></Sections></Member><Member Name="AlarmEmergencyStopActive" Datatype="Program_Alarm" Version="1.0"><Sections><Section Name="Base"><Sections Datatype="ALARM_BASE" Version="1.0"><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="Alarm_ID" Datatype="Event_ID" Version="1.0"><Sections><Section Name="None"><Member Name="ALID" Datatype="Word" /><Member Name="ARID" Datatype="Word" /></Section></Sections></Member><Member Name="HANDLE" Datatype="DWord" /></Section></Sections></Section><Section Name="Input"><Member Name="SIG" Datatype="Bool" /><Member Name="TIMESTAMP" Datatype="LDT" /><Member Name="SD_1" Datatype="Variant" /><Member Name="SD_2" Datatype="Variant" /><Member Name="SD_3" Datatype="Variant" /><Member Name="SD_4" Datatype="Variant" /><Member Name="SD_5" Datatype="Variant" /><Member Name="SD_6" Datatype="Variant" /><Member Name="SD_7" Datatype="Variant" /><Member Name="SD_8" Datatype="Variant" /><Member Name="SD_9" Datatype="Variant" /><Member Name="SD_10" Datatype="Variant" /></Section><Section Name="Output"><Member Name="Error" Datatype="Bool" /><Member Name="Status" Datatype="Word" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="SD_0" Datatype="AssocValue_0" Version="1.0"><Sections><Section Name="None"><Member Name="Syntax" Datatype="UInt" /><Member Name="Aap" Datatype="Byte" /></Section></Sections></Member><Member Name="SIG_Edge_History" Datatype="Bool" /><Member Name="INIT_FB_State" Datatype="DWord" /></Section></Sections></Member><Member Name="AlarmWarningActive" Datatype="Program_Alarm" Version="1.0"><Sections><Section Name="Base"><Sections Datatype="ALARM_BASE" Version="1.0"><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="Alarm_ID" Datatype="Event_ID" Version="1.0"><Sections><Section Name="None"><Member Name="ALID" Datatype="Word" /><Member Name="ARID" Datatype="Word" /></Section></Sections></Member><Member Name="HANDLE" Datatype="DWord" /></Section></Sections></Section><Section Name="Input"><Member Name="SIG" Datatype="Bool" /><Member Name="TIMESTAMP" Datatype="LDT" /><Member Name="SD_1" Datatype="Variant" /><Member Name="SD_2" Datatype="Variant" /><Member Name="SD_3" Datatype="Variant" /><Member Name="SD_4" Datatype="Variant" /><Member Name="SD_5" Datatype="Variant" /><Member Name="SD_6" Datatype="Variant" /><Member Name="SD_7" Datatype="Variant" /><Member Name="SD_8" Datatype="Variant" /><Member Name="SD_9" Datatype="Variant" /><Member Name="SD_10" Datatype="Variant" /></Section><Section Name="Output"><Member Name="Error" Datatype="Bool" /><Member Name="Status" Datatype="Word" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="SD_0" Datatype="AssocValue_0" Version="1.0"><Sections><Section Name="None"><Member Name="Syntax" Datatype="UInt" /><Member Name="Aap" Datatype="Byte" /></Section></Sections></Member><Member Name="SIG_Edge_History" Datatype="Bool" /><Member Name="INIT_FB_State" Datatype="DWord" /></Section></Sections></Member><Member Name="WarningManualOverrideActive" Datatype="Program_Alarm" Version="1.0"><Sections><Section Name="Base"><Sections Datatype="ALARM_BASE" Version="1.0"><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="Alarm_ID" Datatype="Event_ID" Version="1.0"><Sections><Section Name="None"><Member Name="ALID" Datatype="Word" /><Member Name="ARID" Datatype="Word" /></Section></Sections></Member><Member Name="HANDLE" Datatype="DWord" /></Section></Sections></Section><Section Name="Input"><Member Name="SIG" Datatype="Bool" /><Member Name="TIMESTAMP" Datatype="LDT" /><Member Name="SD_1" Datatype="Variant" /><Member Name="SD_2" Datatype="Variant" /><Member Name="SD_3" Datatype="Variant" /><Member Name="SD_4" Datatype="Variant" /><Member Name="SD_5" Datatype="Variant" /><Member Name="SD_6" Datatype="Variant" /><Member Name="SD_7" Datatype="Variant" /><Member Name="SD_8" Datatype="Variant" /><Member Name="SD_9" Datatype="Variant" /><Member Name="SD_10" Datatype="Variant" /></Section><Section Name="Output"><Member Name="Error" Datatype="Bool" /><Member Name="Status" Datatype="Word" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="SD_0" Datatype="AssocValue_0" Version="1.0"><Sections><Section Name="None"><Member Name="Syntax" Datatype="UInt" /><Member Name="Aap" Datatype="Byte" /></Section></Sections></Member><Member Name="SIG_Edge_History" Datatype="Bool" /><Member Name="INIT_FB_State" Datatype="DWord" /></Section></Sections></Member><Member Name="T_ZoneInfo" Datatype="&quot;ZoneInfo&quot;"><Sections><Section Name="None"><Member Name="AppStateIndex" Datatype="Int" /><Member Name="ZoneName" Datatype="String[40]" /></Section></Sections></Member><Member Name="T_Appstate" Datatype="&quot;ApplicationState_UDT&quot;"><Sections><Section Name="None"><Member Name="Hmi_Buttons" Datatype="&quot;appButtons_UDT&quot;"><Sections><Section Name="None"><Member Name="reset" Datatype="&quot;HMIButton_UDT&quot;"><Sections><Section Name="None"><Member Name="SignalFromHMI" Datatype="Bool" /><Member Name="state" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member><Member Name="colorNumber" Datatype="Int" /><Member Name="Hide" Datatype="Bool" /></Section></Sections></Member><Member Name="StartAutoMode" Datatype="&quot;HMIButton_UDT&quot;"><Sections><Section Name="None"><Member Name="SignalFromHMI" Datatype="Bool" /><Member Name="state" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member><Member Name="colorNumber" Datatype="Int" /><Member Name="Hide" Datatype="Bool" /></Section></Sections></Member><Member Name="ActivateManualMode" Datatype="&quot;HMIButton_UDT&quot;"><Sections><Section Name="None"><Member Name="SignalFromHMI" Datatype="Bool" /><Member Name="state" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member><Member Name="colorNumber" Datatype="Int" /><Member Name="Hide" Datatype="Bool" /></Section></Sections></Member><Member Name="StopAutoMode" Datatype="&quot;HMIButton_UDT&quot;"><Sections><Section Name="None"><Member Name="SignalFromHMI" Datatype="Bool" /><Member Name="state" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member><Member Name="colorNumber" Datatype="Int" /><Member Name="Hide" Datatype="Bool" /></Section></Sections></Member><Member Name="DeactivateManualMode" Datatype="&quot;HMIButton_UDT&quot;"><Sections><Section Name="None"><Member Name="SignalFromHMI" Datatype="Bool" /><Member Name="state" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member><Member Name="colorNumber" Datatype="Int" /><Member Name="Hide" Datatype="Bool" /></Section></Sections></Member><Member Name="StartEmptyMode" Datatype="&quot;HMIButton_UDT&quot;"><Sections><Section Name="None"><Member Name="SignalFromHMI" Datatype="Bool" /><Member Name="state" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member><Member Name="colorNumber" Datatype="Int" /><Member Name="Hide" Datatype="Bool" /></Section></Sections></Member><Member Name="StopEmptyMode" Datatype="&quot;HMIButton_UDT&quot;"><Sections><Section Name="None"><Member Name="SignalFromHMI" Datatype="Bool" /><Member Name="state" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member><Member Name="colorNumber" Datatype="Int" /><Member Name="Hide" Datatype="Bool" /></Section></Sections></Member><Member Name="ActivateStandby" Datatype="&quot;HMIButton_UDT&quot;"><Sections><Section Name="None"><Member Name="SignalFromHMI" Datatype="Bool" /><Member Name="state" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member><Member Name="colorNumber" Datatype="Int" /><Member Name="Hide" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="States" Datatype="&quot;appStates_UDT&quot;"><Sections><Section Name="None"><Member Name="ReadyForAutoMode" Datatype="Bool" /><Member Name="ReadyForStandby" Datatype="Bool" /><Member Name="RequestingAutoModeOff" Datatype="Bool" /><Member Name="Standby" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member><Member Name="AutoModeActivated" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member><Member Name="ManualModeActivated" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member><Member Name="EmptyApplicatoinMode" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member><Member Name="EmergencyOk" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member><Member Name="ManaulOverrideActive" Datatype="Struct"><Member Name="Internal" Datatype="Bool" /><Member Name="HMI" Datatype="Bool" /></Member></Section></Sections></Member><Member Name="Alarms" Datatype="Struct"><Member Name="AlarmActiveInternalPLC" Datatype="Bool" /><Member Name="AlarmsActiveForHmi" Datatype="Bool" /></Member></Section></Sections></Member><Member Name="Alarm" Datatype="&quot;AlarmInfo_UDT&quot;"><Sections><Section Name="None"><Member Name="info" Datatype="String" /><Member Name="init" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member>
+  </Section>
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>DRV_CONTROLLER_FB</Name>
+      <Number>3</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="4" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <Token Text="REGION" UId="21" />
+  <Blank Num="1" UId="22" />
+  <Text UId="23">DRV_101_DRV_1</Text>
+  <NewLine Num="1" UId="24" />
+  <Blank Num="4" UId="25" />
+  <NewLine Num="1" UId="26" />
+  <Blank Num="4" UId="27" />
+  <Access Scope="Call" UId="28">
+    <CallInfo UId="29" BlockType="FC">
+      <Instance Scope="GlobalVariable" UId="31">
+        <Component Name="Conv_Nord_Drive_Commander" UId="30" />
+      </Instance>
+      <Token Text="(" UId="32" />
+      <Parameter Name="I_Conv" UId="33">
+        <Blank Num="1" UId="34" />
+        <Token Text=":=" UId="35" />
+        <Blank Num="1" UId="36" />
+        <Access Scope="GlobalVariable" UId="37">
+          <Symbol UId="38">
+            <Component Name="CONV_DB" UId="39" />
+            <Token Text="." UId="40" />
+            <Component Name="CONV_101" UId="41" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="42" />
+      <NewLine Num="1" UId="43" />
+      <Blank Num="32" UId="44" />
+      <Parameter Name="I_INV" UId="45">
+        <Blank Num="1" UId="46" />
+        <Token Text=":=" UId="47" />
+        <Blank Num="1" UId="48" />
+        <Access Scope="LiteralConstant" UId="49">
+          <Constant UId="50">
+            <ConstantValue UId="52">FALSE</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="53" />
+      <NewLine Num="1" UId="54" />
+      <Blank Num="32" UId="55" />
+      <Parameter Name="IO_NordDrive" UId="56">
+        <Blank Num="1" UId="57" />
+        <Token Text=":=" UId="58" />
+        <Blank Num="1" UId="59" />
+        <Access Scope="GlobalVariable" UId="60">
+          <Symbol UId="61">
+            <Component Name="DRV_DB" UId="62" />
+            <Token Text="." UId="63" />
+            <Component Name="DRV_101_DRV_1" UId="64" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="65" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="66" />
+  <NewLine Num="1" UId="67" />
+  <Blank Num="4" UId="68" />
+  <NewLine Num="1" UId="69" />
+  <Blank Num="4" UId="70" />
+  <Access Scope="Call" UId="71">
+    <CallInfo UId="72" BlockType="FB" Name="Nord_DriveController">
+      <Instance Scope="LocalVariable" UId="73">
+        <Component Name="DRV_101_DRV_1" UId="74" />
+      </Instance>
+      <Token Text="(" UId="75" />
+      <Parameter Name="I_MotorData" UId="76">
+        <Blank Num="1" UId="77" />
+        <Token Text=":=" UId="78" />
+        <Blank Num="1" UId="79" />
+        <Access Scope="GlobalVariable" UId="80">
+          <Symbol UId="81">
+            <Component Name="I_DRV_101_1" UId="82" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="83" />
+      <NewLine Num="1" UId="84" />
+      <Blank Num="19" UId="85" />
+      <Parameter Name="I_Interlock" UId="86">
+        <Blank Num="1" UId="87" />
+        <Token Text=":=" UId="88" />
+        <Blank Num="1" UId="89" />
+        <Access Scope="LiteralConstant" UId="90">
+          <Constant UId="91">
+            <ConstantValue UId="93">FALSE</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="94" />
+      <NewLine Num="1" UId="95" />
+      <Blank Num="19" UId="96" />
+      <Parameter Name="I_TimeNotRunning" UId="97">
+        <Blank Num="1" UId="98" />
+        <Token Text=":=" UId="99" />
+        <Blank Num="1" UId="100" />
+        <Access Scope="TypedConstant" UId="101">
+          <Constant UId="102">
+            <ConstantValue UId="103">T#10s</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="104" />
+      <NewLine Num="1" UId="105" />
+      <Blank Num="19" UId="106" />
+      <Parameter Name="I_TimeNotStopping" UId="107">
+        <Blank Num="1" UId="108" />
+        <Token Text=":=" UId="109" />
+        <Blank Num="1" UId="110" />
+        <Access Scope="TypedConstant" UId="111">
+          <Constant UId="112">
+            <ConstantValue UId="113">T#10s</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="114" />
+      <NewLine Num="1" UId="115" />
+      <Blank Num="19" UId="116" />
+      <Parameter Name="I_SlowStopMode" UId="117">
+        <Blank Num="1" UId="118" />
+        <Token Text=":=" UId="119" />
+        <Blank Num="1" UId="120" />
+        <Access Scope="LiteralConstant" UId="121">
+          <Constant UId="122">
+            <ConstantValue UId="124">FALSE</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="125" />
+      <NewLine Num="1" UId="126" />
+      <Blank Num="19" UId="127" />
+      <Parameter Name="IO_MotorData" UId="128">
+        <Blank Num="1" UId="129" />
+        <Token Text=":=" UId="130" />
+        <Blank Num="1" UId="131" />
+        <Access Scope="GlobalVariable" UId="132">
+          <Symbol UId="133">
+            <Component Name="Q_DRV_101_1" UId="134" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="135" />
+      <NewLine Num="1" UId="136" />
+      <Blank Num="19" UId="137" />
+      <Parameter Name="IO_MotorStatus" UId="138">
+        <Blank Num="1" UId="139" />
+        <Token Text=":=" UId="140" />
+        <Blank Num="1" UId="141" />
+        <Access Scope="GlobalVariable" UId="142">
+          <Symbol UId="143">
+            <Component Name="DRV_DB" UId="144" />
+            <Token Text="." UId="145" />
+            <Component Name="DRV_101_DRV_1" UId="146" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="150" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="151" />
+  <NewLine Num="1" UId="152" />
+  <Blank Num="4" UId="153" />
+  <NewLine Num="1" UId="154" />
+  <Token Text="END_REGION" UId="155" />
+  <NewLine Num="1" UId="156" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="5" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-BE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="8" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-BE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="B" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

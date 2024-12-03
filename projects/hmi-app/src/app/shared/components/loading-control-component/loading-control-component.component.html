@@ -1,0 +1,18 @@
+<div class="loading-wrapper" [ngSwitch]="state">
+	<div *ngSwitchCase="1" class="loading-wrapper">
+		<mat-spinner color="accent"></mat-spinner>
+		<p>
+			{{ 'No connection to PLC. We are trying to reconnect...' | translate }}
+		</p>
+	</div>
+
+	<div *ngSwitchCase="2" class="loading-wrapper">
+		<h2 class="text-error">{{ 'ERROR' | translate }}</h2>
+		<p>{{ 'Object not found' | translate }}</p>
+	</div>
+
+	<div *ngSwitchCase="3" class="loading-wrapper">
+		<mat-spinner color="accent"></mat-spinner>
+		<p>{{ 'Loading data...' | translate }}</p>
+	</div>
+</div>

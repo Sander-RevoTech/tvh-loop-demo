@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V16" />
+  <DocumentInfo>
+    <Created>2024-12-03T15:41:45.2847935Z</Created>
+    <ExportSetting>WithReadOnly</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V16 Update 2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <CreationDate ReadOnly="true">2022-02-10T08:20:21.8932261Z</CreationDate>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v4">
+  <Section Name="None">
+    <Member Name="TriggerContr_TriggerEnable" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">0 = Trigger via PhotoEye1 = Trigger via Fieldbus</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="TriggerContr_Trigger" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">0 = Trigger OFF1 = Trigger ON* only when Trigger Enable == 1</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="TriggerContr_Spare_2" Datatype="Bool" />
+    <Member Name="TriggerContr_Spare_3" Datatype="Bool" />
+    <Member Name="TriggerContr_ForceRunMode" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">0 = Allow to open Setup Tool Connection1 = Block Setup Tool Connection and stay in RunMode</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="TriggerContr_TriggerSetting" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">0 = Individual Trigger per reader1 = Trigger = triggers both readers* Only for Trigger 2</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="TriggerContr_TriggerPin" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">0 = Pin 4 IN11 = Pin 2 IN2</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="TriggerContr_TriggerEdge" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">0 = Rising edge1 = Falling edge</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ResultContr_ResultAck" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Bit is used to acknowledge that the PLC hassuccessfully read the last result data. When set to truethe ‘Result Available’ bit will be cleared.</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ResultContr_spare_1" Datatype="Bool" />
+    <Member Name="ResultContr_spare_4" Datatype="Bool" />
+    <Member Name="ResultContr_spare_6" Datatype="Bool" />
+    <Member Name="ResultContr_spare_7" Datatype="Bool" />
+    <Member Name="ResultContr_spare_8" Datatype="Bool" />
+    <Member Name="ResultContr_spare_9" Datatype="Bool" />
+    <Member Name="ResultContr_spare_10" Datatype="Bool" />
+    <Member Name="SoftEventContr_TrainCode" Datatype="Bool" />
+    <Member Name="SoftEventContr_TrainMatchString" Datatype="Bool" />
+    <Member Name="SoftEventContr_Focus" Datatype="Bool" />
+    <Member Name="SoftEventContr_TrainBirghtness" Datatype="Bool" />
+    <Member Name="SoftEventContr_Untrain" Datatype="Bool" />
+    <Member Name="SoftEventContr_SetInputString" Datatype="Bool" />
+    <Member Name="SoftEventContr_ExecuteDMCC" Datatype="Bool" />
+    <Member Name="SoftEventContr_SetMatchString" Datatype="Bool" />
+    <Member Name="UserDataOption" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Only used by “Set Match String” soft event. Specifieswhich code target to assign the string (16-bit integer)</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="spare_5" Datatype="Byte" />
+    <Member Name="DataBlock_DataBlockSize_0" Datatype="Bool" />
+    <Member Name="DataBlock_DataBlockSize_1" Datatype="Bool" />
+    <Member Name="DataBlock_DataBlockSize_2" Datatype="Bool" />
+    <Member Name="DataBlock_DataBlockSize_3" Datatype="Bool" />
+    <Member Name="DataBlock_spare_4" Datatype="Bool" />
+    <Member Name="DataBlock_spare_5" Datatype="Bool" />
+    <Member Name="DataBlock_spare_6" Datatype="Bool" />
+    <Member Name="DataBlock_Reader2Disabled" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">0 = Reader 2 Enabled (default)1 = Reader 2 Disabled</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="UserData" Datatype="Array[0..15] of Byte" />
+  </Section>
+</Sections></Interface>
+      <InterfaceModifiedDate ReadOnly="true">2020-06-23T05:39:39.7523029Z</InterfaceModifiedDate>
+      <IsConsistent ReadOnly="true">true</IsConsistent>
+      <LibraryConformanceStatus ReadOnly="true">The object is library-conformant.</LibraryConformanceStatus>
+      <ModifiedDate ReadOnly="true">2020-06-23T22:30:53.6264385Z</ModifiedDate>
+      <Name>COGNEX_DATAMAN_OUT_UDT</Name>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

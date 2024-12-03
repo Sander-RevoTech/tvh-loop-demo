@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V16" />
+  <DocumentInfo>
+    <Created>2024-12-03T15:41:45.8171192Z</Created>
+    <ExportSetting>WithReadOnly</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V16 Update 2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <CreationDate ReadOnly="true">2024-12-03T06:55:59.9692037Z</CreationDate>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v4">
+  <Section Name="None">
+    <Member Name="MotorRunningOnSetpoint" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">1 = Setpoint bereikt</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="BusControllerActive" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">1 = Bus controller actief</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Function4809" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">P481 Not Used</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="MotorIsRunningRight" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">1 = Motor draait rechstom</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="MotorIsRunningLeft" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">1 = Motor draait linksom</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Function4810_MovementDone" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">P481 Not Used</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ParameterSetLsB" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">0 = Par set 1 / 1 = Par set 2 / 2 = Par set 3 / 3 = Par set 4</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ParameterSetMSB" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">0 = Par set 1 / 1 = Par set 2 / 2 = Par set 3 / 3 = Par set 4</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ReadyToStart" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">1 = Ready to start</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ReadyForOperation" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">1 = Ready for operation</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Running" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">1 = Operation enabled</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ErrorActive" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">1 = Drive in fout</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="PowerOn" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">0 = OFF 2 commando is uitgevoerd</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="EmergencyStoPActive" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">0 = OFF 3 commando is uitgevoerd</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="CannotStartError" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">1 = Starten niet mogelijk</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="WarningActive" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">1 = Er is een warning op de drive</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ActualSpeed" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Actual motor speed (RPM) | scale factor = 11.66</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="DigitalInputs" Datatype="Struct">
+      <Comment>
+        <MultiLanguageText Lang="en-US">digital inputs</MultiLanguageText>
+      </Comment>
+      <Member Name="Spare_5" Datatype="Byte" />
+      <Member Name="Input_1" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Digital Input 1</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Input_2" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Digital Input 2</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Input_3" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Digital Input 3</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Input_4" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Digital Input 4</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Input_5" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Digital Input 5</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Input_6" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Digital Input 6</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Spare_3" Datatype="Bool" />
+      <Member Name="Spare_4" Datatype="Bool" />
+    </Member>
+    <Member Name="ActualCurrent" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Actual motor phase current | scale factor = 19113.33</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ErrorNumber" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Active error | 0 = no error</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ActualSetpointFrequency" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Actual setpoint frequency stator | scale factor = 327.56</MultiLanguageText>
+      </Comment>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <InterfaceModifiedDate ReadOnly="true">2023-12-19T13:50:46.5922924Z</InterfaceModifiedDate>
+      <IsConsistent ReadOnly="true">true</IsConsistent>
+      <LibraryConformanceStatus ReadOnly="true">The object is library-conformant.</LibraryConformanceStatus>
+      <ModifiedDate ReadOnly="true">2023-12-19T13:50:46.5922924Z</ModifiedDate>
+      <Name>Nord_Drive_SK5xx_In_Data_UDT</Name>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

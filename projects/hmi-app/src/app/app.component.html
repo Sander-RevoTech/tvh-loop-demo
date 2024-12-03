@@ -1,0 +1,57 @@
+<mat-drawer-container
+	class="mat-drawer-container light-theme"
+	id="mainContainer"
+	#mainContainer
+	autosize
+>
+	<mat-drawer class="mat-drawer" #drawer class="sidenav" mode="over">
+		<div>
+			<hmi-sidenav
+				[onBurgerMenuClick]="drawer.toggle.bind(drawer)"
+			></hmi-sidenav>
+		</div>
+	</mat-drawer>
+
+	<mat-drawer-content>
+		<core-alert *ngIf="showNotifications"></core-alert>
+
+		<div class="sidenav-content">
+			<div class="drag-drop-zone">
+				<div class="app-wrapper">
+					<app-header
+						[hideHamburger]="drawer.opened"
+						[onBurgerMenuClick]="drawer.toggle.bind(drawer)"
+					></app-header>
+					<core-scroll-controller
+						*ngIf="plcInitialized"
+						[scrollBox]="contentWrapper"
+					></core-scroll-controller>
+					<core-zoom
+						*ngIf="plcInitialized"
+						[zoomContainer]="contentWrapper"
+						[mainContainer]="mainContainer['_element'].nativeElement"
+					></core-zoom>
+					<div
+						cdkScrollable
+						#contentWrapper
+						id="contentWrapper"
+						class="app-content"
+					>
+						<div>
+							<router-outlet></router-outlet>
+						</div>
+					</div>
+					<div class="spacer"></div>
+					<app-footer></app-footer>
+				</div>
+				<hmi-floating-reset-buttton
+					(OnresetClick)="onReset()"
+					[visible]="plcInitialized"
+					cdkDragBoundary=".drag-drop-zone"
+					cdkDrag
+				>
+				</hmi-floating-reset-buttton>
+			</div>
+		</div>
+	</mat-drawer-content>
+</mat-drawer-container>

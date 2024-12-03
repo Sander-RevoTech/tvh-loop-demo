@@ -1,0 +1,14 @@
+{
+  "PLCS": [
+    {
+      "Name": "PLC_Main",
+      "Ip": "192.168.10.1",
+      "Rack": 0,
+      "Slot": 0,
+      "CpuType": 0,
+      "Id": 0,
+      "source": "PLC_Main"
+    }
+  ],
+  "Compiled": "2024-12-03T16:41:38.9855076+01:00"
+}

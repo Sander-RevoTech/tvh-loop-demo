@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V16" />
+  <DocumentInfo>
+    <Created>2024-12-03T15:41:45.4466841Z</Created>
+    <ExportSetting>WithReadOnly</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V16 Update 2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <CreationDate ReadOnly="true">2022-02-10T10:30:20.6863124Z</CreationDate>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v4">
+  <Section Name="None">
+    <Member Name="Cmd" Datatype="Struct">
+      <Comment>
+        <MultiLanguageText Lang="en-US">MotorCommands</MultiLanguageText>
+      </Comment>
+      <Member Name="Reset" Datatype="Bool" />
+      <Member Name="OnAuto" Datatype="Bool" />
+      <Member Name="OnManual" Datatype="Bool" />
+      <Member Name="DirectionAuto" Datatype="Bool" />
+      <Member Name="DirectionManual" Datatype="Bool" />
+      <Member Name="SpeedAuto" Datatype="Real" />
+      <Member Name="SpeedManual" Datatype="Real" />
+      <Member Name="Interlock" Datatype="Bool" />
+    </Member>
+    <Member Name="Faults" Datatype="Struct">
+      <Member Name="status" Datatype="Word" />
+      <Member Name="FaultCode" Datatype="Word" />
+      <Member Name="FaultActive" Datatype="Bool" />
+      <Member Name="Disconnected" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">The device is not connected</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="TorqueNOK" Datatype="Bool"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+      <Member Name="TemperatureNOK" Datatype="Bool"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+      <Member Name="CurrentNOK" Datatype="Bool"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+      <Member Name="NotOnTImedOut" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Motor not on in time</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="NotReady" Datatype="Bool" />
+      <Member Name="SAFETY_ERROR_ACTIVE" Datatype="Bool" />
+      <Member Name="STO_ACTIVE" Datatype="Bool" />
+    </Member>
+    <Member Name="Alarms" Datatype="Struct">
+      <Member Name="Status" Datatype="Word" />
+      <Member Name="AlarmCode" Datatype="Word" />
+      <Member Name="AlarmFromDrive" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Error from drive</MultiLanguageText>
+        </Comment>
+      </Member>
+    </Member>
+    <Member Name="Status" Datatype="Struct">
+      <Member Name="CmdRunManualActive" Datatype="Bool" />
+      <Member Name="Interlocked" Datatype="Bool" />
+      <Member Name="ManualModeActive" Datatype="Bool" />
+      <Member Name="ManualCommandsDisabled" Datatype="Bool" />
+      <Member Name="Running" Datatype="Bool" />
+      <Member Name="ActualSpeed" Datatype="Real" />
+      <Member Name="ActualDirection" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">0 right | 1 left</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Ready" Datatype="Bool" />
+      <Member Name="Current" Datatype="Real" />
+      <Member Name="Torque" Datatype="Real" />
+    </Member>
+    <Member Name="Settings" Datatype="Struct">
+      <Member Name="DefaultDirection" Datatype="Bool" />
+      <Member Name="AllowManualDirection" Datatype="Bool" />
+      <Member Name="MaxSpeedManual" Datatype="Real">
+        <StartValue>100.0</StartValue>
+      </Member>
+      <Member Name="MinSpeedManual" Datatype="Real">
+        <StartValue>0.0</StartValue>
+      </Member>
+      <Member Name="MaxSpeedAuto" Datatype="Real">
+        <StartValue>100.0</StartValue>
+      </Member>
+      <Member Name="MinSpeedAuto" Datatype="Real">
+        <StartValue>0.0</StartValue>
+      </Member>
+      <Member Name="references" Datatype="Struct">
+        <Member Name="maxSpeedReference" Datatype="Real">
+          <StartValue>1800.0</StartValue>
+        </Member>
+        <Member Name="referenceSpeed" Datatype="Real">
+          <Comment>
+            <MultiLanguageText Lang="en-US">rpm</MultiLanguageText>
+          </Comment>
+          <StartValue>1500.0</StartValue>
+        </Member>
+        <Member Name="referenceVoltage" Datatype="Real">
+          <Comment>
+            <MultiLanguageText Lang="en-US">Vrms</MultiLanguageText>
+          </Comment>
+          <StartValue>1000.0</StartValue>
+        </Member>
+        <Member Name="referenceCurrent" Datatype="Real">
+          <Comment>
+            <MultiLanguageText Lang="en-US">Arms</MultiLanguageText>
+          </Comment>
+          <StartValue>100.0</StartValue>
+        </Member>
+        <Member Name="referenceTorque" Datatype="Real">
+          <Comment>
+            <MultiLanguageText Lang="en-US">Nm</MultiLanguageText>
+          </Comment>
+          <StartValue>1.0</StartValue>
+        </Member>
+        <Member Name="referencePower" Datatype="Real">
+          <Comment>
+            <MultiLanguageText Lang="en-US">Kw</MultiLanguageText>
+          </Comment>
+          <StartValue>0.16</StartValue>
+        </Member>
+      </Member>
+    </Member>
+    <Member Name="Zone" Datatype="Int" />
+    <Member Name="info" Datatype="&quot;MotorInfo&quot;" />
+  </Section>
+</Sections></Interface>
+      <InterfaceModifiedDate ReadOnly="true">2021-11-16T12:33:53.9032873Z</InterfaceModifiedDate>
+      <IsConsistent ReadOnly="true">true</IsConsistent>
+      <LibraryConformanceStatus ReadOnly="true">The object is library-conformant.</LibraryConformanceStatus>
+      <ModifiedDate ReadOnly="true">2021-11-16T12:33:53.9032873Z</ModifiedDate>
+      <Name>G115D_DRIVE_UDT</Name>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

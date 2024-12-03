@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V16" />
+  <DocumentInfo>
+    <Created>2024-12-03T15:41:45.5487141Z</Created>
+    <ExportSetting>WithReadOnly</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V16 Update 2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <CreationDate ReadOnly="true">2022-02-11T10:10:02.2939531Z</CreationDate>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v4">
+  <Section Name="None">
+    <Member Name="status" Datatype="Struct">
+      <Member Name="spare_6" Datatype="Bool" />
+      <Member Name="spare_7" Datatype="Bool" />
+      <Member Name="spare_8" Datatype="Bool" />
+      <Member Name="LineRunning" Datatype="Bool" />
+      <Member Name="spare_9" Datatype="Bool" />
+      <Member Name="spare_10" Datatype="Bool" />
+      <Member Name="spare_11" Datatype="Bool" />
+      <Member Name="spare_12" Datatype="Bool" />
+      <Member Name="StartEvo" Datatype="Bool" />
+      <Member Name="StopEvo" Datatype="Bool" />
+      <Member Name="RequestToSent" Datatype="Bool" />
+      <Member Name="ReadyToReceive" Datatype="Bool" />
+      <Member Name="spare" Datatype="Bool" />
+      <Member Name="TransferInProgress" Datatype="Bool" />
+      <Member Name="DataReceived" Datatype="Bool" />
+      <Member Name="KeepAlive" Datatype="Bool" />
+    </Member>
+    <Member Name="ObjectInfo" Datatype="Struct">
+      <Member Name="spare_3" Datatype="Bool" />
+      <Member Name="spare_4" Datatype="Bool" />
+      <Member Name="spare_5" Datatype="Bool" />
+      <Member Name="WithoutCutting" Datatype="Bool" />
+      <Member Name="withoutLidding" Datatype="Bool" />
+      <Member Name="spare" Datatype="Bool" />
+      <Member Name="spare_1" Datatype="Bool" />
+      <Member Name="spare_2" Datatype="Bool" />
+      <Member Name="Barcode_1" Datatype="Char" />
+      <Member Name="Barcode_2" Datatype="Char" />
+      <Member Name="Barcode_3" Datatype="Char" />
+      <Member Name="Barcode_4" Datatype="Char" />
+      <Member Name="Barcode_5" Datatype="Char" />
+      <Member Name="Barcode_6" Datatype="Char" />
+      <Member Name="Barcode_7" Datatype="Char" />
+      <Member Name="Barcode_8" Datatype="Char" />
+      <Member Name="Barcode_9" Datatype="Char" />
+      <Member Name="Barcode_10" Datatype="Char" />
+      <Member Name="Barcode_11" Datatype="Char" />
+      <Member Name="Barcode_12" Datatype="Char" />
+      <Member Name="Barcode_13" Datatype="Char" />
+      <Member Name="Barcode_14" Datatype="Char" />
+      <Member Name="Barcode_15" Datatype="Char" />
+      <Member Name="Barcode_16" Datatype="Char" />
+      <Member Name="weight" Datatype="Byte">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Weight in KG</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Length" Datatype="Word" />
+      <Member Name="widht" Datatype="Word" />
+      <Member Name="HeightBoxBasis" Datatype="Word" />
+      <Member Name="spare_6" Datatype="Word" />
+      <Member Name="spare_7" Datatype="Word" />
+      <Member Name="HeightBoxMinimum" Datatype="Byte" />
+      <Member Name="MinimumCut" Datatype="Byte" />
+    </Member>
+  </Section>
+</Sections></Interface>
+      <InterfaceModifiedDate ReadOnly="true">2022-02-11T10:51:25.3124999Z</InterfaceModifiedDate>
+      <IsConsistent ReadOnly="true">true</IsConsistent>
+      <LibraryConformanceStatus ReadOnly="true">The object is library-conformant.</LibraryConformanceStatus>
+      <ModifiedDate ReadOnly="true">2022-02-11T10:51:25.3124999Z</ModifiedDate>
+      <Name>Q_RANPACK_UDT</Name>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

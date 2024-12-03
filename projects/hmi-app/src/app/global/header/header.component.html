@@ -1,0 +1,73 @@
+<mat-toolbar color="accent" class="small-toolbar">
+	<p id="time">{{ now | fullHoursDateTime }}</p>
+	<hmi-full-screen *ngIf="chrome"></hmi-full-screen>
+</mat-toolbar>
+<mat-toolbar color="primary">
+	<mat-toolbar-row>
+		<div class="items-left">
+			<button
+				*ngIf="!_hideHamburger"
+				mat-button
+				class="button-mobile"
+				(click)="handleBurgerMenuClick()"
+			>
+				<mat-icon>menu_round</mat-icon>
+			</button>
+			<core-go-back-button></core-go-back-button>
+			<button class="current-screen button-mobile" mat-button>
+				{{ screenName | translate }}
+			</button>
+			<button routerLink="servers-detail" class="mobile-no" mat-button>
+				<hmi-connection-status-simple
+					[connectionStatus]="allConnectionsOnline"
+				></hmi-connection-status-simple>
+			</button>
+		</div>
+
+		<div class="logo">
+			<!-- <img src="../../../assets/icons/logo.svg" /> -->
+		</div>
+
+		<div class="items-right">
+			<button
+				mat-button
+				class="button-mobile"
+				routerLink="installation-control"
+			>
+				<div class="control-buttons">
+					<span>
+						<core-label-led [settings]="infoLed"></core-label-led>
+					</span>
+					<span>
+						<core-label-led [settings]="warningLed"></core-label-led>
+					</span>
+				</div>
+			</button>
+			<button mat-button class="button-mobile" routerLink="alarms-active">
+				<mat-icon [ngClass]="{ bell: alarmActive }"
+					>notifications_active</mat-icon
+				>
+			</button>
+			<button
+				mat-button
+				class="logoutButton auth"
+				*ngIf="userLoggedIn; else userNotLoggedIn"
+				(click)="logout()"
+			>
+				<mat-icon>person</mat-icon>
+				{{ 'Not' | translate }} <strong>{{ userName }}</strong
+				>? Log out.
+			</button>
+			<ng-template #userNotLoggedIn>
+				<button mat-button class="loginButton auth" (click)="login()">
+					<mat-icon>person</mat-icon>
+					<span>{{ 'Log in' | translate }}</span>
+				</button>
+			</ng-template>
+			<core-language-selector [languages]="languages"></core-language-selector>
+		</div>
+	</mat-toolbar-row>
+	<!-- <mat-toolbar-row>
+    <app-breadcrumbs></app-breadcrumbs>
+  </mat-toolbar-row> -->
+</mat-toolbar>

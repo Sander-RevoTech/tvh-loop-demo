@@ -1,0 +1,161 @@
+<!-- prettier-ignore -->
+<div class="layout-wrapper">
+	<div class="grid-container" coreProgressiveChildLoader>
+
+
+		<app-barcode-scanner-simple [coreGrid]="[22,20]" [scanner]="SCAN_102"></app-barcode-scanner-simple>
+
+		<!-- ZONE 1 -->
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_101" [motor]="MOT_101" [coreGrid]="[20,8]"
+			[settings]="{ rotation: 0 ,alt: 0,hide: hideAll}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_101" [motor]="MOT_101" [coreGrid]="[20,9]"
+			[settings]="{ rotation: 0 ,alt: 0,hide: hideAll}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_101" [motor]="MOT_101" [coreGrid]="[20,10]"
+			[settings]="{ rotation: 0 ,alt: 0,hide: hideAll}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_101" [motor]="MOT_101" [coreGrid]="[20,11]"
+			[settings]="{ rotation: 0 ,alt: 0,hide: hideAll}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_101" [motor]="MOT_101" [coreGrid]="[20,12]"
+			[settings]="{ rotation: 0 ,alt: 0,hide: hideAll}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_101" [motor]="MOT_101" [coreGrid]="[20,13]"
+			[settings]="{ rotation: 0 ,alt: 0,hide: hideAll}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_101" [motor]="MOT_101" [coreGrid]="[20,14]"
+			[settings]="{ rotation: 0 ,alt: 0,hide: hideAll}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_101" [motor]="MOT_101" [coreGrid]="[20,15]"
+			[settings]="{ rotation: 0 ,alt: 0,hide: hideAll}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_101" [motor]="MOT_101" [coreGrid]="[20,16]"
+			[settings]="{ rotation: 0 ,alt: 0,hide: hideStart}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_102L" [motor]="MOT_102L" [coreGrid]="[20,17]"
+			[settings]="{ rotation: 0 ,alt: 1,hide: hideStart}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_102R" [motor]="MOT_102R" [coreGrid]="[20,18]"
+			[settings]="{ rotation: 0 ,alt: 0,hide: hideStart}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_103L" [motor]="MOT_103L" [coreGrid]="[20,19]"
+			[settings]="{ rotation: 0 ,alt: 1,hide: hideStart}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_103R" [motor]="MOT_103R" [coreGrid]="[20,20]"
+			[settings]="{ rotation: 0 ,alt: 0,hide: hideStart}"></app-conveyor-simple>
+
+		<!-- ZONE 2 -->
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_104R" [motor]="MOT_104R" [coreGrid]="[20,21]"
+			[settings]="{ rotation: 0 ,alt: 1,hide: hideStart}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_104L" [motor]="MOT_104L" [coreGrid]="[20,22]"
+			[settings]="{ rotation: 0 ,alt: 1,hide: hideStart, corner:1}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_105R" [motor]="MOT_105R" [coreGrid]="[21,22]"
+			[settings]="{ rotation: 90 ,alt: 0,hide: hideStart, corner:1}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_105L" [motor]="MOT_105L" [coreGrid]="[21,21]"
+			[settings]="{ rotation: 180 ,alt: 1,hide: hideStart}"></app-conveyor-simple>
+
+
+		<!-- ZONE 3 -->
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_106R" [motor]="MOT_106R" [coreGrid]="[21,20]"
+			[settings]="{ rotation: 180 ,alt: 0,hide: hideStart}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_107R" [motor]="MOT_107R" [coreGrid]="[21,19]"
+			[settings]="{ rotation: 180 ,alt: 1,hide: hideStart}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_108R" [motor]="MOT_108R" [coreGrid]="[21,18]"
+			[settings]="{ rotation: 180 ,alt: 0,hide: hideStart}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_108L" [motor]="MOT_108L" [coreGrid]="[21,17]"
+			[settings]="{ rotation: 180 ,alt: 1,hide: hideStart}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_109R" [motor]="MOT_109R" [coreGrid]="[21,16]"
+			[settings]="{ rotation: 180 ,alt: 0,hide: hideStart}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_109L" [motor]="MOT_109L" [coreGrid]="[21,15]"
+			[settings]="{ rotation: 180 ,alt: 1,hide: hideStart}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_110R" [motor]="MOT_110R" [coreGrid]="[21,14]"
+			[settings]="{ rotation: 180 ,alt: 0,hide: hideStart}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_110L" [motor]="MOT_110L" [coreGrid]="[21,13]"
+			[settings]="{ rotation: 180 ,alt: 1,hide: hideStart}"></app-conveyor-simple>
+
+		<app-transfer-unit-simple [horConv]="CONV_111R" [verConv]="CONV_201R_BELTS" [horMotor]="MOT_111R"
+			[verMotor]="MOT_201R_Belts" [upDownMotor]="MOT_201L_Lift" [coreGrid]="[21,12]" [horSettings]="{dir:1}"
+			[verSettings]="{dir:1}">
+		</app-transfer-unit-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_111L" [motor]="MOT_111L" [coreGrid]="[21,11]"
+			[settings]="{ rotation: 180 ,alt: 0,hide: hideStart}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_112R" [motor]="MOT_112R" [coreGrid]="[21,10]"
+			[settings]="{ rotation: 180 ,alt: 0,hide: hideStart}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_112R" [motor]="MOT_112L" [coreGrid]="[21,9]"
+			[settings]="{ rotation: 180 ,alt: 1,hide: hideStart}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_113L" [motor]="MOT_113L" [coreGrid]="[21,8]"
+			[settings]="{ rotation: 180 ,alt: 0,hide: hideStart}"></app-conveyor-simple>
+
+
+		<!-- ZONE 4  -->
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_114R" [motor]="MOT_114R" [coreGrid]="[21,7]"
+			[settings]="{ rotation: 180 ,alt: 1,hide: hideStart}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_114L" [motor]="MOT_114L" [coreGrid]="[21,6]"
+			[settings]="{ rotation: 180 ,alt: 0,hide: hideStart,corner:1}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_115R" [motor]="MOT_115R" [coreGrid]="[20,6]"
+			[settings]="{ rotation: 270 ,alt: 1,hide: hideStart,corner:1}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_115L" [motor]="MOT_115L" [coreGrid]="[20,7]"
+			[settings]="{ rotation: 0 ,alt: 1,hide: hideStart}"></app-conveyor-simple>
+
+
+		<!-- ZONE 5 -->
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_301R" [motor]="MOT_301L" [coreGrid]="[22,18]"
+			[settings]="{ rotation: 90 ,alt: 1,hide: hideStart}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_301R" [motor]="MOT_301R" [coreGrid]="[23,18]"
+			[settings]="{ rotation: 90 ,alt: 1,hide: hideStart,corner:1}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_302L" [motor]="MOT_302L" [coreGrid]="[23,17]"
+			[settings]="{ rotation: 180 ,alt: 1,hide: hideStart}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_302R" [motor]="MOT_302R" [coreGrid]="[23,16]"
+			[settings]="{ rotation: 180 ,alt: 0,hide: hideStart}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_303L" [motor]="MOT_303L" [coreGrid]="[23,15]"
+			[settings]="{ rotation: 180 ,alt: 1,hide: hideStart}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_303R" [motor]="MOT_303R" [coreGrid]="[23,14]"
+			[settings]="{ rotation: 180 ,alt: 0,hide: hideAll}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_303R" [motor]="MOT_303R" [coreGrid]="[23,13]"
+			[settings]="{ rotation: 180 ,alt: 1,hide: hideStart}"></app-conveyor-simple>
+
+		<app-transfer-unit-simple [horConv]="CONV_304L" [verConv]="CONV_203R_BELTS" [horMotor]="MOT_304L"
+			[verMotor]="MOT_203R_Belts" [upDownMotor]="MOT_203L_Lift" [coreGrid]="[23,12]" [horSettings]="{dir:1}"
+			[verSettings]="{dir:1}">
+		</app-transfer-unit-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_203R_BELTS" [motor]="MOT_202L" [coreGrid]="[22,12]"
+			[settings]="{ rotation: 270 ,alt: 0,hide: hideStart}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_304R" [motor]="MOT_304R" [coreGrid]="[23,11]"
+			[settings]="{ rotation: 180 ,alt: 1,hide: hideSens}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_305R" [motor]="MOT_305L" [coreGrid]="[23,10]"
+			[settings]="{ rotation: 180 ,alt: 1,hide: hideSens,corner:1}"></app-conveyor-simple>
+
+		<app-conveyor-simple *coreProgressiveChild [conveyor]="CONV_305R" [motor]="MOT_305R" [coreGrid]="[22,10]"
+			[settings]="{ rotation: 270 ,alt: 1,hide: hideStart}"></app-conveyor-simple>
+
+	</div>
+</div>

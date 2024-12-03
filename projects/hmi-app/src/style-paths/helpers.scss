@@ -1,0 +1,80 @@
+@import 'variables';
+
+// helpers
+
+// pages layout
+
+.details-title {
+	text-align: center;
+}
+
+.subtitle {
+	font-weight: 300;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.wrapper-90 {
+	width: 90%;
+	margin: 0 auto;
+	@media (max-width: 802px) {
+		width: 100%;
+		flex-direction: column;
+	}
+}
+
+.layout-wrapper {
+	justify-content: center;
+	display: flex;
+}
+
+.grid-container {
+	justify-content: center;
+	display: grid;
+	// grid-gap: 0.6rem;
+	grid-auto-rows: min-content;
+	grid-auto-columns: min-content;
+	position: relative;
+}
+
+// display
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.flex-row-column {
+	display: flex;
+	flex-direction: row;
+	@media (max-width: 992px) {
+		flex-direction: column !important;
+	}
+}
+
+// loading
+
+.loading-wrapper {
+	flex-direction: column;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	p:first-of-type {
+		margin-top: 3rem;
+	}
+}
+
+// components
+
+// verical line
+.light-hr {
+	margin: 7px 0 12px 0;
+	border: 0.8px solid rgba(255, 255, 255, 0.12);
+}

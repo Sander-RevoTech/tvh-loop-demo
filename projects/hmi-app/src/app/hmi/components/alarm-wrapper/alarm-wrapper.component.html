@@ -1,0 +1,15 @@
+<hmi-alarm-table *ngIf="emergencyAlarms.length" [alarms]="emergencyAlarms" [alarmServerOnline]="true"
+	[titles]="emergencyAlarmsTitles" (AlarmClicked)="onEmgAlarmClick()"></hmi-alarm-table>
+
+<br />
+
+<hmi-alarm-table *ngIf="connectionAlarms.length" [alarms]="connectionAlarms" [alarmServerOnline]="true"
+	[titles]="connectionAlarmsTitles"></hmi-alarm-table>
+
+<br />
+
+<hmi-alarm-table [alarms]="plcAlarms" [alarmServerOnline]="plcAlarmServerOnline" [titles]="plcAlarmTitles"
+	(AlarmClicked)="onPlcAlarmClick($event)"></hmi-alarm-table>
+
+<hmi-alarm-table [alarms]="plcHardwareAlarms" [alarmServerOnline]="plcAlarmServerOnline"
+	[titles]="plcHardwareAlarmTitles"></hmi-alarm-table>

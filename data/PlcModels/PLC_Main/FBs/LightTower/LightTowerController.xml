@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V16" />
+  <DocumentInfo>
+    <Created>2024-12-03T15:41:39.4768861Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V16 Update 2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v4">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="AutoModeOn" Datatype="&quot;SmartBool&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="I_Sensor" Datatype="Bool" /><Member Name="I_Simulate" Datatype="Bool" /><Member Name="HoldOnTIme" Datatype="Time" /><Member Name="DelayOnTime" Datatype="Time" /></Section><Section Name="Output"><Member Name="O_data" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member></Section><Section Name="InOut" /><Section Name="Static"><Member Name="S_Prev_Val" Datatype="Bool" /><Member Name="S_DelayOnTime" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="S_HoldOnTimer" Datatype="TOF_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="S_LE" Datatype="Bool" /><Member Name="S_FE" Datatype="Bool" /><Member Name="S_SensorState" Datatype="Bool" /><Member Name="S_HoldOn" Datatype="Bool" /></Section></Sections></Member>
+    <Member Name="StartupBuzzer" Datatype="TOF_TIME" Version="1.0" Remanence="SetInIDB" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member>
+    <Member Name="grav_226" Datatype="&quot;LightTowerGravController&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="I_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member><Member Name="I_half_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member></Section><Section Name="Output"><Member Name="O_GREEN" Datatype="Bool" /><Member Name="O_ORGANGE" Datatype="Bool" /><Member Name="O_RED" Datatype="Bool" /></Section><Section Name="InOut"><Member Name="IO_GRAV" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member><Member Name="IO_SUPPLY" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="halfFull" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="full" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="empty" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="grav_227" Datatype="&quot;LightTowerGravController&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="I_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member><Member Name="I_half_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member></Section><Section Name="Output"><Member Name="O_GREEN" Datatype="Bool" /><Member Name="O_ORGANGE" Datatype="Bool" /><Member Name="O_RED" Datatype="Bool" /></Section><Section Name="InOut"><Member Name="IO_GRAV" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member><Member Name="IO_SUPPLY" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="halfFull" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="full" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="empty" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="grav_236" Datatype="&quot;LightTowerGravController&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="I_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member><Member Name="I_half_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member></Section><Section Name="Output"><Member Name="O_GREEN" Datatype="Bool" /><Member Name="O_ORGANGE" Datatype="Bool" /><Member Name="O_RED" Datatype="Bool" /></Section><Section Name="InOut"><Member Name="IO_GRAV" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member><Member Name="IO_SUPPLY" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="halfFull" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="full" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="empty" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="grav_237" Datatype="&quot;LightTowerGravController&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="I_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member><Member Name="I_half_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member></Section><Section Name="Output"><Member Name="O_GREEN" Datatype="Bool" /><Member Name="O_ORGANGE" Datatype="Bool" /><Member Name="O_RED" Datatype="Bool" /></Section><Section Name="InOut"><Member Name="IO_GRAV" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member><Member Name="IO_SUPPLY" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="halfFull" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="full" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="empty" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="grav_256" Datatype="&quot;LightTowerGravController&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="I_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member><Member Name="I_half_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member></Section><Section Name="Output"><Member Name="O_GREEN" Datatype="Bool" /><Member Name="O_ORGANGE" Datatype="Bool" /><Member Name="O_RED" Datatype="Bool" /></Section><Section Name="InOut"><Member Name="IO_GRAV" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member><Member Name="IO_SUPPLY" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="halfFull" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="full" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="empty" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="grav_257" Datatype="&quot;LightTowerGravController&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="I_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member><Member Name="I_half_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member></Section><Section Name="Output"><Member Name="O_GREEN" Datatype="Bool" /><Member Name="O_ORGANGE" Datatype="Bool" /><Member Name="O_RED" Datatype="Bool" /></Section><Section Name="InOut"><Member Name="IO_GRAV" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member><Member Name="IO_SUPPLY" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="halfFull" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="full" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="empty" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="grav_266" Datatype="&quot;LightTowerGravController&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="I_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member><Member Name="I_half_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member></Section><Section Name="Output"><Member Name="O_GREEN" Datatype="Bool" /><Member Name="O_ORGANGE" Datatype="Bool" /><Member Name="O_RED" Datatype="Bool" /></Section><Section Name="InOut"><Member Name="IO_GRAV" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member><Member Name="IO_SUPPLY" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="halfFull" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="full" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="empty" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="grav_267" Datatype="&quot;LightTowerGravController&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="I_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member><Member Name="I_half_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member></Section><Section Name="Output"><Member Name="O_GREEN" Datatype="Bool" /><Member Name="O_ORGANGE" Datatype="Bool" /><Member Name="O_RED" Datatype="Bool" /></Section><Section Name="InOut"><Member Name="IO_GRAV" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member><Member Name="IO_SUPPLY" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="halfFull" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="full" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="empty" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="grav_276" Datatype="&quot;LightTowerGravController&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="I_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member><Member Name="I_half_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member></Section><Section Name="Output"><Member Name="O_GREEN" Datatype="Bool" /><Member Name="O_ORGANGE" Datatype="Bool" /><Member Name="O_RED" Datatype="Bool" /></Section><Section Name="InOut"><Member Name="IO_GRAV" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member><Member Name="IO_SUPPLY" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="halfFull" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="full" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="empty" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="grav_277" Datatype="&quot;LightTowerGravController&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="I_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member><Member Name="I_half_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member></Section><Section Name="Output"><Member Name="O_GREEN" Datatype="Bool" /><Member Name="O_ORGANGE" Datatype="Bool" /><Member Name="O_RED" Datatype="Bool" /></Section><Section Name="InOut"><Member Name="IO_GRAV" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member><Member Name="IO_SUPPLY" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="halfFull" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="full" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="empty" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="grav_286" Datatype="&quot;LightTowerGravController&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="I_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member><Member Name="I_half_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member></Section><Section Name="Output"><Member Name="O_GREEN" Datatype="Bool" /><Member Name="O_ORGANGE" Datatype="Bool" /><Member Name="O_RED" Datatype="Bool" /></Section><Section Name="InOut"><Member Name="IO_GRAV" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member><Member Name="IO_SUPPLY" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="halfFull" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="full" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="empty" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="grav_287" Datatype="&quot;LightTowerGravController&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="I_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member><Member Name="I_half_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member></Section><Section Name="Output"><Member Name="O_GREEN" Datatype="Bool" /><Member Name="O_ORGANGE" Datatype="Bool" /><Member Name="O_RED" Datatype="Bool" /></Section><Section Name="InOut"><Member Name="IO_GRAV" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member><Member Name="IO_SUPPLY" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="halfFull" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="full" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="empty" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="grav_519" Datatype="&quot;LightTowerGravController&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="I_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member><Member Name="I_half_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member></Section><Section Name="Output"><Member Name="O_GREEN" Datatype="Bool" /><Member Name="O_ORGANGE" Datatype="Bool" /><Member Name="O_RED" Datatype="Bool" /></Section><Section Name="InOut"><Member Name="IO_GRAV" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member><Member Name="IO_SUPPLY" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="halfFull" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="full" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="empty" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="grav_527" Datatype="&quot;LightTowerGravController&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="I_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member><Member Name="I_half_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member></Section><Section Name="Output"><Member Name="O_GREEN" Datatype="Bool" /><Member Name="O_ORGANGE" Datatype="Bool" /><Member Name="O_RED" Datatype="Bool" /></Section><Section Name="InOut"><Member Name="IO_GRAV" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member><Member Name="IO_SUPPLY" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="halfFull" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="full" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="empty" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="grav_528" Datatype="&quot;LightTowerGravController&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="I_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member><Member Name="I_half_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member></Section><Section Name="Output"><Member Name="O_GREEN" Datatype="Bool" /><Member Name="O_ORGANGE" Datatype="Bool" /><Member Name="O_RED" Datatype="Bool" /></Section><Section Name="InOut"><Member Name="IO_GRAV" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member><Member Name="IO_SUPPLY" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="halfFull" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="full" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="empty" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="grav_534" Datatype="&quot;LightTowerGravController&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="I_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member><Member Name="I_half_full" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member></Section><Section Name="Output"><Member Name="O_GREEN" Datatype="Bool" /><Member Name="O_ORGANGE" Datatype="Bool" /><Member Name="O_RED" Datatype="Bool" /></Section><Section Name="InOut"><Member Name="IO_GRAV" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member><Member Name="IO_SUPPLY" Datatype="&quot;Conveyor_UDT&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="halfFull" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="full" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="empty" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member>
+  </Section>
+  <Section Name="Temp">
+    <Member Name="T_Index" Datatype="Int" />
+    <Member Name="T_StartLED" Datatype="Bool" />
+    <Member Name="T_ResetLED" Datatype="Bool" />
+  </Section>
+  <Section Name="Constant" />
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <MemoryLayout>Standard</MemoryLayout>
+      <Name>LightTowerController</Name>
+      <Number>58</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="4" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <Token Text="REGION" UId="21" />
+  <Blank Num="1" UId="22" />
+  <Text UId="23">GLOBAL LIGHT TOWER SIGNALS</Text>
+  <NewLine Num="1" UId="24" />
+  <Blank Num="4" UId="25" />
+  <NewLine Num="1" UId="26" />
+  <Blank Num="4" UId="27" />
+  <Token Text="REGION" UId="28" />
+  <Blank Num="1" UId="29" />
+  <Text UId="30">GREEN LED</Text>
+  <NewLine Num="1" UId="31" />
+  <Blank Num="8" UId="32" />
+  <NewLine Num="1" UId="33" />
+  <Blank Num="8" UId="34" />
+  <Access Scope="GlobalVariable" UId="35">
+    <Symbol UId="36">
+      <Component Name="Q_LED_GREEN" UId="37" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="38" />
+  <Token Text=":=" UId="39" />
+  <Blank Num="1" UId="40" />
+  <Access Scope="LiteralConstant" UId="41">
+    <Constant UId="42">
+      <ConstantValue UId="44">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="45" />
+  <NewLine Num="1" UId="46" />
+  <Blank Num="8" UId="47" />
+  <NewLine Num="1" UId="48" />
+  <Blank Num="8" UId="49" />
+  <Token Text="IF" UId="50" />
+  <Blank Num="1" UId="51" />
+  <Access Scope="GlobalVariable" UId="52">
+    <Symbol UId="53">
+      <Component Name="ApplicationState_DB" UId="54" />
+      <Token Text="." UId="55" />
+      <Component Name="Appstate" UId="56">
+        <Token Text="[" UId="57" />
+        <Access Scope="LiteralConstant" UId="58">
+          <Constant UId="59">
+            <ConstantValue UId="61">1</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="62" />
+      </Component>
+      <Token Text="." UId="63" />
+      <Component Name="States" UId="64" />
+      <Token Text="." UId="65" />
+      <Component Name="AutoModeActivated" UId="66" />
+      <Token Text="." UId="67" />
+      <Component Name="State" UId="68" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="69" />
+  <Token Text="THEN" UId="70" />
+  <NewLine Num="1" UId="71" />
+  <Blank Num="12" UId="72" />
+  <Access Scope="GlobalVariable" UId="73">
+    <Symbol UId="74">
+      <Component Name="Q_LED_GREEN" UId="75" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="76" />
+  <Token Text=":=" UId="77" />
+  <Blank Num="1" UId="78" />
+  <Access Scope="LiteralConstant" UId="79">
+    <Constant UId="80">
+      <ConstantValue UId="82">1</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="83" />
+  <NewLine Num="1" UId="84" />
+  <Blank Num="8" UId="85" />
+  <Token Text="END_IF" UId="86" />
+  <Token Text=";" UId="87" />
+  <NewLine Num="1" UId="88" />
+  <Blank Num="8" UId="89" />
+  <NewLine Num="1" UId="90" />
+  <Blank Num="4" UId="91" />
+  <Token Text="END_REGION" UId="92" />
+  <NewLine Num="1" UId="93" />
+  <Blank Num="4" UId="94" />
+  <NewLine Num="1" UId="95" />
+  <Blank Num="4" UId="96" />
+  <Token Text="REGION" UId="97" />
+  <Blank Num="1" UId="98" />
+  <Text UId="99">ORANGE LED</Text>
+  <NewLine Num="1" UId="100" />
+  <Blank Num="8" UId="101" />
+  <NewLine Num="1" UId="102" />
+  <Blank Num="8" UId="103" />
+  <Access Scope="GlobalVariable" UId="104">
+    <Symbol UId="105">
+      <Component Name="Q_LED_ORANGE" UId="106" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="107" />
+  <Token Text=":=" UId="108" />
+  <NewLine Num="1" UId="109" />
+  <Blank Num="8" UId="110" />
+  <Access Scope="GlobalVariable" UId="111">
+    <Symbol UId="112">
+      <Component Name="ApplicationState_DB" UId="113" />
+      <Token Text="." UId="114" />
+      <Component Name="GlobalState" UId="115" />
+      <Token Text="." UId="116" />
+      <Component Name="States" UId="117" />
+      <Token Text="." UId="118" />
+      <Component Name="AlarmActive" UId="119" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="120" />
+  <Token Text="AND" UId="121" />
+  <Blank Num="1" UId="122" />
+  <Access Scope="GlobalVariable" UId="123">
+    <Symbol UId="124">
+      <Component Name="Clock_0.5Hz" UId="125" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="126" />
+  <NewLine Num="2" UId="127" />
+  <Blank Num="4" UId="128" />
+  <Token Text="END_REGION" UId="129" />
+  <NewLine Num="1" UId="130" />
+  <Blank Num="4" UId="131" />
+  <NewLine Num="1" UId="132" />
+  <Blank Num="4" UId="133" />
+  <Token Text="REGION" UId="134" />
+  <Blank Num="1" UId="135" />
+  <Text UId="136">RED LED</Text>
+  <NewLine Num="1" UId="137" />
+  <Blank Num="8" UId="138" />
+  <NewLine Num="1" UId="139" />
+  <Blank Num="8" UId="140" />
+  <Access Scope="GlobalVariable" UId="141">
+    <Symbol UId="142">
+      <Component Name="Q_LED_RED" UId="143" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="144" />
+  <Token Text=":=" UId="145" />
+  <NewLine Num="1" UId="146" />
+  <Blank Num="8" UId="147" />
+  <Token Text="NOT" UId="148" />
+  <Blank Num="1" UId="149" />
+  <Access Scope="GlobalVariable" UId="150">
+    <Symbol UId="151">
+      <Component Name="ApplicationState_DB" UId="152" />
+      <Token Text="." UId="153" />
+      <Component Name="Appstate" UId="154">
+        <Token Text="[" UId="155" />
+        <Access Scope="LiteralConstant" UId="156">
+          <Constant UId="157">
+            <ConstantValue UId="159">1</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="160" />
+      </Component>
+      <Token Text="." UId="161" />
+      <Component Name="States" UId="162" />
+      <Token Text="." UId="163" />
+      <Component Name="EmergencyOk" UId="164" />
+      <Token Text="." UId="165" />
+      <Component Name="State" UId="166" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="167" />
+  <NewLine Num="1" UId="168" />
+  <Blank Num="8" UId="169" />
+  <NewLine Num="1" UId="170" />
+  <Blank Num="4" UId="171" />
+  <Token Text="END_REGION" UId="172" />
+  <NewLine Num="1" UId="173" />
+  <Blank Num="4" UId="174" />
+  <NewLine Num="1" UId="175" />
+  <Token Text="END_REGION" UId="176" />
+  <NewLine Num="2" UId="177" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="5" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-BE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="8" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-BE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="B" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

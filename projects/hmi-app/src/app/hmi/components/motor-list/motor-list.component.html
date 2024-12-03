@@ -1,0 +1,25 @@
+<mat-list mat-subheader>
+	<h4>Motors Nord</h4>
+	<mat-list-item
+		matRipple
+		*ngFor="let motor of nordMotors; last as last"
+		(click)="onMotorClick(motor, $event)"
+	>
+		<h4 mat-line>{{ motor.Name | prettyName }}</h4>
+		<p mat-line>{{ motor.Comment }}</p>
+		<mat-divider [inset]="true" *ngIf="!last"></mat-divider>
+	</mat-list-item>
+</mat-list>
+
+<mat-list mat-subheader>
+	<h4>Conveylinx Motors</h4>
+	<mat-list-item
+		matRipple
+		*ngFor="let motor of conveyLinx; last as last"
+		(click)="onMotorClick(motor, $event)"
+	>
+		<h4 mat-line>{{ motor.Name | prettyName }}</h4>
+		<p mat-line>{{ motor.Comment }}</p>
+		<mat-divider [inset]="true" *ngIf="!last"></mat-divider>
+	</mat-list-item>
+</mat-list>

@@ -1,0 +1,295 @@
+{
+	"$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+	"version": 1,
+	"newProjectRoot": "projects",
+	"projects": {
+		"hmi-app": {
+			"projectType": "application",
+			"schematics": {
+				"@schematics/angular:component": {
+					"style": "scss"
+				}
+			},
+			"root": "projects/hmi-app",
+			"sourceRoot": "projects/hmi-app/src",
+			"prefix": "app",
+			"architect": {
+				"build": {
+					"builder": "@angular-devkit/build-angular:browser",
+					"options": {
+						"outputPath": "./dist/www",
+						"index": "projects/hmi-app/src/index.html",
+						"main": "projects/hmi-app/src/main.ts",
+						"polyfills": "projects/hmi-app/src/polyfills.ts",
+						"tsConfig": "projects/hmi-app/tsconfig.app.json",
+						"aot": true,
+						"assets": [
+							"projects/hmi-app/src/favicon.ico",
+							"projects/hmi-app/src/assets"
+						],
+						"stylePreprocessorOptions": {
+							"includePaths": [
+								"projects/hmi-app/src/style-paths",
+								"node_modules/@revotechiscool/revo-tech-core-lib/src/styles",
+								"node_modules/@revotechiscool/revo-tech-hmi-lib/src/styles"
+							]
+						},
+						"styles": [
+							"node_modules/bootstrap/dist/css/bootstrap.min.css",
+							"projects/hmi-app/src/style-paths/styles.scss"
+						],
+						"scripts": [],
+						"webWorkerTsConfig": "projects/hmi-app/tsconfig.worker.json"
+					},
+					"configurations": {
+						"test": {
+							"fileReplacements": [
+								{
+									"replace": "projects/hmi-app/src/environments/environment.ts",
+									"with": "projects/hmi-app/src/environments/environment.test.ts"
+								}
+							]
+						},
+						"test-revo": {
+							"fileReplacements": [
+								{
+									"replace": "projects/hmi-app/src/environments/environment.ts",
+									"with": "projects/hmi-app/src/environments/environment.test.revo.ts"
+								}
+							]
+						},
+						"dev": {
+							"fileReplacements": [
+								{
+									"replace": "projects/hmi-app/src/environments/environment.ts",
+									"with": "projects/hmi-app/src/environments/environment.dev.ts"
+								}
+							]
+						},
+						"production": {
+							"fileReplacements": [
+								{
+									"replace": "projects/hmi-app/src/environments/environment.ts",
+									"with": "projects/hmi-app/src/environments/environment.prod.ts"
+								}
+							],
+							"optimization": true,
+							"outputHashing": "all",
+							"namedChunks": false,
+							"extractLicenses": true,
+							"aot": true,
+							"vendorChunk": true,
+							"buildOptimizer": true,
+							"budgets": [
+								{
+									"type": "initial",
+									"maximumWarning": "2mb",
+									"maximumError": "5mb"
+								},
+								{
+									"type": "anyComponentStyle",
+									"maximumWarning": "6kb",
+									"maximumError": "10kb"
+								}
+							]
+						}
+					}
+				},
+				"serve": {
+					"builder": "@angular-devkit/build-angular:dev-server",
+					"options": {
+						"browserTarget": "hmi-app:build"
+					},
+					"configurations": {
+						"test": {
+							"browserTarget": "hmi-app:build:test"
+						},
+						"test-revo": {
+							"browserTarget": "hmi-app:build:test-revo"
+						},
+						"dev": {
+							"browserTarget": "hmi-app:build:dev"
+						},
+						"production": {
+							"browserTarget": "hmi-app:build:production"
+						}
+					}
+				},
+				"extract-i18n": {
+					"builder": "@angular-devkit/build-angular:extract-i18n",
+					"options": {
+						"browserTarget": "hmi-app:build"
+					}
+				},
+				"test": {
+					"builder": "@angular-devkit/build-angular:karma",
+					"options": {
+						"main": "projects/hmi-app/src/test.ts",
+						"polyfills": "projects/hmi-app/src/polyfills.ts",
+						"tsConfig": "projects/hmi-app/tsconfig.spec.json",
+						"karmaConfig": "projects/hmi-app/karma.conf.js",
+						"assets": [
+							"projects/hmi-app/src/favicon.ico",
+							"projects/hmi-app/src/assets"
+						],
+						"styles": ["projects/hmi-app/src/styles.scss"],
+						"scripts": []
+					}
+				},
+				"lint": {
+					"builder": "@angular-devkit/build-angular:tslint",
+					"options": {
+						"tsConfig": [
+							"projects/hmi-app/tsconfig.app.json",
+							"projects/hmi-app/tsconfig.spec.json",
+							"projects/hmi-app/e2e/tsconfig.json",
+							"projects/hmi-app/tsconfig.worker.json"
+						],
+						"exclude": ["**/node_modules/**"]
+					}
+				},
+				"e2e": {
+					"builder": "@angular-devkit/build-angular:protractor",
+					"options": {
+						"protractorConfig": "projects/hmi-app/e2e/protractor.conf.js",
+						"devServerTarget": "hmi-app:serve"
+					},
+					"configurations": {
+						"production": {
+							"devServerTarget": "hmi-app:serve:production"
+						}
+					}
+				}
+			}
+		},
+		"playground": {
+			"projectType": "application",
+			"schematics": {
+				"@schematics/angular:component": {
+					"style": "scss"
+				}
+			},
+			"root": "projects/playground",
+			"sourceRoot": "projects/playground/src",
+			"prefix": "app",
+			"architect": {
+				"build": {
+					"builder": "@angular-devkit/build-angular:browser",
+					"options": {
+						"outputPath": "dist/playground",
+						"index": "projects/playground/src/index.html",
+						"main": "projects/playground/src/main.ts",
+						"polyfills": "projects/playground/src/polyfills.ts",
+						"tsConfig": "projects/playground/tsconfig.app.json",
+						"aot": true,
+						"assets": [
+							"projects/playground/src/favicon.ico",
+							"projects/playground/src/assets"
+						],
+						"stylePreprocessorOptions": {
+							"includePaths": [
+								"dist/revo-tech-core-lib/src/styles",
+								"dist/revo-tech-hmi-lib/src/styles"
+							]
+						},
+						"styles": [
+							"./node_modules/@angular/material/prebuilt-themes/purple-green.css",
+							"projects/playground/src/styles.scss"
+						],
+						"scripts": []
+					},
+					"configurations": {
+						"production": {
+							"fileReplacements": [
+								{
+									"replace": "projects/playground/src/environments/environment.ts",
+									"with": "projects/playground/src/environments/environment.prod.ts"
+								}
+							],
+							"optimization": true,
+							"outputHashing": "all",
+							"namedChunks": false,
+							"extractLicenses": true,
+							"vendorChunk": false,
+							"buildOptimizer": true,
+							"budgets": [
+								{
+									"type": "initial",
+									"maximumWarning": "2mb",
+									"maximumError": "5mb"
+								},
+								{
+									"type": "anyComponentStyle",
+									"maximumWarning": "6kb",
+									"maximumError": "10kb"
+								}
+							]
+						}
+					}
+				},
+				"serve": {
+					"builder": "@angular-devkit/build-angular:dev-server",
+					"options": {
+						"browserTarget": "playground:build"
+					},
+					"configurations": {
+						"production": {
+							"browserTarget": "playground:build:production"
+						}
+					}
+				},
+				"extract-i18n": {
+					"builder": "@angular-devkit/build-angular:extract-i18n",
+					"options": {
+						"browserTarget": "playground:build"
+					}
+				},
+				"test": {
+					"builder": "@angular-devkit/build-angular:karma",
+					"options": {
+						"main": "projects/playground/src/test.ts",
+						"polyfills": "projects/playground/src/polyfills.ts",
+						"tsConfig": "projects/playground/tsconfig.spec.json",
+						"karmaConfig": "projects/playground/karma.conf.js",
+						"assets": [
+							"projects/playground/src/favicon.ico",
+							"projects/playground/src/assets"
+						],
+						"styles": [
+							"./node_modules/@angular/material/prebuilt-themes/purple-green.css",
+							"projects/playground/src/styles.scss"
+						],
+						"scripts": []
+					}
+				},
+				"lint": {
+					"builder": "@angular-devkit/build-angular:tslint",
+					"options": {
+						"tsConfig": [
+							"projects/playground/tsconfig.app.json",
+							"projects/playground/tsconfig.spec.json",
+							"projects/playground/e2e/tsconfig.json"
+						],
+						"exclude": ["**/node_modules/**"]
+					}
+				},
+				"e2e": {
+					"builder": "@angular-devkit/build-angular:protractor",
+					"options": {
+						"protractorConfig": "projects/playground/e2e/protractor.conf.js",
+						"devServerTarget": "playground:serve"
+					},
+					"configurations": {
+						"production": {
+							"devServerTarget": "playground:serve:production"
+						}
+					}
+				}
+			}
+		}
+	},
+	"defaultProject": "playground",
+	"cli": {
+		"analytics": "4f1aa42c-4f5a-4cf8-9ce0-4f468232aef1"
+	}
+}

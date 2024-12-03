@@ -1,0 +1,41 @@
+<h5 class="details-title">{{ 'Serves details' | translate }}</h5>
+
+<h5 class="details-title">{{ 'PLC Connections' | translate }}</h5>
+<div class="server-wrapper">
+	<div
+		*ngFor="let equipment of plcConnections"
+		class="control-wrapper server-detail"
+	>
+		<hmi-connection-status-detail
+			[settings]="equipment"
+		></hmi-connection-status-detail>
+	</div>
+</div>
+
+<br />
+
+<h5 class="details-title">{{ 'Client Connections' | translate }}</h5>
+<div class="server-wrapper">
+	<div
+		*ngFor="let equipment of clientConnections"
+		class="control-wrapper server-detail"
+	>
+		<hmi-connection-status-detail
+			[settings]="equipment"
+		></hmi-connection-status-detail>
+	</div>
+</div>
+
+<br />
+
+<h5 class="details-title">{{ 'Data collector Connections' | translate }}</h5>
+<div class="server-wrapper">
+	<div
+		*ngFor="let equipment of dataCollectorConnections"
+		class="control-wrapper server-detail"
+	>
+		<hmi-connection-status-detail
+			[settings]="equipment"
+		></hmi-connection-status-detail>
+	</div>
+</div>

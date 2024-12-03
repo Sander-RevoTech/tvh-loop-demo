@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V16" />
+  <DocumentInfo>
+    <Created>2024-12-03T15:41:44.9072209Z</Created>
+    <ExportSetting>WithReadOnly</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V16 Update 2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <CreationDate ReadOnly="true">2021-07-13T07:41:36.2278727Z</CreationDate>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v4">
+  <Section Name="None">
+    <Member Name="Convey_stop_status" Datatype="Struct"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Status of ConveyStop</MultiLanguageText></Comment><Member Name="Reserved0" Datatype="Bool" /><Member Name="Reserved1" Datatype="Bool" /><Member Name="StopActiveCommandPLC" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">Stop active due to stop command from the PLC</MultiLanguageText></Comment></Member><Member Name="Reserved3" Datatype="Bool" /><Member Name="Reserved4" Datatype="Bool" /><Member Name="Reserved5" Datatype="Bool" /><Member Name="Reserved6" Datatype="Bool" /><Member Name="Reserved7" Datatype="Bool" /><Member Name="Reserved8" Datatype="Bool" /><Member Name="Reserved9" Datatype="Bool" /><Member Name="Reserved10" Datatype="Bool" /><Member Name="Reserved11" Datatype="Bool" /><Member Name="Reserved12" Datatype="Bool" /><Member Name="StopActiveOtherModule" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">Stop condition is active on a module in the ConveyStop group</MultiLanguageText></Comment></Member><Member Name="StopActiveLostConn" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">Stop is active due to a loss of communication connection</MultiLanguageText></Comment></Member><Member Name="StopActiveLostPLC" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">Stop active due to a loss of connection with the PLC</MultiLanguageText></Comment></Member></Member>
+    <Member Name="AllSensors" Datatype="Struct"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">All sensor inputs</MultiLanguageText></Comment><Member Name="Reserved[0]" Datatype="Bool" /><Member Name="Reserved[1]" Datatype="Bool" /><Member Name="Reserved[2]" Datatype="Bool" /><Member Name="Reserved[3]" Datatype="Bool" /><Member Name="Reserved[4]" Datatype="Bool" /><Member Name="Reserved[5]" Datatype="Bool" /><Member Name="Reserved[6]" Datatype="Bool" /><Member Name="Heartbeat" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">This bit toggles every 2 seconds .</MultiLanguageText></Comment></Member><Member Name="LeftPin2" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">Left sensor port state (Pin2)</MultiLanguageText></Comment></Member><Member Name="Reserved[9]" Datatype="Bool" /><Member Name="RightPin2" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">Right sensor port state (Pin2)</MultiLanguageText></Comment></Member><Member Name="Reserved[11]" Datatype="Bool" /><Member Name="LeftPin4" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">Left sensor port state (Pin4)</MultiLanguageText></Comment></Member><Member Name="Reserved[13]" Datatype="Bool" /><Member Name="RightPin4" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">Right sensor port state (Pin4)</MultiLanguageText></Comment></Member><Member Name="Reserved[15]" Datatype="Bool" /></Member>
+    <Member Name="SensorDetect" Datatype="Struct"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Sensor detection</MultiLanguageText></Comment><Member Name="Reserved" Datatype="Byte" /><Member Name="RightSensorDetect" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">If this bit is TRUE a sensor has been detected on the Right sensor port</MultiLanguageText></Comment></Member><Member Name="LeftSensorDetect" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">If this bit is TRUE a sensor has been detected on the Left sensor port</MultiLanguageText></Comment></Member><Member Name="Reserved[10]" Datatype="Bool" /><Member Name="Reserved[11]" Datatype="Bool" /><Member Name="Reserved[12]" Datatype="Bool" /><Member Name="Reserved[13]" Datatype="Bool" /><Member Name="Reserved[14]" Datatype="Bool" /><Member Name="Reserved[15]" Datatype="Bool" /></Member>
+    <Member Name="Voltage" Datatype="Int"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The Voltage applied to the module in milivolts</MultiLanguageText></Comment></Member>
+    <Member Name="LeftCurrent" Datatype="Int"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The current consumed by the Left MDR in miliamperes</MultiLanguageText></Comment></Member>
+    <Member Name="LeftFreq" Datatype="Int"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">MDR frequency in Hz  as measured by the Hall effect sensors</MultiLanguageText></Comment></Member>
+    <Member Name="LeftCalcTemp" Datatype="Byte"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The temperature of the Left MDR in  degrees Celsius</MultiLanguageText></Comment></Member>
+    <Member Name="ModuleTemp" Datatype="Byte"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The temperature of the module in degrees Celsius</MultiLanguageText></Comment></Member>
+    <Member Name="LeftMDRDiagnostic" Datatype="Struct"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Left MDR diagnostics .</MultiLanguageText></Comment><Member Name="Overheat" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR 's temperature has exceeded 105 degrees Celsius</MultiLanguageText></Comment></Member><Member Name="MaxTorque" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR is running with maximum torque output</MultiLanguageText></Comment></Member><Member Name="ShortCircuit" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">There is a short circuit on the MDR</MultiLanguageText></Comment></Member><Member Name="MDRNotConnected" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR is not connected</MultiLanguageText></Comment></Member><Member Name="Overload" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR has been overloaded - this means its speed is less than 10% of the selected speed</MultiLanguageText></Comment></Member><Member Name="Stalled" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR has stalled</MultiLanguageText></Comment></Member><Member Name="MDRBadHall" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR has a Hall Efect Sensor error</MultiLanguageText></Comment></Member><Member Name="MDRNotUsed" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR is not used</MultiLanguageText></Comment></Member><Member Name="MDRStatus1" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">This field and the next are used together by the module to indicate the status of the MDR. Please refer to documentation</MultiLanguageText></Comment></Member><Member Name="MDRStatus2" Datatype="Bool" /><Member Name="MDRinDOmode" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR is in digital Output mode .</MultiLanguageText></Comment></Member><Member Name="Reserved1" Datatype="Bool" /><Member Name="Reserved2" Datatype="Bool" /><Member Name="Reserved3" Datatype="Bool" /><Member Name="OverVoltage" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The sum of the module power supply voltage + the MDR-generated voltage has exceeded 30 volts</MultiLanguageText></Comment></Member><Member Name="LowVoltage" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">Module power supply is less than 18 Volts</MultiLanguageText></Comment></Member></Member>
+    <Member Name="RightCurrent" Datatype="Int"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The current consumed by the Right motor in miliamperes</MultiLanguageText></Comment></Member>
+    <Member Name="RightFreq" Datatype="Int"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">MDR frequency in Hz  as measured by the Hall effect sensors</MultiLanguageText></Comment></Member>
+    <Member Name="RightCalcTemp" Datatype="Byte"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The temperature of the Right MDR in degrees Celsius</MultiLanguageText></Comment></Member>
+    <Member Name="ModuleTemp_1" Datatype="Byte"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The temperature of the module in degrees Celsius</MultiLanguageText></Comment></Member>
+    <Member Name="RightMDRDiagnostic" Datatype="Struct"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Right MDR diagnostics .</MultiLanguageText></Comment><Member Name="Overheat" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR 's temperature has exceeded 105 degrees Celsius</MultiLanguageText></Comment></Member><Member Name="MaxTorque" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR is running with maximum torque output</MultiLanguageText></Comment></Member><Member Name="ShortCircuit" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">There is a short circuit on the MDR</MultiLanguageText></Comment></Member><Member Name="MDRNotConnected" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR is not connected</MultiLanguageText></Comment></Member><Member Name="Overload" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR has been overloaded - this means its speed is less than 10% of the selected speed</MultiLanguageText></Comment></Member><Member Name="Stalled" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR has stalled</MultiLanguageText></Comment></Member><Member Name="MDRBadHall" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR has a Hall Efect Sensor error</MultiLanguageText></Comment></Member><Member Name="MDRNotUsed" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR is not used</MultiLanguageText></Comment></Member><Member Name="MDRStatus1" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">This field and the next are used together by the module to indicate the status of the MDR. Please refer to documentation</MultiLanguageText></Comment></Member><Member Name="MDRStatus2" Datatype="Bool" /><Member Name="MDRinDOmode" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR is in digital Output mode .</MultiLanguageText></Comment></Member><Member Name="Reserved1" Datatype="Bool" /><Member Name="Reserved2" Datatype="Bool" /><Member Name="Reserved3" Datatype="Bool" /><Member Name="OverVoltage" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The sum of the module power supply voltage + the MDR-generated voltage has exceeded 30 volts</MultiLanguageText></Comment></Member><Member Name="LowVoltage" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">Module power supply is less than 18 Volts</MultiLanguageText></Comment></Member></Member>
+    <Member Name="LeftMDR_DIOstatus" Datatype="Struct">
+      <Comment>
+        <MultiLanguageText Lang="en-US">This is the status when the MDR is used as a digital IO</MultiLanguageText>
+      </Comment>
+      <Member Name="Reserved0" Datatype="Bool" />
+      <Member Name="Reserved1" Datatype="Bool" />
+      <Member Name="Reserved2" Datatype="Bool" />
+      <Member Name="Reserved3" Datatype="Bool" />
+      <Member Name="ShortCircuit" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">When this bit is '1' , there is a short circuit between +24V and Pin2/3/4</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Reserved5" Datatype="Bool" />
+      <Member Name="Reserved6" Datatype="Bool" />
+      <Member Name="Reserved7" Datatype="Bool" />
+      <Member Name="Reserved" Datatype="Byte" />
+    </Member>
+    <Member Name="RightMDR_DIOstatus" Datatype="Struct">
+      <Comment>
+        <MultiLanguageText Lang="en-US">This is the status when the MDR is used as a digital IO</MultiLanguageText>
+      </Comment>
+      <Member Name="Reserved0" Datatype="Bool" />
+      <Member Name="Reserved1" Datatype="Bool" />
+      <Member Name="Reserved2" Datatype="Bool" />
+      <Member Name="Reserved3" Datatype="Bool" />
+      <Member Name="ShortCircuit" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">When this bit is '1' , there is a short circuit between +24V and Pin2/3/4</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Reserved5" Datatype="Bool" />
+      <Member Name="Reserved6" Datatype="Bool" />
+      <Member Name="Reserved7" Datatype="Bool" />
+      <Member Name="Reserved" Datatype="Byte" />
+    </Member>
+    <Member Name="UpstreamModuleStatus" Datatype="Word"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The ZPA status from the Upstream ConveyLinx module</MultiLanguageText></Comment></Member>
+    <Member Name="DownstreamModuleStatus" Datatype="Word"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The ZPA status from the Downstream ConveyLinx module</MultiLanguageText></Comment></Member>
+    <Member Name="TrackingFromUpstream" Datatype="DWord"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Tracking data from the Upstream ConveyLinx module</MultiLanguageText></Comment></Member>
+    <Member Name="Reserved" Datatype="Word"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="DistanceLeft" Datatype="Int"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Distance traveled by the Left MDR in 'mm'. For all Servo commands and statuses , please refer to documentation</MultiLanguageText></Comment></Member>
+    <Member Name="DistanceRight" Datatype="Int"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Distance traveled by the Right MDR in 'mm'</MultiLanguageText></Comment></Member>
+    <Member Name="ServoStatusLeft" Datatype="Struct"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Status Word for Servo commands for Left MDR</MultiLanguageText></Comment><Member Name="Reserve_6" Datatype="Byte" /><Member Name="LastServoCommandExecuted" Datatype="Bool" /><Member Name="ResetPulseCount_Echo" Datatype="Bool" /><Member Name="RunCommand_Echo" Datatype="Bool" /><Member Name="Reserve_1" Datatype="Bool" /><Member Name="Reserve_2" Datatype="Bool" /><Member Name="Reserve_3" Datatype="Bool" /><Member Name="Reserve_4" Datatype="Bool" /><Member Name="Reserve_5" Datatype="Bool" /></Member>
+    <Member Name="ServoStatusRight" Datatype="Struct"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Status Word for Servo commands for Right MDR</MultiLanguageText></Comment><Member Name="Reserve_6" Datatype="Byte" /><Member Name="LastServoCommandExecuted" Datatype="Bool" /><Member Name="ResetPulseCount_Echo" Datatype="Bool" /><Member Name="RunCommand_Echo" Datatype="Bool" /><Member Name="Reserve_1" Datatype="Bool" /><Member Name="Reserve_2" Datatype="Bool" /><Member Name="Reserve_3" Datatype="Bool" /><Member Name="Reserve_4" Datatype="Bool" /><Member Name="Reserve_5" Datatype="Bool" /></Member>
+    <Member Name="LeftMDRRealSpeed" Datatype="Word"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The Real Speed of the MDR in m/sec*1000 . Also two status bits are included . Please refer to documentation</MultiLanguageText></Comment></Member>
+    <Member Name="RightMDRRealSpeed" Datatype="Word"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The Real Speed of the MDR in m/sec*1000 . Also two status bits are included . Please refer to documentation</MultiLanguageText></Comment></Member>
+    <Member Name="Future" Datatype="Array[25..31] of Word"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+  </Section>
+</Sections></Interface>
+      <InterfaceModifiedDate ReadOnly="true">2019-12-05T06:59:16.4729649Z</InterfaceModifiedDate>
+      <IsConsistent ReadOnly="true">true</IsConsistent>
+      <LibraryConformanceStatus ReadOnly="true">The object is library-conformant.</LibraryConformanceStatus>
+      <ModifiedDate ReadOnly="true">2021-03-27T07:36:50.6243175Z</ModifiedDate>
+      <Name>CLXAiPLC_IN_UDT</Name>
+      <Number ReadOnly="true">10</Number>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

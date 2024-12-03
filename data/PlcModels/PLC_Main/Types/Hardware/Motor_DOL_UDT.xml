@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V16" />
+  <DocumentInfo>
+    <Created>2024-12-03T15:41:44.8646903Z</Created>
+    <ExportSetting>WithReadOnly</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V16 Update 2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <CreationDate ReadOnly="true">2021-07-13T07:41:36.2278727Z</CreationDate>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v4">
+  <Section Name="None">
+    <Member Name="Cmd" Datatype="Struct">
+      <Comment>
+        <MultiLanguageText Lang="en-US">MotorCommands</MultiLanguageText>
+      </Comment>
+      <Member Name="Reset" Datatype="Bool" />
+      <Member Name="Interlock" Datatype="Bool" />
+      <Member Name="OnAuto" Datatype="Bool" />
+      <Member Name="OnManual" Datatype="Bool" />
+      <Member Name="DirectionAuto" Datatype="Bool" />
+      <Member Name="DirectionManual" Datatype="Bool" />
+    </Member>
+    <Member Name="Alarms" Datatype="Struct">
+      <Member Name="NotOnTImedOut" Datatype="&quot;HmiAlarm&quot;">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Motor not on in time</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="NotOffTimedOut" Datatype="&quot;HmiAlarm&quot;">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Motor not off in time</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="ThermalProtection" Datatype="&quot;HmiAlarm&quot;">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Motor thermal protection not ok</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="AlarmStatus" Datatype="Word">
+        <Comment>
+          <MultiLanguageText Lang="en-US">lsb 1 not on | lsb 2 not off | lsb 3 error from soft starter</MultiLanguageText>
+        </Comment>
+      </Member>
+    </Member>
+    <Member Name="Status" Datatype="Struct">
+      <Member Name="Interlocked" Datatype="Bool" />
+      <Member Name="ManualModeActive" Datatype="Bool" />
+      <Member Name="ManualCommandsDisabled" Datatype="Bool" />
+      <Member Name="Running" Datatype="Bool" />
+      <Member Name="Status" Datatype="Word">
+        <Comment>
+          <MultiLanguageText Lang="en-US">lsb 0 interlocked | lsb 1 running | lbs2 manual mode active</MultiLanguageText>
+        </Comment>
+      </Member>
+    </Member>
+    <Member Name="Name" Datatype="String[20]" />
+    <Member Name="Zone" Datatype="Int">
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="Info" Datatype="&quot;MotorInfo&quot;"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="CommonStatus" Datatype="Int" />
+  </Section>
+</Sections></Interface>
+      <InterfaceModifiedDate ReadOnly="true">2020-12-13T14:34:57.5526505Z</InterfaceModifiedDate>
+      <IsConsistent ReadOnly="true">true</IsConsistent>
+      <LibraryConformanceStatus ReadOnly="true">The object is library-conformant.</LibraryConformanceStatus>
+      <ModifiedDate ReadOnly="true">2021-03-27T07:36:47.7019474Z</ModifiedDate>
+      <Name>Motor_DOL_UDT</Name>
+      <Number ReadOnly="true">18</Number>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

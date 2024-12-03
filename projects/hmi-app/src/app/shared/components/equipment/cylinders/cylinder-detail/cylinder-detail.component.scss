@@ -1,0 +1,14 @@
+:host {
+	height: 100%;
+}
+.boxes {
+	display: flex;
+	flex-direction: column;
+	> div {
+		@media (max-width: 576px) {
+			flex-direction: column;
+		}
+		flex: 1;
+		display: flex;
+	}
+}

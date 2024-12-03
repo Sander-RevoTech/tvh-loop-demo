@@ -1,0 +1,277 @@
+:host {
+}
+
+.running-status {
+	fill: green;
+}
+
+.iddle-status {
+	fill: black;
+}
+
+.motor {
+	width: 50px;
+	z-index: 4;
+	overflow: visible;
+}
+
+.name {
+	font-size: 10px;
+	font-weight: bold;
+	white-space: pre-wrap;
+	padding: 0;
+	margin: 0;
+	z-index: 5;
+	color: #484848;
+	font-weight: 500;
+}
+
+// motors per rotation
+
+.motor-rot-0 {
+	position: absolute;
+	bottom: 0;
+	width: 200px;
+	top: 160px;
+	div {
+		position: absolute;
+		bottom: 18px;
+		left: 5px;
+		bottom: 5px;
+		width: 135px;
+		height: 36px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+	svg {
+		position: absolute;
+		right: 5px;
+		bottom: 10px;
+	}
+}
+
+.motor-rot-90 {
+	position: absolute;
+	z-index: 3;
+	bottom: 0;
+	top: 0;
+	right: 0px;
+	left: 160px;
+	bottom: 0;
+	div {
+		-webkit-writing-mode: vertical-lr;
+		writing-mode: vertical-lr;
+		-webkit-text-orientation: upright;
+		text-orientation: upright;
+		width: 100%;
+		top: 7px;
+		position: absolute;
+		bottom: 53px;
+		display: flex;
+		align-items: end;
+	}
+
+	svg {
+		transform: rotateY(180deg) rotateZ(90deg);
+		position: absolute;
+		left: -12px;
+		bottom: 11px;
+	}
+}
+
+.motor-rot-180 {
+	position: absolute;
+	top: 157px;
+	left: 0;
+	z-index: 3;
+	width: 200px;
+	left: 0;
+	div {
+		position: absolute;
+		right: 66px;
+		bottom: -25px;
+		position: absolute;
+		right: 0;
+		bottom: -38px;
+		width: 135px;
+		height: 36px;
+		display: flex;
+		align-items: center;
+	}
+	svg {
+		transform: rotateY(180deg);
+		position: absolute;
+		left: 5px;
+		bottom: -33px;
+	}
+}
+
+.motor-rot-270 {
+	position: absolute;
+	position: absolute;
+	z-index: 3;
+	bottom: 0;
+	top: 0;
+	right: 0px;
+	left: 160px;
+
+	div {
+		text-orientation: upright;
+		width: 100%;
+		position: absolute;
+		bottom: 11px;
+		top: 64px;
+		left: 3px;
+		-webkit-writing-mode: vertical-lr;
+		writing-mode: vertical-lr;
+	}
+	svg {
+		transform: rotate(-90deg);
+		position: absolute;
+		left: -12px;
+		top: 18px;
+	}
+}
+
+.motor-rot-0-corner {
+	div {
+		position: absolute;
+		right: 0;
+		bottom: 79px;
+		max-width: 68px;
+		height: 68px;
+		display: flex;
+		align-items: flex-end;
+		text-align: end;
+	}
+	svg {
+		transform: rotate(90deg) rotateX(190deg);
+		z-index: -1;
+		position: absolute;
+		right: 4px;
+		bottom: 9px;
+	}
+}
+
+.motor-rot-90-corner {
+	div {
+		position: absolute;
+		bottom: 14px;
+		left: 59px;
+		height: 41px;
+		position: absolute;
+		width: 102px;
+		height: 29px;
+		display: flex;
+		text-align: left;
+		align-items: center;
+	}
+	svg {
+		position: absolute;
+		bottom: 0px;
+		transform: rotateY(180deg) translate(80px, -12px);
+		left: 80px;
+		z-index: -1;
+	}
+}
+
+.motor-rot-180-corner {
+	div {
+		position: absolute;
+		bottom: 73px;
+		max-width: 54px;
+		height: 68px;
+		text-align: left;
+	}
+	svg {
+		position: absolute;
+		left: 3px;
+		transform: rotateX(190deg) rotate(90deg);
+		z-index: -1;
+		top: 8px;
+	}
+}
+
+.motor-rot-270-corner {
+	div {
+		position: absolute;
+		right: 59px;
+		width: 102px;
+		height: 26px;
+		top: 14px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+	svg {
+		transform: rotateX(190deg);
+		position: absolute;
+		z-index: -1;
+		right: 0;
+		top: 12px;
+	}
+}
+
+// names per rotations
+
+.name-rot-90 {
+	top: 5px;
+	right: 50px;
+	height: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.name-rot-270 {
+	left: -5px;
+	top: -60px;
+}
+
+.motor-rot-0-default {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	div {
+		max-width: 100px;
+	}
+}
+
+.motor-rot-90-default {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: flex-end;
+	height: 60px;
+	svg {
+		transform: rotate(90deg);
+	}
+}
+
+.motor-rot-180-default {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	div {
+		max-width: 100px;
+	}
+	svg {
+		transform: rotateY(180deg);
+	}
+}
+
+.motor-rot-270-default {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: flex-end;
+	height: 60px;
+	svg {
+		transform: rotate(270deg);
+	}
+}

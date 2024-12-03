@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V16" />
+  <DocumentInfo>
+    <Created>2024-12-03T15:41:43.6424382Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V16 Update 2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v4">
+  <Section Name="Input">
+    <Member Name="I_BTTN_STATUS_OK" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="I_AlarmInfoBttnPressed" Datatype="String[100]" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="I_EMG_ACTIVATED" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="I_EmgName" Datatype="String[100]" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="I_UseBttnPressedALarm" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList><StartValue>true</StartValue></Member>
+    <Member Name="I_UseEmgNotActiveAlarm" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList><StartValue>true</StartValue></Member>
+  </Section>
+  <Section Name="Output">
+    <Member Name="O_AlarmActive" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+  </Section>
+  <Section Name="InOut">
+    <Member Name="IO_STATUS" Datatype="&quot;EMG_Status_UDT&quot;" Accessibility="Public">
+      <Sections>
+        <Section Name="None">
+          <Member Name="emgNok" Datatype="Bool" />
+          <Member Name="activated" Datatype="Bool" />
+          <Member Name="waitingForReset" Datatype="Bool" />
+        </Section>
+      </Sections>
+    </Member>
+  </Section>
+  <Section Name="Static">
+    <Member Name="alarmBTNNPRessed" Datatype="Program_Alarm" Version="1.0" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="Base"><Sections Datatype="ALARM_BASE" Version="1.0"><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="Alarm_ID" Datatype="Event_ID" Version="1.0"><Sections><Section Name="None"><Member Name="ALID" Datatype="Word" /><Member Name="ARID" Datatype="Word" /></Section></Sections></Member><Member Name="HANDLE" Datatype="DWord" /></Section></Sections></Section><Section Name="Input"><Member Name="SIG" Datatype="Bool" /><Member Name="TIMESTAMP" Datatype="LDT" /><Member Name="SD_1" Datatype="Variant" /><Member Name="SD_2" Datatype="Variant" /><Member Name="SD_3" Datatype="Variant" /><Member Name="SD_4" Datatype="Variant" /><Member Name="SD_5" Datatype="Variant" /><Member Name="SD_6" Datatype="Variant" /><Member Name="SD_7" Datatype="Variant" /><Member Name="SD_8" Datatype="Variant" /><Member Name="SD_9" Datatype="Variant" /><Member Name="SD_10" Datatype="Variant" /></Section><Section Name="Output"><Member Name="Error" Datatype="Bool" /><Member Name="Status" Datatype="Word" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="SD_0" Datatype="AssocValue_0" Version="1.0"><Sections><Section Name="None"><Member Name="Syntax" Datatype="UInt" /><Member Name="Aap" Datatype="Byte" /></Section></Sections></Member><Member Name="SIG_Edge_History" Datatype="Bool" /><Member Name="INIT_FB_State" Datatype="DWord" /></Section></Sections></Member>
+    <Member Name="alarmEmgNotActive" Datatype="Program_Alarm" Version="1.0" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="Base"><Sections Datatype="ALARM_BASE" Version="1.0"><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="Alarm_ID" Datatype="Event_ID" Version="1.0"><Sections><Section Name="None"><Member Name="ALID" Datatype="Word" /><Member Name="ARID" Datatype="Word" /></Section></Sections></Member><Member Name="HANDLE" Datatype="DWord" /></Section></Sections></Section><Section Name="Input"><Member Name="SIG" Datatype="Bool" /><Member Name="TIMESTAMP" Datatype="LDT" /><Member Name="SD_1" Datatype="Variant" /><Member Name="SD_2" Datatype="Variant" /><Member Name="SD_3" Datatype="Variant" /><Member Name="SD_4" Datatype="Variant" /><Member Name="SD_5" Datatype="Variant" /><Member Name="SD_6" Datatype="Variant" /><Member Name="SD_7" Datatype="Variant" /><Member Name="SD_8" Datatype="Variant" /><Member Name="SD_9" Datatype="Variant" /><Member Name="SD_10" Datatype="Variant" /></Section><Section Name="Output"><Member Name="Error" Datatype="Bool" /><Member Name="Status" Datatype="Word" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="SD_0" Datatype="AssocValue_0" Version="1.0"><Sections><Section Name="None"><Member Name="Syntax" Datatype="UInt" /><Member Name="Aap" Datatype="Byte" /></Section></Sections></Member><Member Name="SIG_Edge_History" Datatype="Bool" /><Member Name="INIT_FB_State" Datatype="DWord" /></Section></Sections></Member>
+  </Section>
+  <Section Name="Temp">
+    <Member Name="T_ButtonActive" Datatype="Bool" />
+    <Member Name="T_EmgActive" Datatype="Bool" />
+  </Section>
+  <Section Name="Constant" />
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>EMG_STATUS_FB</Name>
+      <Number>10</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="4" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <Token Text="REGION" UId="21" />
+  <Blank Num="1" UId="22" />
+  <Text UId="23">Check button is pressed</Text>
+  <NewLine Num="1" UId="24" />
+  <Blank Num="4" UId="25" />
+  <NewLine Num="1" UId="26" />
+  <Blank Num="4" UId="27" />
+  <Access Scope="LocalVariable" UId="28">
+    <Symbol UId="29">
+      <Component Name="T_ButtonActive" UId="30" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="31" />
+  <Token Text=":=" UId="32" />
+  <Blank Num="1" UId="33" />
+  <Token Text="NOT" UId="34" />
+  <Blank Num="1" UId="35" />
+  <Access Scope="LocalVariable" UId="36">
+    <Symbol UId="37">
+      <Component Name="I_BTTN_STATUS_OK" UId="38" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="39" />
+  <Token Text="AND" UId="40" />
+  <Blank Num="1" UId="41" />
+  <Access Scope="LocalVariable" UId="42">
+    <Symbol UId="43">
+      <Component Name="I_UseBttnPressedALarm" UId="44" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="45" />
+  <NewLine Num="1" UId="46" />
+  <Blank Num="4" UId="47" />
+  <NewLine Num="1" UId="48" />
+  <Blank Num="4" UId="49" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="50">
+    <Text UId="51"> #alarmBTNNPRessed(SIG:=#T_ButtonActive,</Text>
+  </LineComment>
+  <NewLine Num="1" UId="52" />
+  <Blank Num="4" UId="53" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="54">
+    <Text UId="55">                   SD_2 := #I_AlarmInfoBttnPressed, SD_3 := #I_EmgName);</Text>
+  </LineComment>
+  <NewLine Num="1" UId="56" />
+  <Blank Num="4" UId="57" />
+  <NewLine Num="1" UId="58" />
+  <Token Text="END_REGION" UId="59" />
+  <NewLine Num="2" UId="60" />
+  <Token Text="REGION" UId="61" />
+  <Blank Num="1" UId="62" />
+  <Text UId="63">Check button pressed and EMG nok</Text>
+  <NewLine Num="1" UId="64" />
+  <Blank Num="4" UId="65" />
+  <NewLine Num="1" UId="66" />
+  <Blank Num="4" UId="67" />
+  <Access Scope="LocalVariable" UId="68">
+    <Symbol UId="69">
+      <Component Name="T_EmgActive" UId="70" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="71" />
+  <Token Text=":=" UId="72" />
+  <Blank Num="1" UId="73" />
+  <Access Scope="LocalVariable" UId="74">
+    <Symbol UId="75">
+      <Component Name="I_BTTN_STATUS_OK" UId="76" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="77" />
+  <Token Text="AND" UId="78" />
+  <Blank Num="1" UId="79" />
+  <Token Text="NOT" UId="80" />
+  <Blank Num="1" UId="81" />
+  <Access Scope="LocalVariable" UId="82">
+    <Symbol UId="83">
+      <Component Name="I_EMG_ACTIVATED" UId="84" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="85" />
+  <Token Text="AND" UId="86" />
+  <Blank Num="1" UId="87" />
+  <Access Scope="LocalVariable" UId="88">
+    <Symbol UId="89">
+      <Component Name="I_UseEmgNotActiveAlarm" UId="90" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="91" />
+  <NewLine Num="1" UId="92" />
+  <Blank Num="4" UId="93" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="94">
+    <Text UId="95"> #alarmEmgNotActive(SIG:=#T_EmgActive,</Text>
+  </LineComment>
+  <NewLine Num="1" UId="96" />
+  <Blank Num="4" UId="97" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="98">
+    <Text UId="99">                    SD_1:=#I_EmgName);</Text>
+  </LineComment>
+  <NewLine Num="1" UId="100" />
+  <Blank Num="4" UId="101" />
+  <NewLine Num="1" UId="102" />
+  <Token Text="END_REGION" UId="103" />
+  <NewLine Num="2" UId="104" />
+  <Token Text="REGION" UId="105" />
+  <Blank Num="1" UId="106" />
+  <Text UId="107">ALARM ACTIVE</Text>
+  <NewLine Num="1" UId="108" />
+  <Blank Num="4" UId="109" />
+  <NewLine Num="1" UId="110" />
+  <Blank Num="4" UId="111" />
+  <Access Scope="LocalVariable" UId="112">
+    <Symbol UId="113">
+      <Component Name="O_AlarmActive" UId="114" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="115" />
+  <Token Text=":=" UId="116" />
+  <Blank Num="1" UId="117" />
+  <Access Scope="LocalVariable" UId="118">
+    <Symbol UId="119">
+      <Component Name="T_ButtonActive" UId="120" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="121" />
+  <Token Text="OR" UId="122" />
+  <Blank Num="1" UId="123" />
+  <Access Scope="LocalVariable" UId="124">
+    <Symbol UId="125">
+      <Component Name="T_EmgActive" UId="126" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="127" />
+  <NewLine Num="1" UId="128" />
+  <Blank Num="4" UId="129" />
+  <NewLine Num="1" UId="130" />
+  <Token Text="END_REGION" UId="131" />
+  <NewLine Num="2" UId="132" />
+  <Token Text="REGION" UId="133" />
+  <Blank Num="1" UId="134" />
+  <Text UId="135">BUILD STATUS</Text>
+  <NewLine Num="1" UId="136" />
+  <Blank Num="4" UId="137" />
+  <NewLine Num="1" UId="138" />
+  <Blank Num="4" UId="139" />
+  <Access Scope="LocalVariable" UId="140">
+    <Symbol UId="141">
+      <Component Name="IO_STATUS" UId="142" />
+      <Token Text="." UId="143" />
+      <Component Name="emgNok" UId="144" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="145" />
+  <Token Text=":=" UId="146" />
+  <Blank Num="1" UId="147" />
+  <Access Scope="LocalVariable" UId="148">
+    <Symbol UId="149">
+      <Component Name="T_ButtonActive" UId="150" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="151" />
+  <Token Text="OR" UId="152" />
+  <Blank Num="1" UId="153" />
+  <Access Scope="LocalVariable" UId="154">
+    <Symbol UId="155">
+      <Component Name="T_EmgActive" UId="156" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="157" />
+  <NewLine Num="1" UId="158" />
+  <Blank Num="4" UId="159" />
+  <Access Scope="LocalVariable" UId="160">
+    <Symbol UId="161">
+      <Component Name="IO_STATUS" UId="162" />
+      <Token Text="." UId="163" />
+      <Component Name="activated" UId="164" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="165" />
+  <Token Text=":=" UId="166" />
+  <Blank Num="1" UId="167" />
+  <Access Scope="LocalVariable" UId="168">
+    <Symbol UId="169">
+      <Component Name="T_ButtonActive" UId="170" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="171" />
+  <NewLine Num="1" UId="172" />
+  <Blank Num="4" UId="173" />
+  <Access Scope="LocalVariable" UId="174">
+    <Symbol UId="175">
+      <Component Name="IO_STATUS" UId="176" />
+      <Token Text="." UId="177" />
+      <Component Name="waitingForReset" UId="178" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="179" />
+  <Token Text=":=" UId="180" />
+  <Blank Num="1" UId="181" />
+  <Access Scope="LocalVariable" UId="182">
+    <Symbol UId="183">
+      <Component Name="T_EmgActive" UId="184" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="185" />
+  <NewLine Num="1" UId="186" />
+  <Blank Num="4" UId="187" />
+  <NewLine Num="1" UId="188" />
+  <Token Text="END_REGION" UId="189" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="5" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-BE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="8" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-BE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="B" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

@@ -1,0 +1,33 @@
+<div class="control-wrapper">
+	<p class="details-title">{{ _settings.name | translate | prettyName }}</p>
+	<div class="buttons large-buttons">
+		<div class="buttons-wrapper">
+			<core-button
+				*ngIf="_settings.showReset"
+				[settings]="resetBttn"
+			></core-button>
+			<core-button
+				*ngIf="_settings.showStandby"
+				[settings]="standbyBttn"
+			></core-button>
+		</div>
+		<div *ngIf="_settings.showAuto">
+			<div class="buttons-label">Auto:</div>
+			<div class="buttons-wrapper">
+				<core-button [settings]="startAutoBttn"></core-button>
+				<core-button [settings]="stopAutoBttn"></core-button>
+			</div>
+		</div>
+		<div *ngIf="_settings.showEmpty" class="buttons-wrapper">
+			<core-button [settings]="startEmptyModeBttn"></core-button>
+			<core-button [settings]="stopEmptyModeBttn"></core-button>
+		</div>
+		<div *ngIf="_settings.showManual">
+			<div class="buttons-label">Manual:</div>
+			<div class="buttons-wrapper">
+				<core-button [settings]="startManualBttn"></core-button>
+				<core-button [settings]="stopManualBttn"></core-button>
+			</div>
+		</div>
+	</div>
+</div>

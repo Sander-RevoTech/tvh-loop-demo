@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V16" />
+  <DocumentInfo>
+    <Created>2024-12-03T15:41:45.7660779Z</Created>
+    <ExportSetting>WithReadOnly</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V16 Update 2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <CreationDate ReadOnly="true">2023-04-19T11:30:38.0051651Z</CreationDate>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v4">
+  <Section Name="None">
+    <Member Name="xStart48011_Takt" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">See P480</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="xStart48012_Home" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">See P480</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="xCrtlData" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">1 = Valid process data</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="CmdRightDirection" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Cmd turning right</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="CmdLeftDirection" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Cmd turning left</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Reserve_1" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Reserved</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Parameterset_LSB" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">0 = Par set 1 / 1 = Par set 2 / 2 = Par set 3 / 3 = Par set 4</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Parameterset_MSB" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">0 = Par set 1 / 1 = Par set 2 / 2 = Par set 3 / 3 = Par set 4</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="CmdReadyForOPeration" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">1 = Ready for operation</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ActivatePower" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">0 = Cut off voltage</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="EmergencyOk" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">0 = Activeer noodstop</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="EnableOperation" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">1 = Enable operation</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="EnableRampGenerator" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">1 = Enable ramp generator</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="EnableSetPointRampGenerator" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">1 = Setpoint on ramp generator enabled</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="xEnSetp" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">1  = Selected ramp generator setpoint is activated</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ResetError" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">FP = Acknowkedge all errors</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="MotorSetpointSpeed" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Motor speed set point</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="DigitalOutputs" Datatype="Struct">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Digital outputs</MultiLanguageText>
+      </Comment>
+      <Member Name="spare_7" Datatype="Byte" />
+      <Member Name="Output_1" Datatype="Bool" />
+      <Member Name="Output_2" Datatype="Bool" />
+      <Member Name="spare_1" Datatype="Bool" />
+      <Member Name="spare_2" Datatype="Bool" />
+      <Member Name="spare_3" Datatype="Bool" />
+      <Member Name="spare_4" Datatype="Bool" />
+      <Member Name="spare_5" Datatype="Bool" />
+      <Member Name="spare_6" Datatype="Bool" />
+    </Member>
+    <Member Name="Reserve_2" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Reserve</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <InterfaceModifiedDate ReadOnly="true">2023-04-19T12:03:36.0944103Z</InterfaceModifiedDate>
+      <IsConsistent ReadOnly="true">true</IsConsistent>
+      <LibraryConformanceStatus ReadOnly="true">The object is library-conformant.</LibraryConformanceStatus>
+      <ModifiedDate ReadOnly="true">2023-04-19T12:03:36.0944103Z</ModifiedDate>
+      <Name>Nord_Drive_Out_Data_UDT</Name>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

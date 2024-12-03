@@ -1,0 +1,76 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~material-design-icons/iconfont/material-icons.css';
+
+// import scss files from this project
+@import 'custom-theme';
+@import 'helpers';
+
+// import libraries
+@import '@revotechiscool/revo-tech-hmi-lib/src/styles/revo-tech-hmi-lib-styles';
+@import '@revotechiscool/revo-tech-core-lib/src/styles/revo-tech-core-lib-styles';
+
+// import project's mixins that are using material theme
+@import '../app/app.component.scss-theme.scss';
+// @import "../app/shared/components/server-status/server-status.component.scss-theme.scss";
+@import '../app/global/header/header.component.sccs-theme.scss';
+
+@mixin custom-themes($theme) {
+	@include revo-tech-core-lib-styles($theme);
+	@include revo-tech-hmi-lib-style($theme);
+	@include app-theme($theme);
+	// @include server-status-theme($theme);
+	@include header-theme($theme);
+}
+
+.light-theme {
+	@include angular-material-theme($light-theme);
+	@include custom-themes($light-theme);
+}
+
+.dark-theme {
+	@include angular-material-theme($dark-theme);
+	@include custom-themes($dark-theme);
+}
+
+.boxes {
+	display: flex;
+	flex-direction: column;
+	> div {
+		@media (max-width: 576px) {
+			flex-direction: column;
+		}
+		flex: 1;
+		display: flex;
+	}
+}
+
+.mat-menu-panel {
+	opacity: 1 !important;
+	transform: scale(1, 1) !important;
+}
+
+.location-indicator {
+	display: flex;
+	align-items: center;
+	font-size: xx-large;
+	font-weight: 700;
+	justify-content: center;
+	color: gray;
+}
+
+.dashboard-title {
+	color: #74afbe;
+	text-align: center;
+}
+
+.machine-container {
+	margin: 0 auto;
+	border-radius: 12px;
+	padding: 0.6rem;
+	box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03),
+		0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03),
+		0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05),
+		0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
+	transition: all 0.2s;
+	margin-bottom: 2rem;
+}

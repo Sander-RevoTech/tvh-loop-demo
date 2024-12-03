@@ -1,0 +1,7 @@
+{
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "git.ignoreLimitWarning": true,
+    "explorer.autoReveal": false,
+    "generate-translation.path": "D:/DEV/2021/30-mv-toyata-hitachi-char/rthmi-hitachi-char/projects/hmi-app/src/assets/i18n"
+}

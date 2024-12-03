@@ -1,0 +1,29 @@
+import {  PlcTagBase,
+ PlcMemoryType,
+ BoolPlcTag,
+ BytePlcTag,
+ CharPlcTag,
+ USIntPlcTag,
+ HwAnyPlcTag,
+ HwioPlcTag,
+ Int16PlcTag,
+ UInt16PlcTag,
+ WordlcTag,
+ DWordPlcTag,
+ DIntPlcTag,
+ UDIntPlcTag,
+ RealPlcTag,
+ LRealPlcTag,
+ TimeMsPlcTag,
+ DatePLcTag,
+ Date_And_TimePlcTag,
+ DtlPlcTag,
+ StringPlcTag,
+} from '../BaseTypes';
+export class EMG_Status_UDT extends PlcTagBase {
+	public static Design = 'EMG_Status_UDT'
+	_emgNok: BoolPlcTag;
+	_activated: BoolPlcTag;
+	_waitingForReset: BoolPlcTag;
+
+}

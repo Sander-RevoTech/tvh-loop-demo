@@ -1,0 +1,47 @@
+<div routerLink="/sensor-list" matRipple matRippleCentered="centered">
+	<div class="image">
+		<img
+			src="../../../../assets/icons/sensor.svg"
+			alt="sensor"
+			width="42"
+			height="42"
+		/>
+	</div>
+	<span>{{ 'Sensor list' | translate }}</span>
+</div>
+
+<div routerLink="/motor-list" matRipple matRippleCentered="centered">
+	<div class="image">
+		<img
+			src="../../../../assets/icons/motor.svg"
+			alt="motor"
+			width="42"
+			height="42"
+		/>
+	</div>
+	<span>{{ 'Motor list' | translate }}</span>
+</div>
+
+<div [routerLink]="plcwebAlarmsRout" matRipple matRippleCentered="centered">
+	<div class="image">
+		<img
+			src="../../../../assets/icons/noun_Alarm_1872016.svg"
+			alt="motor"
+			width="42"
+			height="42"
+		/>
+	</div>
+	<span>{{ 'Alarm counter' | translate }}</span>
+</div>
+
+<div [routerLink]="colNameAlarmLog" matRipple matRippleCentered="centered">
+	<div class="image">
+		<img
+			src="../../../../assets/icons/noun_log_903479.svg"
+			alt="motor"
+			width="42"
+			height="42"
+		/>
+	</div>
+	<span>{{ 'Alarm log' | translate }}</span>
+</div>

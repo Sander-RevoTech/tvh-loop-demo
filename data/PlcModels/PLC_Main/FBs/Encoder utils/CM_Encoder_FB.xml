@@ -1,0 +1,994 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V16" />
+  <DocumentInfo>
+    <Created>2024-12-03T15:41:41.4210961Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V16 Update 2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v4">
+  <Section Name="Input">
+    <Member Name="dEncr" Datatype="DInt" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Encoder input</MultiLanguageText></Comment></Member>
+    <Member Name="dPPR" Datatype="DInt" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Number of pulses per revolution</MultiLanguageText></Comment></Member>
+    <Member Name="rDiameterWheel" Datatype="Real" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Diameter of the wheel driving the roller or belt conveyor (mm)</MultiLanguageText></Comment></Member>
+    <Member Name="rGearRatio" Datatype="Real" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">GearRatio should be 1.0 for the standalone encoders</MultiLanguageText></Comment></Member>
+    <Member Name="x32or16bitEncr" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">1 = 32 bit, 0 = 16 bit</MultiLanguageText></Comment></Member>
+  </Section>
+  <Section Name="Output" />
+  <Section Name="InOut">
+    <Member Name="IO_Encoder" Datatype="&quot;VirtualEncoder_UDT&quot;" Accessibility="Public">
+      <Sections>
+        <Section Name="None">
+          <Member Name="Distance_mm" Datatype="Real" />
+          <Member Name="Speed_mm_ms" Datatype="Real" />
+          <Member Name="Settings" Datatype="Struct">
+            <Member Name="Base_M_min" Datatype="Real" />
+            <Member Name="BaseRelative" Datatype="Real" />
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+  </Section>
+  <Section Name="Static">
+    <Member Name="d16bitEncr_Range" Datatype="DInt" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Range of 16 bit encoder (pulses)</MultiLanguageText></Comment><StartValue>65535</StartValue></Member>
+    <Member Name="d32bitEncr_Range" Datatype="DInt" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Range of 32 bit encoder (pulses)</MultiLanguageText></Comment></Member>
+    <Member Name="dCheckRotationClockwise" Datatype="DInt" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="rPPmm" Datatype="Real" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US"># Pulses per mm</MultiLanguageText></Comment></Member>
+    <Member Name="rCircumference" Datatype="Real" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Contour of the driving wheel</MultiLanguageText></Comment></Member>
+    <Member Name="prevValue" Datatype="DInt" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="currentValue" Datatype="DInt" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="deltaPulses" Datatype="DInt" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+  </Section>
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>CM_Encoder_FB</Name>
+      <Number>119</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="4" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <LineComment Inserted="false" NoClosingBracket="false" UId="21">
+    <Text UId="22">//////////////////////////////////////////////////////////////////////////////////////////////////////////////</Text>
+  </LineComment>
+  <NewLine Num="1" UId="23" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="24">
+    <Text UId="25">Processing encoder data</Text>
+  </LineComment>
+  <NewLine Num="1" UId="26" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="27">
+    <Text UId="28">//////////////////////////////////////////////////////////////////////////////////////////////////////////////</Text>
+  </LineComment>
+  <NewLine Num="2" UId="29" />
+  <Token Text="REGION" UId="30" />
+  <Blank Num="1" UId="31" />
+  <Text UId="32">Init</Text>
+  <NewLine Num="1" UId="33" />
+  <Blank Num="4" UId="34" />
+  <Access Scope="LocalVariable" UId="35">
+    <Symbol UId="36">
+      <Component Name="d16bitEncr_Range" UId="37" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="38" />
+  <Token Text=":=" UId="39" />
+  <Blank Num="1" UId="40" />
+  <Access Scope="LiteralConstant" UId="41">
+    <Constant UId="42">
+      <ConstantValue UId="44">65535</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="45" />
+  <NewLine Num="1" UId="46" />
+  <Blank Num="4" UId="47" />
+  <Access Scope="LocalVariable" UId="48">
+    <Symbol UId="49">
+      <Component Name="d32bitEncr_Range" UId="50" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="51" />
+  <Token Text=":=" UId="52" />
+  <Blank Num="1" UId="53" />
+  <Access Scope="LiteralConstant" UId="54">
+    <Constant UId="55">
+      <ConstantValue UId="57">65536000</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank Num="1" UId="58" />
+  <Token Text="+" UId="59" />
+  <Blank Num="1" UId="60" />
+  <Access Scope="LiteralConstant" UId="61">
+    <Constant UId="62">
+      <ConstantValue UId="64">65535999</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="65" />
+  <NewLine Num="1" UId="66" />
+  <Blank Num="4" UId="67" />
+  <NewLine Num="1" UId="68" />
+  <Token Text="END_REGION" UId="69" />
+  <NewLine Num="2" UId="70" />
+  <Token Text="REGION" UId="71" />
+  <Blank Num="1" UId="72" />
+  <Text UId="73">Update actual and old amount of pulses</Text>
+  <NewLine Num="1" UId="74" />
+  <Blank Num="4" UId="75" />
+  <NewLine Num="1" UId="76" />
+  <Blank Num="4" UId="77" />
+  <Access Scope="LocalVariable" UId="78">
+    <Symbol UId="79">
+      <Component Name="prevValue" UId="80" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="81" />
+  <Token Text=":=" UId="82" />
+  <Blank Num="1" UId="83" />
+  <Access Scope="LocalVariable" UId="84">
+    <Symbol UId="85">
+      <Component Name="currentValue" UId="86" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="87" />
+  <NewLine Num="1" UId="88" />
+  <Blank Num="4" UId="89" />
+  <Access Scope="LocalVariable" UId="90">
+    <Symbol UId="91">
+      <Component Name="currentValue" UId="92" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="93" />
+  <Token Text=":=" UId="94" />
+  <Blank Num="1" UId="95" />
+  <Access Scope="LocalVariable" UId="96">
+    <Symbol UId="97">
+      <Component Name="dEncr" UId="98" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="99" />
+  <NewLine Num="1" UId="100" />
+  <Blank Num="4" UId="101" />
+  <NewLine Num="1" UId="102" />
+  <Token Text="END_REGION" UId="103" />
+  <NewLine Num="2" UId="104" />
+  <Token Text="REGION" UId="105" />
+  <Blank Num="1" UId="106" />
+  <Text UId="107">Calculate difference in amount of pulses (between 2 cycles)</Text>
+  <NewLine Num="1" UId="108" />
+  <Blank Num="4" UId="109" />
+  <NewLine Num="1" UId="110" />
+  <Blank Num="4" UId="111" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="112">
+    <Text UId="113">Situation 1: From positive to negative sign</Text>
+  </LineComment>
+  <NewLine Num="1" UId="114" />
+  <Blank Num="4" UId="115" />
+  <Token Text="IF" UId="116" />
+  <Blank Num="1" UId="117" />
+  <Access Scope="LocalVariable" UId="118">
+    <Symbol UId="119">
+      <Component Name="prevValue" UId="120" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="121" />
+  <Token Text="&gt;" UId="122" />
+  <Blank Num="1" UId="123" />
+  <Access Scope="LiteralConstant" UId="124">
+    <Constant UId="125">
+      <ConstantValue UId="127">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank Num="1" UId="128" />
+  <Token Text="AND" UId="129" />
+  <Blank Num="1" UId="130" />
+  <Access Scope="LocalVariable" UId="131">
+    <Symbol UId="132">
+      <Component Name="currentValue" UId="133" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="134" />
+  <Token Text="&lt;" UId="135" />
+  <Blank Num="1" UId="136" />
+  <Access Scope="LiteralConstant" UId="137">
+    <Constant UId="138">
+      <ConstantValue UId="140">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank Num="1" UId="141" />
+  <Token Text="THEN" UId="142" />
+  <NewLine Num="1" UId="143" />
+  <Blank Num="8" UId="144" />
+  <NewLine Num="1" UId="145" />
+  <Blank Num="8" UId="146" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="147">
+    <Text UId="148">Situation 1.1: Overflow detected </Text>
+  </LineComment>
+  <NewLine Num="1" UId="149" />
+  <Blank Num="8" UId="150" />
+  <Token Text="IF" UId="151" />
+  <Blank Num="1" UId="152" />
+  <Access Scope="Call" UId="153">
+    <Instruction Name="ABS" UId="154">
+      <Token Text="(" UId="155" />
+      <NamelessParameter UId="156">
+        <Access Scope="LocalVariable" UId="157">
+          <Symbol UId="158">
+            <Component Name="currentValue" UId="159" />
+          </Symbol>
+        </Access>
+        <Blank Num="1" UId="160" />
+        <Token Text="-" UId="161" />
+        <Blank Num="1" UId="162" />
+        <Access Scope="LocalVariable" UId="163">
+          <Symbol UId="164">
+            <Component Name="prevValue" UId="165" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="167" />
+    </Instruction>
+  </Access>
+  <Blank Num="1" UId="168" />
+  <Token Text="&gt;" UId="169" />
+  <Blank Num="1" UId="170" />
+  <Token Text="(" UId="171" />
+  <Access Scope="LocalVariable" UId="172">
+    <Symbol UId="173">
+      <Component Name="d32bitEncr_Range" UId="174" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="175" />
+  <Token Text="/" UId="176" />
+  <Blank Num="1" UId="177" />
+  <Access Scope="LiteralConstant" UId="178">
+    <Constant UId="179">
+      <ConstantValue UId="181">2.0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=")" UId="182" />
+  <Blank Num="1" UId="183" />
+  <Token Text="AND" UId="184" />
+  <Blank Num="1" UId="185" />
+  <Access Scope="LocalVariable" UId="186">
+    <Symbol UId="187">
+      <Component Name="x32or16bitEncr" UId="188" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="189" />
+  <Token Text="THEN" UId="190" />
+  <NewLine Num="1" UId="191" />
+  <Blank Num="12" UId="192" />
+  <Access Scope="LocalVariable" UId="193">
+    <Symbol UId="194">
+      <Component Name="deltaPulses" UId="195" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="196" />
+  <Token Text=":=" UId="197" />
+  <Blank Num="1" UId="198" />
+  <Token Text="(" UId="199" />
+  <Access Scope="LocalVariable" UId="200">
+    <Symbol UId="201">
+      <Component Name="currentValue" UId="202" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="203" />
+  <Token Text="+" UId="204" />
+  <Blank Num="1" UId="205" />
+  <Access Scope="LocalVariable" UId="206">
+    <Symbol UId="207">
+      <Component Name="d32bitEncr_Range" UId="208" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="209" />
+  <Token Text="+" UId="210" />
+  <Blank Num="1" UId="211" />
+  <Access Scope="LiteralConstant" UId="212">
+    <Constant UId="213">
+      <ConstantValue UId="215">1</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=")" UId="216" />
+  <Blank Num="1" UId="217" />
+  <Token Text="-" UId="218" />
+  <Blank Num="1" UId="219" />
+  <Access Scope="LocalVariable" UId="220">
+    <Symbol UId="221">
+      <Component Name="prevValue" UId="222" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="223" />
+  <NewLine Num="1" UId="224" />
+  <Blank Num="8" UId="225" />
+  <Token Text="ELSIF" UId="226" />
+  <Blank Num="1" UId="227" />
+  <Access Scope="Call" UId="228">
+    <Instruction Name="ABS" UId="229">
+      <Token Text="(" UId="230" />
+      <NamelessParameter UId="231">
+        <Access Scope="LocalVariable" UId="232">
+          <Symbol UId="233">
+            <Component Name="currentValue" UId="234" />
+          </Symbol>
+        </Access>
+        <Blank Num="1" UId="235" />
+        <Token Text="-" UId="236" />
+        <Blank Num="1" UId="237" />
+        <Access Scope="LocalVariable" UId="238">
+          <Symbol UId="239">
+            <Component Name="prevValue" UId="240" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="242" />
+    </Instruction>
+  </Access>
+  <Blank Num="1" UId="243" />
+  <Token Text="&gt;" UId="244" />
+  <Blank Num="1" UId="245" />
+  <Token Text="(" UId="246" />
+  <Access Scope="LocalVariable" UId="247">
+    <Symbol UId="248">
+      <Component Name="d16bitEncr_Range" UId="249" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="250" />
+  <Token Text="/" UId="251" />
+  <Blank Num="1" UId="252" />
+  <Access Scope="LiteralConstant" UId="253">
+    <Constant UId="254">
+      <ConstantValue UId="256">2.0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=")" UId="257" />
+  <Blank Num="1" UId="258" />
+  <Token Text="AND" UId="259" />
+  <Blank Num="1" UId="260" />
+  <Token Text="NOT" UId="261" />
+  <Blank Num="1" UId="262" />
+  <Access Scope="LocalVariable" UId="263">
+    <Symbol UId="264">
+      <Component Name="x32or16bitEncr" UId="265" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="266" />
+  <Token Text="THEN" UId="267" />
+  <NewLine Num="1" UId="268" />
+  <Blank Num="12" UId="269" />
+  <Access Scope="LocalVariable" UId="270">
+    <Symbol UId="271">
+      <Component Name="deltaPulses" UId="272" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="273" />
+  <Token Text=":=" UId="274" />
+  <Blank Num="1" UId="275" />
+  <Token Text="(" UId="276" />
+  <Access Scope="LocalVariable" UId="277">
+    <Symbol UId="278">
+      <Component Name="currentValue" UId="279" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="280" />
+  <Token Text="+" UId="281" />
+  <Blank Num="1" UId="282" />
+  <Access Scope="LocalVariable" UId="283">
+    <Symbol UId="284">
+      <Component Name="d16bitEncr_Range" UId="285" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="286" />
+  <Token Text="+" UId="287" />
+  <Blank Num="1" UId="288" />
+  <Access Scope="LiteralConstant" UId="289">
+    <Constant UId="290">
+      <ConstantValue UId="292">1</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=")" UId="293" />
+  <Blank Num="1" UId="294" />
+  <Token Text="-" UId="295" />
+  <Blank Num="1" UId="296" />
+  <Access Scope="LocalVariable" UId="297">
+    <Symbol UId="298">
+      <Component Name="prevValue" UId="299" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="300" />
+  <NewLine Num="1" UId="301" />
+  <Blank Num="12" UId="302" />
+  <NewLine Num="1" UId="303" />
+  <Blank Num="12" UId="304" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="305">
+    <Text UId="306">Situation 1.2: No overflow (rotation not clockwise)    </Text>
+  </LineComment>
+  <NewLine Num="1" UId="307" />
+  <Blank Num="8" UId="308" />
+  <Token Text="ELSE" UId="309" />
+  <NewLine Num="1" UId="310" />
+  <Blank Num="12" UId="311" />
+  <Access Scope="LocalVariable" UId="312">
+    <Symbol UId="313">
+      <Component Name="deltaPulses" UId="314" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="315" />
+  <Token Text=":=" UId="316" />
+  <Blank Num="1" UId="317" />
+  <Access Scope="LocalVariable" UId="318">
+    <Symbol UId="319">
+      <Component Name="currentValue" UId="320" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="321" />
+  <Token Text="-" UId="322" />
+  <Blank Num="1" UId="323" />
+  <Access Scope="LocalVariable" UId="324">
+    <Symbol UId="325">
+      <Component Name="prevValue" UId="326" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="327" />
+  <NewLine Num="1" UId="328" />
+  <Blank Num="8" UId="329" />
+  <Token Text="END_IF" UId="330" />
+  <Token Text=";" UId="331" />
+  <NewLine Num="1" UId="332" />
+  <Blank Num="8" UId="333" />
+  <NewLine Num="1" UId="334" />
+  <Blank Num="8" UId="335" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="336">
+    <Text UId="337">Situation 2: From negative to positive sign    </Text>
+  </LineComment>
+  <NewLine Num="1" UId="338" />
+  <Blank Num="4" UId="339" />
+  <Token Text="ELSIF" UId="340" />
+  <Blank Num="1" UId="341" />
+  <Access Scope="LocalVariable" UId="342">
+    <Symbol UId="343">
+      <Component Name="prevValue" UId="344" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="345" />
+  <Token Text="&lt;" UId="346" />
+  <Blank Num="1" UId="347" />
+  <Access Scope="LiteralConstant" UId="348">
+    <Constant UId="349">
+      <ConstantValue UId="351">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank Num="1" UId="352" />
+  <Token Text="AND" UId="353" />
+  <Blank Num="1" UId="354" />
+  <Access Scope="LocalVariable" UId="355">
+    <Symbol UId="356">
+      <Component Name="currentValue" UId="357" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="358" />
+  <Token Text="&gt;" UId="359" />
+  <Blank Num="1" UId="360" />
+  <Access Scope="LiteralConstant" UId="361">
+    <Constant UId="362">
+      <ConstantValue UId="364">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank Num="1" UId="365" />
+  <Token Text="THEN" UId="366" />
+  <NewLine Num="1" UId="367" />
+  <Blank Num="8" UId="368" />
+  <NewLine Num="1" UId="369" />
+  <Blank Num="8" UId="370" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="371">
+    <Text UId="372">Situation 2.1: Overflow detected </Text>
+  </LineComment>
+  <NewLine Num="1" UId="373" />
+  <Blank Num="8" UId="374" />
+  <Token Text="IF" UId="375" />
+  <Blank Num="1" UId="376" />
+  <Access Scope="Call" UId="377">
+    <Instruction Name="ABS" UId="378">
+      <Token Text="(" UId="379" />
+      <NamelessParameter UId="380">
+        <Access Scope="LocalVariable" UId="381">
+          <Symbol UId="382">
+            <Component Name="currentValue" UId="383" />
+          </Symbol>
+        </Access>
+        <Blank Num="1" UId="384" />
+        <Token Text="-" UId="385" />
+        <Blank Num="1" UId="386" />
+        <Access Scope="LocalVariable" UId="387">
+          <Symbol UId="388">
+            <Component Name="prevValue" UId="389" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="391" />
+    </Instruction>
+  </Access>
+  <Blank Num="1" UId="392" />
+  <Token Text="&gt;" UId="393" />
+  <Blank Num="1" UId="394" />
+  <Token Text="(" UId="395" />
+  <Access Scope="LocalVariable" UId="396">
+    <Symbol UId="397">
+      <Component Name="d32bitEncr_Range" UId="398" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="399" />
+  <Token Text="/" UId="400" />
+  <Blank Num="1" UId="401" />
+  <Access Scope="LiteralConstant" UId="402">
+    <Constant UId="403">
+      <ConstantValue UId="405">2.0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=")" UId="406" />
+  <Blank Num="1" UId="407" />
+  <Token Text="AND" UId="408" />
+  <Blank Num="1" UId="409" />
+  <Access Scope="LocalVariable" UId="410">
+    <Symbol UId="411">
+      <Component Name="x32or16bitEncr" UId="412" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="413" />
+  <Token Text="THEN" UId="414" />
+  <NewLine Num="1" UId="415" />
+  <Blank Num="12" UId="416" />
+  <Access Scope="LocalVariable" UId="417">
+    <Symbol UId="418">
+      <Component Name="deltaPulses" UId="419" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="420" />
+  <Token Text=":=" UId="421" />
+  <Blank Num="1" UId="422" />
+  <Token Text="(" UId="423" />
+  <Access Scope="LocalVariable" UId="424">
+    <Symbol UId="425">
+      <Component Name="currentValue" UId="426" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="427" />
+  <Token Text="-" UId="428" />
+  <Blank Num="1" UId="429" />
+  <Access Scope="LocalVariable" UId="430">
+    <Symbol UId="431">
+      <Component Name="d32bitEncr_Range" UId="432" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="433" />
+  <Token Text="-" UId="434" />
+  <Blank Num="1" UId="435" />
+  <Access Scope="LiteralConstant" UId="436">
+    <Constant UId="437">
+      <ConstantValue UId="439">1</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=")" UId="440" />
+  <Blank Num="1" UId="441" />
+  <Token Text="-" UId="442" />
+  <Blank Num="1" UId="443" />
+  <Access Scope="LocalVariable" UId="444">
+    <Symbol UId="445">
+      <Component Name="prevValue" UId="446" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="447" />
+  <NewLine Num="1" UId="448" />
+  <Blank Num="8" UId="449" />
+  <Token Text="ELSIF" UId="450" />
+  <Blank Num="1" UId="451" />
+  <Access Scope="Call" UId="452">
+    <Instruction Name="ABS" UId="453">
+      <Token Text="(" UId="454" />
+      <NamelessParameter UId="455">
+        <Access Scope="LocalVariable" UId="456">
+          <Symbol UId="457">
+            <Component Name="currentValue" UId="458" />
+          </Symbol>
+        </Access>
+        <Blank Num="1" UId="459" />
+        <Token Text="-" UId="460" />
+        <Blank Num="1" UId="461" />
+        <Access Scope="LocalVariable" UId="462">
+          <Symbol UId="463">
+            <Component Name="prevValue" UId="464" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="466" />
+    </Instruction>
+  </Access>
+  <Blank Num="1" UId="467" />
+  <Token Text="&gt;" UId="468" />
+  <Blank Num="1" UId="469" />
+  <Token Text="(" UId="470" />
+  <Access Scope="LocalVariable" UId="471">
+    <Symbol UId="472">
+      <Component Name="d16bitEncr_Range" UId="473" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="474" />
+  <Token Text="/" UId="475" />
+  <Blank Num="1" UId="476" />
+  <Access Scope="LiteralConstant" UId="477">
+    <Constant UId="478">
+      <ConstantValue UId="480">2.0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=")" UId="481" />
+  <Blank Num="1" UId="482" />
+  <Token Text="AND" UId="483" />
+  <Blank Num="1" UId="484" />
+  <Token Text="NOT" UId="485" />
+  <Blank Num="1" UId="486" />
+  <Access Scope="LocalVariable" UId="487">
+    <Symbol UId="488">
+      <Component Name="x32or16bitEncr" UId="489" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="490" />
+  <Token Text="THEN" UId="491" />
+  <NewLine Num="1" UId="492" />
+  <Blank Num="12" UId="493" />
+  <Access Scope="LocalVariable" UId="494">
+    <Symbol UId="495">
+      <Component Name="deltaPulses" UId="496" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="497" />
+  <Token Text=":=" UId="498" />
+  <Blank Num="1" UId="499" />
+  <Token Text="(" UId="500" />
+  <Access Scope="LocalVariable" UId="501">
+    <Symbol UId="502">
+      <Component Name="currentValue" UId="503" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="504" />
+  <Token Text="-" UId="505" />
+  <Blank Num="1" UId="506" />
+  <Access Scope="LocalVariable" UId="507">
+    <Symbol UId="508">
+      <Component Name="d16bitEncr_Range" UId="509" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="510" />
+  <Token Text="-" UId="511" />
+  <Blank Num="1" UId="512" />
+  <Access Scope="LiteralConstant" UId="513">
+    <Constant UId="514">
+      <ConstantValue UId="516">1</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=")" UId="517" />
+  <Blank Num="1" UId="518" />
+  <Token Text="-" UId="519" />
+  <Blank Num="1" UId="520" />
+  <Access Scope="LocalVariable" UId="521">
+    <Symbol UId="522">
+      <Component Name="prevValue" UId="523" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="524" />
+  <NewLine Num="1" UId="525" />
+  <Blank Num="12" UId="526" />
+  <NewLine Num="1" UId="527" />
+  <Blank Num="12" UId="528" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="529">
+    <Text UId="530">Situation 2.2: No overflow (rotation not clockwise)    </Text>
+  </LineComment>
+  <NewLine Num="1" UId="531" />
+  <Blank Num="8" UId="532" />
+  <Token Text="ELSE" UId="533" />
+  <NewLine Num="1" UId="534" />
+  <Blank Num="12" UId="535" />
+  <Access Scope="LocalVariable" UId="536">
+    <Symbol UId="537">
+      <Component Name="deltaPulses" UId="538" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="539" />
+  <Token Text=":=" UId="540" />
+  <Blank Num="1" UId="541" />
+  <Access Scope="LocalVariable" UId="542">
+    <Symbol UId="543">
+      <Component Name="currentValue" UId="544" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="545" />
+  <Token Text="-" UId="546" />
+  <Blank Num="1" UId="547" />
+  <Access Scope="LocalVariable" UId="548">
+    <Symbol UId="549">
+      <Component Name="prevValue" UId="550" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="551" />
+  <NewLine Num="1" UId="552" />
+  <Blank Num="8" UId="553" />
+  <Token Text="END_IF" UId="554" />
+  <Token Text=";" UId="555" />
+  <NewLine Num="1" UId="556" />
+  <Blank Num="8" UId="557" />
+  <NewLine Num="1" UId="558" />
+  <Blank Num="8" UId="559" />
+  <NewLine Num="1" UId="560" />
+  <Blank Num="8" UId="561" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="562">
+    <Text UId="563">Situation 3: no sign changes    </Text>
+  </LineComment>
+  <NewLine Num="1" UId="564" />
+  <Blank Num="4" UId="565" />
+  <Token Text="ELSE" UId="566" />
+  <NewLine Num="1" UId="567" />
+  <Blank Num="8" UId="568" />
+  <Access Scope="LocalVariable" UId="569">
+    <Symbol UId="570">
+      <Component Name="deltaPulses" UId="571" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="572" />
+  <Token Text=":=" UId="573" />
+  <Blank Num="1" UId="574" />
+  <Access Scope="LocalVariable" UId="575">
+    <Symbol UId="576">
+      <Component Name="currentValue" UId="577" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="578" />
+  <Token Text="-" UId="579" />
+  <Blank Num="1" UId="580" />
+  <Access Scope="LocalVariable" UId="581">
+    <Symbol UId="582">
+      <Component Name="prevValue" UId="583" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="584" />
+  <NewLine Num="1" UId="585" />
+  <Blank Num="8" UId="586" />
+  <NewLine Num="1" UId="587" />
+  <Blank Num="4" UId="588" />
+  <Token Text="END_IF" UId="589" />
+  <Token Text=";" UId="590" />
+  <NewLine Num="1" UId="591" />
+  <Blank Num="4" UId="592" />
+  <NewLine Num="1" UId="593" />
+  <Token Text="END_REGION" UId="594" />
+  <NewLine Num="2" UId="595" />
+  <Token Text="REGION" UId="596" />
+  <Blank Num="1" UId="597" />
+  <Text UId="598">Convert # pulses to lineair distance (mm)</Text>
+  <NewLine Num="1" UId="599" />
+  <Blank Num="4" UId="600" />
+  <Access Scope="LocalVariable" UId="601">
+    <Symbol UId="602">
+      <Component Name="rPPmm" UId="603" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="604" />
+  <Token Text=":=" UId="605" />
+  <Blank Num="1" UId="606" />
+  <Token Text="(" UId="607" />
+  <Access Scope="LocalVariable" UId="608">
+    <Symbol UId="609">
+      <Component Name="rDiameterWheel" UId="610" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="611" />
+  <Token Text="/" UId="612" />
+  <Blank Num="1" UId="613" />
+  <Access Scope="LiteralConstant" UId="614">
+    <Constant UId="615">
+      <ConstantValue UId="617">2.0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=")" UId="618" />
+  <Blank Num="1" UId="619" />
+  <Token Text="*" UId="620" />
+  <Blank Num="1" UId="621" />
+  <Token Text="(" UId="622" />
+  <Token Text="(" UId="623" />
+  <Access Scope="LiteralConstant" UId="624">
+    <Constant UId="625">
+      <ConstantValue UId="627">2.0</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank Num="1" UId="628" />
+  <Token Text="*" UId="629" />
+  <Blank Num="1" UId="630" />
+  <Access Scope="LiteralConstant" UId="631">
+    <Constant UId="632">
+      <ConstantValue UId="634">3.14159265359</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=")" UId="635" />
+  <Blank Num="1" UId="636" />
+  <Token Text="/" UId="637" />
+  <Blank Num="1" UId="638" />
+  <Access Scope="Call" UId="639">
+    <Instruction Name="DINT_TO_REAL" UId="640">
+      <Token Text="(" UId="641" />
+      <NamelessParameter UId="642">
+        <Access Scope="LocalVariable" UId="643">
+          <Symbol UId="644">
+            <Component Name="dPPR" UId="645" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="647" />
+    </Instruction>
+  </Access>
+  <Token Text=")" UId="648" />
+  <Token Text=";" UId="649" />
+  <NewLine Num="1" UId="650" />
+  <Blank Num="4" UId="651" />
+  <Access Scope="LocalVariable" UId="652">
+    <Symbol UId="653">
+      <Component Name="IO_Encoder" UId="654" />
+      <Token Text="." UId="655" />
+      <Component Name="Distance_mm" UId="656" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="657" />
+  <Token Text=":=" UId="658" />
+  <Blank Num="1" UId="659" />
+  <Access Scope="LocalVariable" UId="660">
+    <Symbol UId="661">
+      <Component Name="rPPmm" UId="662" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="663" />
+  <Token Text="*" UId="664" />
+  <Blank Num="1" UId="665" />
+  <Access Scope="LocalVariable" UId="666">
+    <Symbol UId="667">
+      <Component Name="deltaPulses" UId="668" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="669" />
+  <Token Text="/" UId="670" />
+  <Blank Num="1" UId="671" />
+  <Access Scope="LocalVariable" UId="672">
+    <Symbol UId="673">
+      <Component Name="rGearRatio" UId="674" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="675" />
+  <NewLine Num="1" UId="676" />
+  <Blank Num="4" UId="677" />
+  <NewLine Num="1" UId="678" />
+  <Token Text="END_REGION" UId="679" />
+  <NewLine Num="6" UId="680" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="5" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-BE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="8" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-BE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="B" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

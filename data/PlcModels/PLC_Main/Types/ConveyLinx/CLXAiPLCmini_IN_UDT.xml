@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V16" />
+  <DocumentInfo>
+    <Created>2024-12-03T15:41:44.9432173Z</Created>
+    <ExportSetting>WithReadOnly</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V16 Update 2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <CreationDate ReadOnly="true">2021-07-13T07:41:36.2278727Z</CreationDate>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v4">
+  <Section Name="None">
+    <Member Name="AllSensors" Datatype="Struct"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">All sensor inputs</MultiLanguageText></Comment><Member Name="Reserved[0]" Datatype="Bool" /><Member Name="Reserved[1]" Datatype="Bool" /><Member Name="Reserved[2]" Datatype="Bool" /><Member Name="Reserved[3]" Datatype="Bool" /><Member Name="Reserved[4]" Datatype="Bool" /><Member Name="Reserved[5]" Datatype="Bool" /><Member Name="Reserved[6]" Datatype="Bool" /><Member Name="Heartbeat" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">This bit toggles every 2 seconds .</MultiLanguageText></Comment></Member><Member Name="LeftPin2" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">Left sensor port state (Pin2)</MultiLanguageText></Comment></Member><Member Name="Reserved[9]" Datatype="Bool" /><Member Name="RightPin2" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">Right sensor port state (Pin2)</MultiLanguageText></Comment></Member><Member Name="Reserved[11]" Datatype="Bool" /><Member Name="LeftPin4" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">Left sensor port state (Pin4)</MultiLanguageText></Comment></Member><Member Name="Reserved[13]" Datatype="Bool" /><Member Name="RightPin4" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">Right sensor port state (Pin4)</MultiLanguageText></Comment></Member><Member Name="Reserved[15]" Datatype="Bool" /></Member>
+    <Member Name="SensorDetect" Datatype="Struct"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Sensor detection</MultiLanguageText></Comment><Member Name="Reserved" Datatype="Byte" /><Member Name="RightSensorDetect" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">If this bit is TRUE a sensor has been detected on the Right sensor port</MultiLanguageText></Comment></Member><Member Name="LeftSensorDetect" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">If this bit is TRUE a sensor has been detected on the Left sensor port</MultiLanguageText></Comment></Member><Member Name="Reserved[10]" Datatype="Bool" /><Member Name="Reserved[11]" Datatype="Bool" /><Member Name="Reserved[12]" Datatype="Bool" /><Member Name="Reserved[13]" Datatype="Bool" /><Member Name="Reserved[14]" Datatype="Bool" /><Member Name="Reserved[15]" Datatype="Bool" /></Member>
+    <Member Name="LeftCalcTemp" Datatype="Byte"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The temperature of the Left MDR in  degrees Celsius</MultiLanguageText></Comment></Member>
+    <Member Name="ModuleTemp" Datatype="Byte"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The temperature of the module in degrees Celsius</MultiLanguageText></Comment></Member>
+    <Member Name="LeftMDRDiagnostic" Datatype="Struct"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Left MDR diagnostics .</MultiLanguageText></Comment><Member Name="Overheat" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR 's temperature has exceeded 105 degrees Celsius</MultiLanguageText></Comment></Member><Member Name="MaxTorque" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR is running with maximum torque output</MultiLanguageText></Comment></Member><Member Name="ShortCircuit" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">There is a short circuit on the MDR</MultiLanguageText></Comment></Member><Member Name="MDRNotConnected" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR is not connected</MultiLanguageText></Comment></Member><Member Name="Overload" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR has been overloaded - this means its speed is less than 10% of the selected speed</MultiLanguageText></Comment></Member><Member Name="Stalled" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR has stalled</MultiLanguageText></Comment></Member><Member Name="MDRBadHall" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR has a Hall Efect Sensor error</MultiLanguageText></Comment></Member><Member Name="MDRNotUsed" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR is not used</MultiLanguageText></Comment></Member><Member Name="MDRStatus1" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">This field and the next are used together by the module to indicate the status of the MDR. Please refer to documentation</MultiLanguageText></Comment></Member><Member Name="MDRStatus2" Datatype="Bool" /><Member Name="MDRinDOmode" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR is in digital Output mode .</MultiLanguageText></Comment></Member><Member Name="Reserved1" Datatype="Bool" /><Member Name="Reserved2" Datatype="Bool" /><Member Name="Reserved3" Datatype="Bool" /><Member Name="OverVoltage" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The sum of the module power supply voltage + the MDR-generated voltage has exceeded 30 volts</MultiLanguageText></Comment></Member><Member Name="LowVoltage" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">Module power supply is less than 18 Volts</MultiLanguageText></Comment></Member></Member>
+    <Member Name="RightCalcTemp" Datatype="Byte"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The temperature of the Right MDR in degrees Celsius</MultiLanguageText></Comment></Member>
+    <Member Name="ModuleTemp_1" Datatype="Byte"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The temperature of the module in degrees Celsius</MultiLanguageText></Comment></Member>
+    <Member Name="RightMDRDiagnostic" Datatype="Struct"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Right MDR diagnostics .</MultiLanguageText></Comment><Member Name="Overheat" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR 's temperature has exceeded 105 degrees Celsius</MultiLanguageText></Comment></Member><Member Name="MaxTorque" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR is running with maximum torque output</MultiLanguageText></Comment></Member><Member Name="ShortCircuit" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">There is a short circuit on the MDR</MultiLanguageText></Comment></Member><Member Name="MDRNotConnected" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR is not connected</MultiLanguageText></Comment></Member><Member Name="Overload" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR has been overloaded - this means its speed is less than 10% of the selected speed</MultiLanguageText></Comment></Member><Member Name="Stalled" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR has stalled</MultiLanguageText></Comment></Member><Member Name="MDRBadHall" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR has a Hall Efect Sensor error</MultiLanguageText></Comment></Member><Member Name="MDRNotUsed" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR is not used</MultiLanguageText></Comment></Member><Member Name="MDRStatus1" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">This field and the next are used together by the module to indicate the status of the MDR. Please refer to documentation</MultiLanguageText></Comment></Member><Member Name="MDRStatus2" Datatype="Bool" /><Member Name="MDRinDOmode" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The MDR is in digital Output mode .</MultiLanguageText></Comment></Member><Member Name="Reserved1" Datatype="Bool" /><Member Name="Reserved2" Datatype="Bool" /><Member Name="Reserved3" Datatype="Bool" /><Member Name="OverVoltage" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">The sum of the module power supply voltage + the MDR-generated voltage has exceeded 30 volts</MultiLanguageText></Comment></Member><Member Name="LowVoltage" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">Module power supply is less than 18 Volts</MultiLanguageText></Comment></Member></Member>
+    <Member Name="LeftMDR_DIOstatus" Datatype="Struct">
+      <Comment>
+        <MultiLanguageText Lang="en-US">This is the status when the MDR is used as a digital IO</MultiLanguageText>
+      </Comment>
+      <Member Name="Reserved0" Datatype="Bool" />
+      <Member Name="Reserved1" Datatype="Bool" />
+      <Member Name="Reserved2" Datatype="Bool" />
+      <Member Name="Reserved3" Datatype="Bool" />
+      <Member Name="ShortCircuit" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">When this bit is '1' , there is a short circuit between +24V and Pin2/3/4</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Reserved5" Datatype="Bool" />
+      <Member Name="Reserved6" Datatype="Bool" />
+      <Member Name="Reserved7" Datatype="Bool" />
+      <Member Name="Reserved" Datatype="Byte" />
+    </Member>
+    <Member Name="RightMDR_DIOstatus" Datatype="Struct">
+      <Comment>
+        <MultiLanguageText Lang="en-US">This is the status when the MDR is used as a digital IO</MultiLanguageText>
+      </Comment>
+      <Member Name="Reserved0" Datatype="Bool" />
+      <Member Name="Reserved1" Datatype="Bool" />
+      <Member Name="Reserved2" Datatype="Bool" />
+      <Member Name="Reserved3" Datatype="Bool" />
+      <Member Name="ShortCircuit" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">When this bit is '1' , there is a short circuit between +24V and Pin2/3/4</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Reserved5" Datatype="Bool" />
+      <Member Name="Reserved6" Datatype="Bool" />
+      <Member Name="Reserved7" Datatype="Bool" />
+      <Member Name="Reserved" Datatype="Byte" />
+    </Member>
+  </Section>
+</Sections></Interface>
+      <InterfaceModifiedDate ReadOnly="true">2020-05-02T16:54:33.6185899Z</InterfaceModifiedDate>
+      <IsConsistent ReadOnly="true">true</IsConsistent>
+      <LibraryConformanceStatus ReadOnly="true">The object is library-conformant.</LibraryConformanceStatus>
+      <ModifiedDate ReadOnly="true">2021-03-27T07:36:57.0070798Z</ModifiedDate>
+      <Name>CLXAiPLCmini_IN_UDT</Name>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V16" />
+  <DocumentInfo>
+    <Created>2024-12-03T15:41:45.8001006Z</Created>
+    <ExportSetting>WithReadOnly</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V16 Update 2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <CreationDate ReadOnly="true">2023-04-19T11:30:38.0051651Z</CreationDate>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v4">
+  <Section Name="None">
+    <Member Name="Cmd" Datatype="Struct">
+      <Comment>
+        <MultiLanguageText Lang="en-US">MotorCommands</MultiLanguageText>
+      </Comment>
+      <Member Name="Reset" Datatype="Bool" />
+      <Member Name="Auto" Datatype="Struct">
+        <Member Name="cmd_move" Datatype="Bool" />
+        <Member Name="speed" Datatype="Real" />
+      </Member>
+      <Member Name="Manual" Datatype="Struct">
+        <Member Name="cmd_move" Datatype="Bool" />
+        <Member Name="home" Datatype="Bool" />
+        <Member Name="speed" Datatype="Real" />
+      </Member>
+      <Member Name="Interlock" Datatype="Bool" />
+    </Member>
+    <Member Name="Alarms" Datatype="Struct">
+      <Member Name="ServoModeTimedOut_x0" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Motor not on in time</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="NotInHome_x1" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Motor not off in time</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="HomingTimedout_x2" Datatype="Bool" />
+      <Member Name="ErrorFromDrive_x3" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Error from drive</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="CannotStartError_x4" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Cannot start error</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="EmergencyStopActive_x5" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Emergency stop is active</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Disconnected_x6" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">The device is not connected</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="WarningFromDrive_x7" Datatype="Bool"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Warning from drive</MultiLanguageText></Comment></Member>
+      <Member Name="AlarmStatus" Datatype="Word">
+        <Comment>
+          <MultiLanguageText Lang="en-US">lsb 0 not on | lsb 1 not off | lsb 2 error from drive | lsb 3 cannot start | 4 emergency stop active | 5 disconnected</MultiLanguageText>
+        </Comment>
+      </Member>
+    </Member>
+    <Member Name="Status" Datatype="Struct">
+      <Member Name="Interlocked" Datatype="Bool" />
+      <Member Name="ManualModeActive" Datatype="Bool" />
+      <Member Name="ManualCommandsDisabled" Datatype="Bool" />
+      <Member Name="running" Datatype="Bool" />
+      <Member Name="homed" Datatype="Bool" />
+      <Member Name="movement_done" Datatype="&quot;SmartBooldt&quot;" />
+      <Member Name="in_home" Datatype="Bool" />
+      <Member Name="ActualSpeed" Datatype="Real" />
+      <Member Name="ActualDirection" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">0 right | 1 left</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="ReadyToStart" Datatype="Bool" />
+      <Member Name="ReadyForOperaiton" Datatype="Bool" />
+      <Member Name="PowerOn" Datatype="Bool" />
+    </Member>
+    <Member Name="Settings" Datatype="Struct">
+      <Member Name="direction" Datatype="Bool" />
+    </Member>
+    <Member Name="Zone" Datatype="Int" />
+    <Member Name="info" Datatype="&quot;MotorInfo&quot;" />
+  </Section>
+</Sections></Interface>
+      <InterfaceModifiedDate ReadOnly="true">2023-04-19T12:03:36.128334Z</InterfaceModifiedDate>
+      <IsConsistent ReadOnly="true">true</IsConsistent>
+      <LibraryConformanceStatus ReadOnly="true">The object is library-conformant.</LibraryConformanceStatus>
+      <ModifiedDate ReadOnly="true">2023-04-19T12:03:36.128334Z</ModifiedDate>
+      <Name>Nord_Shute_Drive_UDT</Name>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

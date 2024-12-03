@@ -1,0 +1,11 @@
+<h5 class="details-title">{{ _tag.Name | prettyName }}</h5>
+
+<hmi-grid-box-wrappers
+	*ngIf="showControl"
+	[settings]="boxes"
+></hmi-grid-box-wrappers>
+
+<app-loading-control-component
+	*ngIf="!showControl"
+	[notFound]="!objectFound"
+></app-loading-control-component>

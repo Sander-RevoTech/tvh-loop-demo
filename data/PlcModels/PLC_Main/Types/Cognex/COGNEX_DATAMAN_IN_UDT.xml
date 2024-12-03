@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V16" />
+  <DocumentInfo>
+    <Created>2024-12-03T15:41:45.2667557Z</Created>
+    <ExportSetting>WithReadOnly</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V16 Update 2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <CreationDate ReadOnly="true">2022-02-10T08:20:21.8932261Z</CreationDate>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v4">
+  <Section Name="None">
+    <Member Name="Status_TriggerReady" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">0 = Not Ready to Accept Trigger via Fieldbus (statewhen Trigger Enable is low or currently processingtrigger or soft event)1 = Ready to Accept new Trigger via Fieldbus</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Status_TriggerAck" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Confirmation of receiving Trigger ON bit, stays on untilTrigger bit is low</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Status_Acquiring" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">0 = Reader Idle1 = Reader Processing a trigger (whether it came fromphoto eye or fieldbus)</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Status_MissedTrigger" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">0 = No Error1 = Received a trigger (signal from Photo Eye or Fieldbus) when an other trigger or soft event is processing.Will reset automatically when a successful trigger couldbe processed again.</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Status_CurrentMode" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">0 = Setup Tool Mode1 = Run Mode</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Status_SerialError" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">0 = No Error; Reader is Connected1 = No Reader connected</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Status_TrigerPin4State" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Copy state of input line IN 1</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Status_TriggerPin2State" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Copy state of input line IN 2</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ResultStatus_ResultAvailable" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Indicates that a new set of read results are available (i.e.the contents of the Result Data are valid). Cleared whenresults are acknowledged by PLC</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ResultStatus_ResultAckMirror" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">This bit mirrors the state of the "Results Ack" bit from theoutput data. This is not exactly "Result Data Valid".When the result data is first presented, this bit will still be"0," since it just mirrors the "Results Ack" bit from the lastoutput but the data is valid.</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ResultStatus_ResultDataBufferOverFlow" Datatype="Bool" />
+    <Member Name="ResultStatus_spare_1" Datatype="Bool" />
+    <Member Name="ResultStatus_spare_2" Datatype="Bool" />
+    <Member Name="ResultStatus_spare_3" Datatype="Bool" />
+    <Member Name="ResultStatus_spare_4" Datatype="Bool" />
+    <Member Name="ResultStatus_GeneralFault" Datatype="Bool" />
+    <Member Name="SoftEventStatus_errorCode1" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Soft event error code from DMCCError code 127 - timeout</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SoftEventStatus_errorCode2" Datatype="Bool" />
+    <Member Name="SoftEventStatus_errorCode3" Datatype="Bool" />
+    <Member Name="SoftEventStatus_errorCode4" Datatype="Bool" />
+    <Member Name="SoftEventStatus_errorCode5" Datatype="Bool" />
+    <Member Name="SoftEventStatus_errorCode6" Datatype="Bool" />
+    <Member Name="SoftEventStatus_errorCode7" Datatype="Bool" />
+    <Member Name="SoftEventStatus_CommendTimedOutOrCompleted" Datatype="Bool" />
+    <Member Name="ResultCode_TriggerResult" Datatype="Bool" />
+    <Member Name="ResultCode_SoftCommandIsRunning" Datatype="Bool" />
+    <Member Name="ResultCode_SoftCommandComplete" Datatype="Bool" />
+    <Member Name="ResultCode_spare_3" Datatype="Bool" />
+    <Member Name="ResultCode_spare_4" Datatype="Bool" />
+    <Member Name="ResultCode_spare_5" Datatype="Bool" />
+    <Member Name="ResultCode_spare_6" Datatype="Bool" />
+    <Member Name="ResultCode_spare_7" Datatype="Bool" />
+    <Member Name="TriggerId" Datatype="Byte">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ID value of the next trigger to be issued. Used to matchissues triggers with corresponding result data receivedlater.</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ResultId" Datatype="Byte">
+      <Comment>
+        <MultiLanguageText Lang="en-US">The value of the “Trigger ID” counter when the triggerthat generated these results was issued.</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ResultLength" Datatype="Byte">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Actual number of bytes contained in the “Result Data"field</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="DataBlock_DataBlockSize_0" Datatype="Bool" />
+    <Member Name="DataBlock_DataBlockSize_1" Datatype="Bool" />
+    <Member Name="DataBlock_DataBlockSize_2" Datatype="Bool" />
+    <Member Name="DataBlock_DataBlockSize_3" Datatype="Bool" />
+    <Member Name="DataBlock_spare_4" Datatype="Bool" />
+    <Member Name="DataBlock_spare_5" Datatype="Bool" />
+    <Member Name="DataBlock_spare_6" Datatype="Bool" />
+    <Member Name="DataBlock_Reader2Disabled" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">0 = Reader 2 Enabled (default)1 = Reader 2 Disabled</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Barcode" Datatype="Array[0..135] of Char" />
+  </Section>
+</Sections></Interface>
+      <InterfaceModifiedDate ReadOnly="true">2020-06-23T05:35:36.0351598Z</InterfaceModifiedDate>
+      <IsConsistent ReadOnly="true">true</IsConsistent>
+      <LibraryConformanceStatus ReadOnly="true">The object is library-conformant.</LibraryConformanceStatus>
+      <ModifiedDate ReadOnly="true">2020-06-23T22:30:53.6218309Z</ModifiedDate>
+      <Name>COGNEX_DATAMAN_IN_UDT</Name>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

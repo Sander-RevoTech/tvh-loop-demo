@@ -1,0 +1,35 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "typescript",
+			"tsconfig": "projects/plc/tsconfig.lib.json",
+			"problemMatcher": ["$tsc"],
+			"group": "build",
+			"label": "build-plc"
+		},
+
+		{
+			"type": "typescript",
+			"tsconfig": "projects/revo-tech-full-screen-browser/tsconfig.app.json",
+			"problemMatcher": ["$tsc"],
+			"group": "build",
+			"label": "build-revo-tech-full-screen-browser"
+		},
+
+		{
+			"type": "typescript",
+			"tsconfig": "projects/data-collector/tsconfig.data.collector.json",
+			"problemMatcher": ["$tsc"],
+			"group": "build",
+			"label": "build-data-collector"
+		},
+		{
+			"type": "typescript",
+			"tsconfig": "projects/authenticate-be/tsconfig.authenticate-be.json",
+			"problemMatcher": ["$tsc"],
+			"group": "build",
+			"label": "build-auth"
+		}
+	]
+}

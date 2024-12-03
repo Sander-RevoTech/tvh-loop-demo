@@ -1,0 +1,60 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "chrome",
+			"request": "launch",
+			"name": "Launch Chrome",
+			"url": "http://127.0.0.1:4200",
+			"webRoot": "${workspaceFolder}/projects/hmi-app"
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"preLaunchTask": "build-data-collector",
+			"name": "Data collector",
+			"program": "${workspaceFolder}/dist/data-collector/index.js",
+			"args": [
+				"prod"
+			],
+			"skipFiles": [
+				"<node_internals>/**"
+			]
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "publisher",
+			"program": "${workspaceFolder}/publish/build-tagserver.js",
+			"args": [
+				"--c=test",
+				//"--copy=fe"
+			],
+			"skipFiles": [
+				"<node_internals>/**"
+			]
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"preLaunchTask": "build-auth",
+			"name": "Authentice be",
+			"program": "${workspaceFolder}/dist/authenticate-be/index.js",
+			"skipFiles": [
+				"<node_internals>/**"
+			]
+		},
+		{
+			"type": "electron",
+			"request": "launch",
+			"name": "revo-tech-full-screen-browser",
+			"appDir": "${workspaceFolder}/projects/revo-tech-full-screen-browser/main.js",
+			"skipFiles": [
+				"<node_internals>/**"
+			]
+		}
+	]
+}

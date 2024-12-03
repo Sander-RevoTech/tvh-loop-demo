@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V16" />
+  <DocumentInfo>
+    <Created>2024-12-03T15:41:44.8807353Z</Created>
+    <ExportSetting>WithReadOnly</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V16 Update 2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <CreationDate ReadOnly="true">2021-10-04T17:07:47.657452Z</CreationDate>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v4">
+  <Section Name="None">
+    <Member Name="Cmd" Datatype="Struct">
+      <Member Name="InAuto" Datatype="Bool" />
+      <Member Name="OutAuto" Datatype="Bool" />
+      <Member Name="InManual" Datatype="Bool" />
+      <Member Name="OutManual" Datatype="Bool" />
+      <Member Name="InManualHMI" Datatype="Bool" />
+      <Member Name="OutManualHMI" Datatype="Bool" />
+      <Member Name="Interlock" Datatype="Bool" />
+    </Member>
+    <Member Name="Alarms" Datatype="Struct">
+      <Member Name="NotIn" Datatype="&quot;HmiAlarm&quot;">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Object in feedback not received in time</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="NotOut" Datatype="&quot;HmiAlarm&quot;">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Object out feedback not received in time</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Status" Datatype="Word">
+        <Comment>
+          <MultiLanguageText Lang="en-US">lsb 0 not in | lsb 1 not out</MultiLanguageText>
+        </Comment>
+      </Member>
+    </Member>
+    <Member Name="Status" Datatype="Struct">
+      <Member Name="Position" Datatype="Int">
+        <Comment>
+          <MultiLanguageText Lang="en-US">0 Traveling | 1 out | -1 in</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="ManualModeActive" Datatype="Bool" />
+      <Member Name="ManualCommandsDisabled" Datatype="Bool" />
+      <Member Name="Interlocked" Datatype="Bool" />
+      <Member Name="status" Datatype="Word">
+        <Comment>
+          <MultiLanguageText Lang="en-US">lsb 0 Interlocked | lsb 1 manual mode active</MultiLanguageText>
+        </Comment>
+      </Member>
+    </Member>
+    <Member Name="Settings" Datatype="Struct">
+      <Member Name="feedBackInDelay" Datatype="Time" />
+      <Member Name="feedBackOutDelay" Datatype="Time" />
+      <Member Name="CylinderInTime" Datatype="Time">
+        <StartValue>t#5s</StartValue>
+      </Member>
+      <Member Name="CylinderOutTime" Datatype="Time">
+        <StartValue>t#5s</StartValue>
+      </Member>
+      <Member Name="CmdOnError" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Copy all the commends when leaving manual mode or auto mode</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="CopyCommands" Datatype="Bool" />
+      <Member Name="CylinderType" Datatype="Int">
+        <Comment>
+          <MultiLanguageText Lang="en-US">(0 bistabiel) (1 monostabiel rest in) (2 monostabiel rest out)</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="EnableManualIn" Datatype="Bool">
+        <StartValue>true</StartValue>
+      </Member>
+      <Member Name="EnableManualOut" Datatype="Bool">
+        <StartValue>true</StartValue>
+      </Member>
+    </Member>
+    <Member Name="Name" Datatype="String[40]" />
+    <Member Name="Zone" Datatype="Int" />
+  </Section>
+</Sections></Interface>
+      <InterfaceModifiedDate ReadOnly="true">2021-10-04T17:08:20.2971293Z</InterfaceModifiedDate>
+      <IsConsistent ReadOnly="true">true</IsConsistent>
+      <LibraryConformanceStatus ReadOnly="true">The object is library-conformant.</LibraryConformanceStatus>
+      <ModifiedDate ReadOnly="true">2021-10-04T17:08:20.2971293Z</ModifiedDate>
+      <Name>Cylinder_UDT</Name>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

@@ -1,0 +1,151 @@
+{
+  "Name": "Counters_DB",
+  "Number": 33,
+  "Id": [
+    0,
+    2
+  ],
+  "Tags": [
+    {
+      "Type": "Struct",
+      "ParseMessage": "",
+      "ParseFailed": false,
+      "Value": [
+        {
+          "Type": "UInt",
+          "LengthBits": 16,
+          "ParseMessage": "",
+          "ParseFailed": false,
+          "Value": null,
+          "WriteValue": 0,
+          "TypeTypeScript": "UInt16PlcTag",
+          "ParentTag": false,
+          "WriteMessage": null,
+          "Name": "_SLM1",
+          "Id": [
+            0,
+            2,
+            0,
+            0
+          ],
+          "Comment": "",
+          "OpcNode": ";s=\"Counters_DB\".\"_BOT_SLM_TRAYS\".\"_SLM1\"",
+          "DbName": "Counters_DB",
+          "ByteAdress": 0,
+          "BitAdress": 0,
+          "DbNumber": 33,
+          "PlcMemoryType": "DB",
+          "Lengthytes": 2,
+          "StartAdressBits": 0,
+          "EndAdressBits": 16
+        },
+        {
+          "Type": "UInt",
+          "LengthBits": 16,
+          "ParseMessage": "",
+          "ParseFailed": false,
+          "Value": null,
+          "WriteValue": 0,
+          "TypeTypeScript": "UInt16PlcTag",
+          "ParentTag": false,
+          "WriteMessage": null,
+          "Name": "_SLM2",
+          "Id": [
+            0,
+            2,
+            0,
+            1
+          ],
+          "Comment": "",
+          "OpcNode": ";s=\"Counters_DB\".\"_BOT_SLM_TRAYS\".\"_SLM2\"",
+          "DbName": "Counters_DB",
+          "ByteAdress": 2,
+          "BitAdress": 0,
+          "DbNumber": 33,
+          "PlcMemoryType": "DB",
+          "Lengthytes": 2,
+          "StartAdressBits": 16,
+          "EndAdressBits": 32
+        },
+        {
+          "Type": "UInt",
+          "LengthBits": 16,
+          "ParseMessage": "",
+          "ParseFailed": false,
+          "Value": null,
+          "WriteValue": 0,
+          "TypeTypeScript": "UInt16PlcTag",
+          "ParentTag": false,
+          "WriteMessage": null,
+          "Name": "_SLM3",
+          "Id": [
+            0,
+            2,
+            0,
+            2
+          ],
+          "Comment": "",
+          "OpcNode": ";s=\"Counters_DB\".\"_BOT_SLM_TRAYS\".\"_SLM3\"",
+          "DbName": "Counters_DB",
+          "ByteAdress": 4,
+          "BitAdress": 0,
+          "DbNumber": 33,
+          "PlcMemoryType": "DB",
+          "Lengthytes": 2,
+          "StartAdressBits": 32,
+          "EndAdressBits": 48
+        },
+        {
+          "Type": "UInt",
+          "LengthBits": 16,
+          "ParseMessage": "",
+          "ParseFailed": false,
+          "Value": null,
+          "WriteValue": 0,
+          "TypeTypeScript": "UInt16PlcTag",
+          "ParentTag": false,
+          "WriteMessage": null,
+          "Name": "_SLM4",
+          "Id": [
+            0,
+            2,
+            0,
+            3
+          ],
+          "Comment": "",
+          "OpcNode": ";s=\"Counters_DB\".\"_BOT_SLM_TRAYS\".\"_SLM4\"",
+          "DbName": "Counters_DB",
+          "ByteAdress": 6,
+          "BitAdress": 0,
+          "DbNumber": 33,
+          "PlcMemoryType": "DB",
+          "Lengthytes": 2,
+          "StartAdressBits": 48,
+          "EndAdressBits": 64
+        }
+      ],
+      "ParentTag": true,
+      "LengthBits": 64,
+      "EndAdressBits": 64,
+      "TypeTypeScript": "StructPlcTag",
+      "WriteValue": null,
+      "WriteMessage": null,
+      "Name": "_BOT_SLM_TRAYS",
+      "Id": [
+        0,
+        2,
+        0
+      ],
+      "Comment": "",
+      "OpcNode": ";s=\"Counters_DB\".\"_BOT_SLM_TRAYS\"",
+      "DbName": "Counters_DB",
+      "ByteAdress": 0,
+      "BitAdress": 0,
+      "DbNumber": 33,
+      "PlcMemoryType": "DB",
+      "Lengthytes": 8,
+      "StartAdressBits": 0
+    }
+  ],
+  "KeyName": "Counters_DB_DB33"
+}

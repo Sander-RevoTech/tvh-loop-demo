@@ -1,0 +1,47 @@
+@import '~@angular/material/theming';
+
+@mixin header-theme($theme) {
+	$accent: map-get($theme, accent);
+	mat-icon {
+		color: mat-color($accent);
+	}
+	.current-screen::after {
+		content: '';
+		background-color: mat-color($accent);
+		width: 100%;
+		height: 0.2rem;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}
+	.loginButton {
+		border: 0;
+		display: flex;
+		font-size: 14px;
+		padding-left: 8px;
+		padding-right: 16px;
+		mat-icon {
+			align-self: center;
+			margin-right: 0.2rem;
+		}
+	}
+
+	.logoutButton {
+		border: 0;
+		font-size: 14px;
+		padding-left: 8px;
+		padding-right: 8px;
+		mat-icon {
+			align-self: center;
+			margin-right: 0.2rem;
+		}
+		span {
+			display: flex;
+			strong {
+				color: mat-color($accent);
+				align-self: center;
+				margin-left: 0.2rem;
+			}
+		}
+	}
+}

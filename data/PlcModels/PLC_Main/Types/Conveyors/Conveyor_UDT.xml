@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V16" />
+  <DocumentInfo>
+    <Created>2024-12-03T15:41:45.9905796Z</Created>
+    <ExportSetting>WithReadOnly</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V16 Update 2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <CreationDate ReadOnly="true">2021-07-13T07:41:36.2278727Z</CreationDate>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v4">
+  <Section Name="None">
+    <Member Name="Settings" Datatype="Struct">
+      <Member Name="Mode" Datatype="Int"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">0 ZPA MODE | 1 Buffer Mode |  2 Run till end mode</MultiLanguageText></Comment></Member>
+      <Member Name="AutomaticBuffering" Datatype="Bool"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Automatically switch between buffer mode and run till end mode if setting is run till end mode</MultiLanguageText></Comment><StartValue>FALSE</StartValue></Member>
+      <Member Name="Direction" Datatype="Bool"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The normal direction of the conveyor</MultiLanguageText></Comment><StartValue>FALSE</StartValue></Member>
+      <Member Name="EnergySave" Datatype="Bool"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Save energy in run till end mode</MultiLanguageText></Comment><StartValue>true</StartValue></Member>
+      <Member Name="RunIddle" Datatype="Bool"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><StartValue>false</StartValue></Member>
+      <Member Name="AutoReset" Datatype="Bool"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Auto reset conveyor when object is removed</MultiLanguageText></Comment><StartValue>true</StartValue></Member>
+      <Member Name="SentHoldOnCheckReceive" Datatype="Bool"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">OnlyRun conveyor during sent hold on when downstream is ready</MultiLanguageText></Comment><StartValue>false</StartValue></Member>
+      <Member Name="Timings" Datatype="&quot;ConveyorTimes_UDT&quot;"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="None"><Member Name="ConveyorLength" Datatype="Real"><StartValue>2000.0</StartValue></Member><Member Name="InitDistance" Datatype="Real"><StartValue>2000.0</StartValue></Member><Member Name="ReceiveDistance" Datatype="Real"><StartValue>0.0</StartValue></Member><Member Name="SendDistance" Datatype="Real"><StartValue>150.0</StartValue></Member><Member Name="SleepDistance" Datatype="Real"><StartValue>1500.0</StartValue></Member></Section></Sections></Member>
+      <Member Name="Speed" Datatype="Struct">
+        <Member Name="speed" Datatype="Real"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">the speed in %</MultiLanguageText></Comment><StartValue>75.0</StartValue></Member>
+        <Member Name="UpstreamGain" Datatype="Real"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><StartValue>1.0</StartValue></Member>
+        <Member Name="speedController" Datatype="Bool"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><StartValue>FALSE</StartValue></Member>
+      </Member>
+      <Member Name="Alarms" Datatype="Struct">
+        <Member Name="BlockDetectionOn" Datatype="Bool"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><StartValue>true</StartValue></Member>
+        <Member Name="BlockedAtStartSensor" Datatype="Bool"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+        <Member Name="ParcelsToCloseDetectionOn" Datatype="Bool"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+        <Member Name="ParcelsToLongDetectionOn" Datatype="Bool"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+        <Member Name="ParcelToShortDetectionOn" Datatype="Bool"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+        <Member Name="BlockRetrys" Datatype="Int"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><StartValue>1</StartValue></Member>
+        <Member Name="SentTimeError" Datatype="Real"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Also used for parcel to long detection</MultiLanguageText></Comment><StartValue>3000.0</StartValue></Member>
+        <Member Name="TimeBetweenParcels" Datatype="Real"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Parcels to close detection</MultiLanguageText></Comment><StartValue>500.0</StartValue></Member>
+        <Member Name="MinSizeParcel" Datatype="Real"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><StartValue>100.0</StartValue></Member>
+        <Member Name="MaxSizeParcel" Datatype="Real"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><StartValue>2200.0</StartValue></Member>
+      </Member>
+    </Member>
+    <Member Name="Cmd" Datatype="Struct">
+      <Member Name="Reset" Datatype="Bool" />
+      <Member Name="ReInitialize" Datatype="Bool" />
+      <Member Name="RunAuto" Datatype="Bool" />
+      <Member Name="RunManual" Datatype="Bool" />
+      <Member Name="SpeedAuto" Datatype="Real" />
+      <Member Name="SpeedManual" Datatype="Real" />
+      <Member Name="ReadyToReceive" Datatype="Bool" />
+      <Member Name="ReadyToSent" Datatype="Bool" />
+      <Member Name="InvertFlow" Datatype="Bool" />
+      <Member Name="Direction" Datatype="Bool" />
+      <Member Name="Accumulate" Datatype="Struct">
+        <Member Name="Acc_ext_1" Datatype="Bool" />
+        <Member Name="Acc_ext_2" Datatype="Bool" />
+        <Member Name="Acc_ext_3" Datatype="Bool" />
+        <Member Name="Acc_ext_4" Datatype="Bool" />
+        <Member Name="Acc_ext_5" Datatype="Bool" />
+        <Member Name="Acc_TC_1" Datatype="Bool" />
+        <Member Name="Acc_TC_2" Datatype="Bool" />
+        <Member Name="Acc_TC_3" Datatype="Bool" />
+        <Member Name="Acc_Scan_1" Datatype="Bool" />
+        <Member Name="Acc_Scan_2" Datatype="Bool" />
+        <Member Name="Acc_Scan_3" Datatype="Bool" />
+        <Member Name="Acc_Scale_1" Datatype="Bool" />
+        <Member Name="Acc_Scale_2" Datatype="Bool" />
+        <Member Name="Acc_Scale_3" Datatype="Bool" />
+      </Member>
+      <Member Name="StartRequestObject" Datatype="Bool" />
+      <Member Name="StopRequestObject" Datatype="Bool" />
+      <Member Name="IgnoreStandby" Datatype="Bool" />
+      <Member Name="ManualOverride" Datatype="Bool" />
+      <Member Name="Interlock" Datatype="Bool" />
+    </Member>
+    <Member Name="Input" Datatype="Struct">
+      <Member Name="SensorStartHMI" Datatype="Bool" />
+      <Member Name="SensorEndHMI" Datatype="Bool" />
+      <Member Name="SensorAtStartLogic" Datatype="&quot;SmartBooldt&quot;"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+      <Member Name="SensorAtEndLogic" Datatype="&quot;SmartBooldt&quot;"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+      <Member Name="Running_FB" Datatype="Bool" />
+      <Member Name="Interlock" Datatype="Bool" />
+    </Member>
+    <Member Name="Alarms" Datatype="Struct">
+      <Member Name="BlockedReceive" Datatype="&quot;HmiAlarm&quot;">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Conveyor is Blocked</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="BlockedSending" Datatype="&quot;HmiAlarm&quot;"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+      <Member Name="ToClose" Datatype="&quot;HmiAlarm&quot;"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+      <Member Name="ToSmall" Datatype="&quot;HmiAlarm&quot;"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+      <Member Name="ToLong" Datatype="&quot;HmiAlarm&quot;"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+      <Member Name="MotorAlarm" Datatype="&quot;HmiAlarm&quot;"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+      <Member Name="AlarmActive" Datatype="&quot;HmiAlarm&quot;"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+      <Member Name="Status" Datatype="Word">
+        <Comment>
+          <MultiLanguageText Lang="en-US">lsb : 0 blocked | 1 interlocked</MultiLanguageText>
+        </Comment>
+      </Member>
+    </Member>
+    <Member Name="Status" Datatype="Struct">
+      <Member Name="AccumulationOn" Datatype="Bool" />
+      <Member Name="StartedAutoMode" Datatype="Bool" />
+      <Member Name="ReadyForStandby" Datatype="Bool" />
+      <Member Name="RequestForSending" Datatype="Bool" />
+      <Member Name="ExecutingReceiveSequence" Datatype="Bool" />
+      <Member Name="ExecutingSendingSequence" Datatype="Bool" />
+      <Member Name="ObjectSentPulse" Datatype="Bool" />
+      <Member Name="ObjectReceivePulse" Datatype="Bool" />
+      <Member Name="GapTimeOk" Datatype="Bool" />
+      <Member Name="Empty" Datatype="Bool" />
+      <Member Name="ObjectOnConveyor" Datatype="Bool" />
+      <Member Name="Initialized" Datatype="Bool" />
+      <Member Name="ManualMode" Datatype="Bool" />
+    </Member>
+    <Member Name="TrackingCmd" Datatype="Struct">
+      <Member Name="InductNewTracking" Datatype="Bool" />
+      <Member Name="ClearTracking" Datatype="Bool" />
+      <Member Name="NewTrackingId" Datatype="&quot;Tracking_Simple_UDT_1&quot;"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    </Member>
+    <Member Name="TrackingStat" Datatype="Struct">
+      <Member Name="Current" Datatype="&quot;Tracking_Simple_UDT_1&quot;"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+      <Member Name="InSending" Datatype="&quot;Tracking_Simple_UDT_1&quot;"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+      <Member Name="TrackingReceived" Datatype="Bool" />
+      <Member Name="TrackingCleared" Datatype="Bool" />
+    </Member>
+    <Member Name="Encoder" Datatype="&quot;VirtualEncoder_UDT&quot;"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="None"><Member Name="Settings" Datatype="Struct"><Member Name="Base_M_min" Datatype="Real"><StartValue>56.0</StartValue></Member></Member></Section></Sections></Member>
+    <Member Name="DiagNostics" Datatype="Struct">
+      <Member Name="ReceivedCounter" Datatype="UDInt" />
+      <Member Name="SendingCounter" Datatype="UDInt" />
+    </Member>
+    <Member Name="Index" Datatype="Int"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="Name" Datatype="String[25]" />
+    <Member Name="Zone" Datatype="Int"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+  </Section>
+</Sections></Interface>
+      <InterfaceModifiedDate ReadOnly="true">2023-07-16T10:12:43.624232Z</InterfaceModifiedDate>
+      <IsConsistent ReadOnly="true">true</IsConsistent>
+      <LibraryConformanceStatus ReadOnly="true">The object is library-conformant.</LibraryConformanceStatus>
+      <ModifiedDate ReadOnly="true">2023-07-16T10:12:43.624232Z</ModifiedDate>
+      <Name>Conveyor_UDT</Name>
+      <Number ReadOnly="true">6</Number>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

@@ -1,0 +1,17 @@
+{
+	"extends": "../../tsconfig.json",
+	"compilerOptions": {
+		"outDir": "../../dist/data-collector",
+		"declaration": true,
+		"inlineSources": true,
+		"allowJs": true,
+		"module": "CommonJS",
+	},
+	"exclude": [
+		"node_modules"
+	],
+	"include": [
+		"*/.ts",
+		"**/*.ts",
+	]
+}

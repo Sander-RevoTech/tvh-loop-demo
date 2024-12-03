@@ -1,0 +1,119 @@
+{
+  "Name": "Settings_DB",
+  "Number": 25,
+  "Id": [
+    0,
+    4
+  ],
+  "Tags": [
+    {
+      "Type": "Real",
+      "LengthBits": 32,
+      "ParseMessage": "",
+      "ParseFailed": false,
+      "Value": 0.0,
+      "WriteValue": 0.0,
+      "TypeTypeScript": "RealPlcTag",
+      "ParentTag": false,
+      "WriteMessage": null,
+      "Name": "_heightBoxSort",
+      "Id": [
+        0,
+        4,
+        0
+      ],
+      "Comment": "",
+      "OpcNode": ";s=\"Settings_DB\".\"_heightBoxSort\"",
+      "DbName": "Settings_DB",
+      "ByteAdress": 0,
+      "BitAdress": 0,
+      "DbNumber": 25,
+      "PlcMemoryType": "DB",
+      "Lengthytes": 4,
+      "StartAdressBits": 0,
+      "EndAdressBits": 32
+    },
+    {
+      "Type": "Bool",
+      "LengthBits": 1,
+      "ParseMessage": "",
+      "ParseFailed": false,
+      "Value": null,
+      "WriteValue": false,
+      "TypeTypeScript": "BoolPlcTag",
+      "ParentTag": false,
+      "WriteMessage": null,
+      "Name": "_alwaysShipping",
+      "Id": [
+        0,
+        4,
+        1
+      ],
+      "Comment": "",
+      "OpcNode": ";s=\"Settings_DB\".\"_alwaysShipping\"",
+      "DbName": "Settings_DB",
+      "ByteAdress": 4,
+      "BitAdress": 0,
+      "DbNumber": 25,
+      "PlcMemoryType": "DB",
+      "Lengthytes": 1,
+      "StartAdressBits": 32,
+      "EndAdressBits": 33
+    },
+    {
+      "Type": "Bool",
+      "LengthBits": 1,
+      "ParseMessage": "",
+      "ParseFailed": false,
+      "Value": null,
+      "WriteValue": false,
+      "TypeTypeScript": "BoolPlcTag",
+      "ParentTag": false,
+      "WriteMessage": null,
+      "Name": "_alwaysProduct",
+      "Id": [
+        0,
+        4,
+        2
+      ],
+      "Comment": "",
+      "OpcNode": ";s=\"Settings_DB\".\"_alwaysProduct\"",
+      "DbName": "Settings_DB",
+      "ByteAdress": 4,
+      "BitAdress": 1,
+      "DbNumber": 25,
+      "PlcMemoryType": "DB",
+      "Lengthytes": 1,
+      "StartAdressBits": 33,
+      "EndAdressBits": 34
+    },
+    {
+      "Type": "Bool",
+      "LengthBits": 1,
+      "ParseMessage": "",
+      "ParseFailed": false,
+      "Value": null,
+      "WriteValue": false,
+      "TypeTypeScript": "BoolPlcTag",
+      "ParentTag": false,
+      "WriteMessage": null,
+      "Name": "_crossRouting",
+      "Id": [
+        0,
+        4,
+        3
+      ],
+      "Comment": "",
+      "OpcNode": ";s=\"Settings_DB\".\"_crossRouting\"",
+      "DbName": "Settings_DB",
+      "ByteAdress": 4,
+      "BitAdress": 2,
+      "DbNumber": 25,
+      "PlcMemoryType": "DB",
+      "Lengthytes": 1,
+      "StartAdressBits": 34,
+      "EndAdressBits": 35
+    }
+  ],
+  "KeyName": "Settings_DB_DB25"
+}

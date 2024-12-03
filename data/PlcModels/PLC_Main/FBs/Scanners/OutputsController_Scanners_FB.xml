@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V16" />
+  <DocumentInfo>
+    <Created>2024-12-03T15:41:39.4238753Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V16 Update 2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v4">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="SCAN_100" Datatype="&quot;EC_Cognex_Dataman_Single_FB&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="I_HwId" Datatype="HW_ANY" /><Member Name="I_Result" Datatype="&quot;COGNEX_DATAMAN_IN_RESULT_UDT&quot;"><Sections><Section Name="None"><Member Name="TriggerId" Datatype="Int" /><Member Name="GoodRead" Datatype="Bool" /><Member Name="Validated" Datatype="Bool" /><Member Name="Verfified" Datatype="Bool" /><Member Name="acquisitionOverrun" Datatype="Bool" /><Member Name="acquisitionBufferOverflow" Datatype="Bool" /><Member Name="spare6" Datatype="Bool" /><Member Name="spare7" Datatype="Bool" /><Member Name="spare8" Datatype="Byte" /><Member Name="spare9" Datatype="Byte" /><Member Name="spare10" Datatype="Byte" /><Member Name="ResultLength" Datatype="Int" /><Member Name="Barcode" Datatype="Array[0..135] of Char" /></Section></Sections></Member><Member Name="I_ResultStatus" Datatype="&quot;COGNEX_DATAMAN_IN_RESULT_STATUS_UDT&quot;"><Sections><Section Name="None"><Member Name="Decoding" Datatype="Bool" /><Member Name="DecodeComplete" Datatype="Bool" /><Member Name="ResultBufferOverrun" Datatype="Bool" /><Member Name="ResultsAvaileble" Datatype="Bool" /><Member Name="spare4" Datatype="Bool" /><Member Name="spare5" Datatype="Bool" /><Member Name="spare6" Datatype="Bool" /><Member Name="GeneralError" Datatype="Bool" /></Section></Sections></Member><Member Name="I_Status" Datatype="&quot;COGNEX_DATAMAN_IN_STATUS_UDT&quot;"><Sections><Section Name="None"><Member Name="TriggerReady" Datatype="Bool" /><Member Name="TriggerAck" Datatype="Bool" /><Member Name="spare2" Datatype="Bool" /><Member Name="MissedAck" Datatype="Bool" /><Member Name="spare4" Datatype="Bool" /><Member Name="spare5" Datatype="Bool" /><Member Name="spare6" Datatype="Bool" /><Member Name="spare7" Datatype="Bool" /><Member Name="TriggerId_LSB" Datatype="Byte" /><Member Name="TriggerId_MSB" Datatype="Byte" /></Section></Sections></Member></Section><Section Name="Output"><Member Name="O_Control" Datatype="&quot;COGNEX_DATAMAN_OUT_CONTROL_UDT&quot;"><Sections><Section Name="None"><Member Name="ResultBufferEnable" Datatype="Bool" /><Member Name="ResultsAck" Datatype="Bool" /><Member Name="spare2" Datatype="Bool" /><Member Name="spare3" Datatype="Bool" /><Member Name="spare4" Datatype="Bool" /><Member Name="spare5" Datatype="Bool" /><Member Name="spare6" Datatype="Bool" /><Member Name="spare7" Datatype="Bool" /></Section></Sections></Member><Member Name="O_Trigger" Datatype="&quot;COGNEX_DATAMAN_OUT_TRIGGER_UDT&quot;"><Sections><Section Name="None"><Member Name="TriggerEnable" Datatype="Bool" /><Member Name="Trigger" Datatype="Bool" /><Member Name="spare2" Datatype="Bool" /><Member Name="spare3" Datatype="Bool" /><Member Name="spare4" Datatype="Bool" /><Member Name="spare5" Datatype="Bool" /><Member Name="spare6" Datatype="Bool" /><Member Name="spare7" Datatype="Bool" /></Section></Sections></Member></Section><Section Name="InOut"><Member Name="IO_Scanner" Datatype="&quot;COGNEX_DATAMAN_LOGIC_UDT&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="PrevScanId" Datatype="Int" /><Member Name="ScanCommand" Datatype="&quot;SmartBool&quot;"><Sections><Section Name="Input"><Member Name="I_Sensor" Datatype="Bool" /><Member Name="I_Simulate" Datatype="Bool" /><Member Name="HoldOnTIme" Datatype="Time" /><Member Name="DelayOnTime" Datatype="Time" /></Section><Section Name="Output"><Member Name="O_data" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member></Section><Section Name="InOut" /><Section Name="Static"><Member Name="S_Prev_Val" Datatype="Bool" /><Member Name="S_DelayOnTime" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="S_HoldOnTimer" Datatype="TOF_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="S_LE" Datatype="Bool" /><Member Name="S_FE" Datatype="Bool" /><Member Name="S_SensorState" Datatype="Bool" /><Member Name="S_HoldOn" Datatype="Bool" /></Section></Sections></Member><Member Name="triggerAuto" Datatype="&quot;SmartBool&quot;"><Sections><Section Name="Input"><Member Name="I_Sensor" Datatype="Bool" /><Member Name="I_Simulate" Datatype="Bool" /><Member Name="HoldOnTIme" Datatype="Time" /><Member Name="DelayOnTime" Datatype="Time" /></Section><Section Name="Output"><Member Name="O_data" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member></Section><Section Name="InOut" /><Section Name="Static"><Member Name="S_Prev_Val" Datatype="Bool" /><Member Name="S_DelayOnTime" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="S_HoldOnTimer" Datatype="TOF_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="S_LE" Datatype="Bool" /><Member Name="S_FE" Datatype="Bool" /><Member Name="S_SensorState" Datatype="Bool" /><Member Name="S_HoldOn" Datatype="Bool" /></Section></Sections></Member><Member Name="triggerManual" Datatype="&quot;SmartBool&quot;"><Sections><Section Name="Input"><Member Name="I_Sensor" Datatype="Bool" /><Member Name="I_Simulate" Datatype="Bool" /><Member Name="HoldOnTIme" Datatype="Time" /><Member Name="DelayOnTime" Datatype="Time" /></Section><Section Name="Output"><Member Name="O_data" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member></Section><Section Name="InOut" /><Section Name="Static"><Member Name="S_Prev_Val" Datatype="Bool" /><Member Name="S_DelayOnTime" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="S_HoldOnTimer" Datatype="TOF_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="S_LE" Datatype="Bool" /><Member Name="S_FE" Datatype="Bool" /><Member Name="S_SensorState" Datatype="Bool" /><Member Name="S_HoldOn" Datatype="Bool" /></Section></Sections></Member><Member Name="NewResultFlag" Datatype="&quot;SmartBool&quot;"><Sections><Section Name="Input"><Member Name="I_Sensor" Datatype="Bool" /><Member Name="I_Simulate" Datatype="Bool" /><Member Name="HoldOnTIme" Datatype="Time" /><Member Name="DelayOnTime" Datatype="Time" /></Section><Section Name="Output"><Member Name="O_data" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member></Section><Section Name="InOut" /><Section Name="Static"><Member Name="S_Prev_Val" Datatype="Bool" /><Member Name="S_DelayOnTime" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="S_HoldOnTimer" Datatype="TOF_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="S_LE" Datatype="Bool" /><Member Name="S_FE" Datatype="Bool" /><Member Name="S_SensorState" Datatype="Bool" /><Member Name="S_HoldOn" Datatype="Bool" /></Section></Sections></Member><Member Name="MissedTrigger" Datatype="&quot;SmartBool&quot;"><Sections><Section Name="Input"><Member Name="I_Sensor" Datatype="Bool" /><Member Name="I_Simulate" Datatype="Bool" /><Member Name="HoldOnTIme" Datatype="Time" /><Member Name="DelayOnTime" Datatype="Time" /></Section><Section Name="Output"><Member Name="O_data" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member></Section><Section Name="InOut" /><Section Name="Static"><Member Name="S_Prev_Val" Datatype="Bool" /><Member Name="S_DelayOnTime" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="S_HoldOnTimer" Datatype="TOF_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="S_LE" Datatype="Bool" /><Member Name="S_FE" Datatype="Bool" /><Member Name="S_SensorState" Datatype="Bool" /><Member Name="S_HoldOn" Datatype="Bool" /></Section></Sections></Member><Member Name="NotConnected" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="TimeOutDetector" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="TimeOutTime" Datatype="Time" /><Member Name="StartTimeOut" Datatype="Bool" /><Member Name="LockReceiveResult" Datatype="Bool" /><Member Name="cycleRun" Datatype="&quot;CycleRun&quot;"><Sections><Section Name="Input"><Member Name="I_Start" Datatype="Int" /><Member Name="I_End" Datatype="Int" /></Section><Section Name="Output"><Member Name="O_Cycle" Datatype="Int" /></Section><Section Name="InOut" /><Section Name="Static" /></Sections></Member><Member Name="alarmInfo" Datatype="&quot;AlarmInfo_UDT&quot;"><Sections><Section Name="None"><Member Name="info" Datatype="String" /><Member Name="init" Datatype="Bool" /></Section></Sections></Member><Member Name="TimeOutAlarm" Datatype="Program_Alarm" Version="1.0"><Sections><Section Name="Base"><Sections Datatype="ALARM_BASE" Version="1.0"><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="Alarm_ID" Datatype="Event_ID" Version="1.0"><Sections><Section Name="None"><Member Name="ALID" Datatype="Word" /><Member Name="ARID" Datatype="Word" /></Section></Sections></Member><Member Name="HANDLE" Datatype="DWord" /></Section></Sections></Section><Section Name="Input"><Member Name="SIG" Datatype="Bool" /><Member Name="TIMESTAMP" Datatype="LDT" /><Member Name="SD_1" Datatype="Variant" /><Member Name="SD_2" Datatype="Variant" /><Member Name="SD_3" Datatype="Variant" /><Member Name="SD_4" Datatype="Variant" /><Member Name="SD_5" Datatype="Variant" /><Member Name="SD_6" Datatype="Variant" /><Member Name="SD_7" Datatype="Variant" /><Member Name="SD_8" Datatype="Variant" /><Member Name="SD_9" Datatype="Variant" /><Member Name="SD_10" Datatype="Variant" /></Section><Section Name="Output"><Member Name="Error" Datatype="Bool" /><Member Name="Status" Datatype="Word" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="SD_0" Datatype="AssocValue_0" Version="1.0"><Sections><Section Name="None"><Member Name="Syntax" Datatype="UInt" /><Member Name="Aap" Datatype="Byte" /></Section></Sections></Member><Member Name="SIG_Edge_History" Datatype="Bool" /><Member Name="INIT_FB_State" Datatype="DWord" /></Section></Sections></Member><Member Name="TriggerGuardAlarm" Datatype="Program_Alarm" Version="1.0"><Sections><Section Name="Base"><Sections Datatype="ALARM_BASE" Version="1.0"><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="Alarm_ID" Datatype="Event_ID" Version="1.0"><Sections><Section Name="None"><Member Name="ALID" Datatype="Word" /><Member Name="ARID" Datatype="Word" /></Section></Sections></Member><Member Name="HANDLE" Datatype="DWord" /></Section></Sections></Section><Section Name="Input"><Member Name="SIG" Datatype="Bool" /><Member Name="TIMESTAMP" Datatype="LDT" /><Member Name="SD_1" Datatype="Variant" /><Member Name="SD_2" Datatype="Variant" /><Member Name="SD_3" Datatype="Variant" /><Member Name="SD_4" Datatype="Variant" /><Member Name="SD_5" Datatype="Variant" /><Member Name="SD_6" Datatype="Variant" /><Member Name="SD_7" Datatype="Variant" /><Member Name="SD_8" Datatype="Variant" /><Member Name="SD_9" Datatype="Variant" /><Member Name="SD_10" Datatype="Variant" /></Section><Section Name="Output"><Member Name="Error" Datatype="Bool" /><Member Name="Status" Datatype="Word" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="SD_0" Datatype="AssocValue_0" Version="1.0"><Sections><Section Name="None"><Member Name="Syntax" Datatype="UInt" /><Member Name="Aap" Datatype="Byte" /></Section></Sections></Member><Member Name="SIG_Edge_History" Datatype="Bool" /><Member Name="INIT_FB_State" Datatype="DWord" /></Section></Sections></Member><Member Name="ScannerNotConnected" Datatype="Program_Alarm" Version="1.0"><Sections><Section Name="Base"><Sections Datatype="ALARM_BASE" Version="1.0"><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="Alarm_ID" Datatype="Event_ID" Version="1.0"><Sections><Section Name="None"><Member Name="ALID" Datatype="Word" /><Member Name="ARID" Datatype="Word" /></Section></Sections></Member><Member Name="HANDLE" Datatype="DWord" /></Section></Sections></Section><Section Name="Input"><Member Name="SIG" Datatype="Bool" /><Member Name="TIMESTAMP" Datatype="LDT" /><Member Name="SD_1" Datatype="Variant" /><Member Name="SD_2" Datatype="Variant" /><Member Name="SD_3" Datatype="Variant" /><Member Name="SD_4" Datatype="Variant" /><Member Name="SD_5" Datatype="Variant" /><Member Name="SD_6" Datatype="Variant" /><Member Name="SD_7" Datatype="Variant" /><Member Name="SD_8" Datatype="Variant" /><Member Name="SD_9" Datatype="Variant" /><Member Name="SD_10" Datatype="Variant" /></Section><Section Name="Output"><Member Name="Error" Datatype="Bool" /><Member Name="Status" Datatype="Word" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="SD_0" Datatype="AssocValue_0" Version="1.0"><Sections><Section Name="None"><Member Name="Syntax" Datatype="UInt" /><Member Name="Aap" Datatype="Byte" /></Section></Sections></Member><Member Name="SIG_Edge_History" Datatype="Bool" /><Member Name="INIT_FB_State" Datatype="DWord" /></Section></Sections></Member><Member Name="ErrorFromScanner" Datatype="Program_Alarm" Version="1.0"><Sections><Section Name="Base"><Sections Datatype="ALARM_BASE" Version="1.0"><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="Alarm_ID" Datatype="Event_ID" Version="1.0"><Sections><Section Name="None"><Member Name="ALID" Datatype="Word" /><Member Name="ARID" Datatype="Word" /></Section></Sections></Member><Member Name="HANDLE" Datatype="DWord" /></Section></Sections></Section><Section Name="Input"><Member Name="SIG" Datatype="Bool" /><Member Name="TIMESTAMP" Datatype="LDT" /><Member Name="SD_1" Datatype="Variant" /><Member Name="SD_2" Datatype="Variant" /><Member Name="SD_3" Datatype="Variant" /><Member Name="SD_4" Datatype="Variant" /><Member Name="SD_5" Datatype="Variant" /><Member Name="SD_6" Datatype="Variant" /><Member Name="SD_7" Datatype="Variant" /><Member Name="SD_8" Datatype="Variant" /><Member Name="SD_9" Datatype="Variant" /><Member Name="SD_10" Datatype="Variant" /></Section><Section Name="Output"><Member Name="Error" Datatype="Bool" /><Member Name="Status" Datatype="Word" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="SD_0" Datatype="AssocValue_0" Version="1.0"><Sections><Section Name="None"><Member Name="Syntax" Datatype="UInt" /><Member Name="Aap" Datatype="Byte" /></Section></Sections></Member><Member Name="SIG_Edge_History" Datatype="Bool" /><Member Name="INIT_FB_State" Datatype="DWord" /></Section></Sections></Member><Member Name="SerialBufferOverlfow" Datatype="Program_Alarm" Version="1.0"><Sections><Section Name="Base"><Sections Datatype="ALARM_BASE" Version="1.0"><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="Alarm_ID" Datatype="Event_ID" Version="1.0"><Sections><Section Name="None"><Member Name="ALID" Datatype="Word" /><Member Name="ARID" Datatype="Word" /></Section></Sections></Member><Member Name="HANDLE" Datatype="DWord" /></Section></Sections></Section><Section Name="Input"><Member Name="SIG" Datatype="Bool" /><Member Name="TIMESTAMP" Datatype="LDT" /><Member Name="SD_1" Datatype="Variant" /><Member Name="SD_2" Datatype="Variant" /><Member Name="SD_3" Datatype="Variant" /><Member Name="SD_4" Datatype="Variant" /><Member Name="SD_5" Datatype="Variant" /><Member Name="SD_6" Datatype="Variant" /><Member Name="SD_7" Datatype="Variant" /><Member Name="SD_8" Datatype="Variant" /><Member Name="SD_9" Datatype="Variant" /><Member Name="SD_10" Datatype="Variant" /></Section><Section Name="Output"><Member Name="Error" Datatype="Bool" /><Member Name="Status" Datatype="Word" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="SD_0" Datatype="AssocValue_0" Version="1.0"><Sections><Section Name="None"><Member Name="Syntax" Datatype="UInt" /><Member Name="Aap" Datatype="Byte" /></Section></Sections></Member><Member Name="SIG_Edge_History" Datatype="Bool" /><Member Name="INIT_FB_State" Datatype="DWord" /></Section></Sections></Member></Section></Sections></Member>
+  </Section>
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>OutputsController_Scanners_FB</Name>
+      <Number>2</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="4" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <Token Text="REGION" UId="21" />
+  <Blank Num="1" UId="22" />
+  <Text UId="23">SCAN_100</Text>
+  <NewLine Num="1" UId="24" />
+  <Blank Num="4" UId="25" />
+  <NewLine Num="1" UId="26" />
+  <Blank Num="4" UId="27" />
+  <Access Scope="Call" UId="28">
+    <CallInfo UId="29" BlockType="FB" Name="EC_Cognex_Dataman_Single_FB">
+      <Instance Scope="LocalVariable" UId="30">
+        <Component Name="SCAN_100" UId="31" />
+      </Instance>
+      <Token Text="(" UId="32" />
+      <Parameter Name="I_HwId" UId="33">
+        <Token Text=":=" UId="34" />
+        <Access Scope="GlobalConstant" UId="35">
+          <Constant Name="SCAN_100~Acquisition_Status_1" UId="36" />
+        </Access>
+      </Parameter>
+      <Token Text="," UId="39" />
+      <NewLine Num="1" UId="40" />
+      <Blank Num="14" UId="41" />
+      <Parameter Name="I_Result" UId="42">
+        <Blank Num="1" UId="43" />
+        <Token Text=":=" UId="44" />
+        <Blank Num="1" UId="45" />
+        <Access Scope="GlobalVariable" UId="46">
+          <Symbol UId="47">
+            <Component Name="I_Scan_100_ResultData" UId="48" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="49" />
+      <NewLine Num="1" UId="50" />
+      <Blank Num="14" UId="51" />
+      <Parameter Name="I_ResultStatus" UId="52">
+        <Blank Num="1" UId="53" />
+        <Token Text=":=" UId="54" />
+        <Blank Num="1" UId="55" />
+        <Access Scope="GlobalVariable" UId="56">
+          <Symbol UId="57">
+            <Component Name="I_Scan_100_ResultStatus" UId="58" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="59" />
+      <NewLine Num="1" UId="60" />
+      <Blank Num="14" UId="61" />
+      <Parameter Name="I_Status" UId="62">
+        <Blank Num="1" UId="63" />
+        <Token Text=":=" UId="64" />
+        <Blank Num="1" UId="65" />
+        <Access Scope="GlobalVariable" UId="66">
+          <Symbol UId="67">
+            <Component Name="I_Scan_100_TriggerStatus" UId="68" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="69" />
+      <NewLine Num="1" UId="70" />
+      <Blank Num="14" UId="71" />
+      <Parameter Name="O_Control" UId="72">
+        <Blank Num="1" UId="73" />
+        <Token Text="=&gt;" UId="74" />
+        <Blank Num="1" UId="75" />
+        <Access Scope="GlobalVariable" UId="76">
+          <Symbol UId="77">
+            <Component Name="Q_Scan_100_ResultControl" UId="78" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="79" />
+      <NewLine Num="1" UId="80" />
+      <Blank Num="14" UId="81" />
+      <Parameter Name="O_Trigger" UId="82">
+        <Blank Num="1" UId="83" />
+        <Token Text="=&gt;" UId="84" />
+        <Blank Num="1" UId="85" />
+        <Access Scope="GlobalVariable" UId="86">
+          <Symbol UId="87">
+            <Component Name="Q_Scan_100_TriggerControl" UId="88" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="89" />
+      <NewLine Num="1" UId="90" />
+      <Blank Num="14" UId="91" />
+      <Parameter Name="IO_Scanner" UId="92">
+        <Blank Num="1" UId="93" />
+        <Token Text=":=" UId="94" />
+        <Blank Num="1" UId="95" />
+        <Access Scope="GlobalVariable" UId="96">
+          <Symbol UId="97">
+            <Component Name="Scanners_DB" UId="98" />
+            <Token Text="." UId="99" />
+            <Component Name="SCAN_100" UId="100" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="101" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="102" />
+  <NewLine Num="1" UId="103" />
+  <Blank Num="4" UId="104" />
+  <NewLine Num="1" UId="105" />
+  <Token Text="END_REGION" UId="106" />
+  <NewLine Num="1" UId="107" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="5" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-BE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="8" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-BE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="B" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

@@ -1,0 +1,13 @@
+{
+	"extends": "../../tsconfig.json",
+	"compilerOptions": {
+		"outDir": "../../dist/plc",
+		"target": "es2015",
+		"module": "CommonJs",
+		"declaration": true,
+		"inlineSources": true,
+		"types": [],
+		"lib": ["dom", "es2018"]
+	},
+	"exclude": ["src/test.ts", "**/*.spec.ts"]
+}

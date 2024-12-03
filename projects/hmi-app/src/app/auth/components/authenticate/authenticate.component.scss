@@ -1,0 +1,17 @@
+:host {
+	flex-basis: 100%;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.wrapper {
+	flex-basis: 100%;
+	> div {
+		height: 100%;
+		display: flex;
+		align-self: center;
+		justify-content: center;
+		align-items: center;
+	}
+}

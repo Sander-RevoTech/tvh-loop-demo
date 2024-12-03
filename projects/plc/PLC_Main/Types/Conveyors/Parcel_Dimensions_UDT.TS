@@ -1,0 +1,31 @@
+import {  PlcTagBase,
+ PlcMemoryType,
+ BoolPlcTag,
+ BytePlcTag,
+ CharPlcTag,
+ USIntPlcTag,
+ HwAnyPlcTag,
+ HwioPlcTag,
+ Int16PlcTag,
+ UInt16PlcTag,
+ WordlcTag,
+ DWordPlcTag,
+ DIntPlcTag,
+ UDIntPlcTag,
+ RealPlcTag,
+ LRealPlcTag,
+ TimeMsPlcTag,
+ DatePLcTag,
+ Date_And_TimePlcTag,
+ DtlPlcTag,
+ StringPlcTag,
+} from '../BaseTypes';
+export class Parcel_Dimensions_UDT extends PlcTagBase {
+	public static Design = 'Parcel_Dimensions_UDT'
+	_length: RealPlcTag;
+	_width: RealPlcTag;
+	_heightProduct: RealPlcTag;
+	_heightBox: RealPlcTag;
+	_heightBoxFinal: RealPlcTag;
+
+}

@@ -1,0 +1,13 @@
+<div class="wrapper">
+	<div *ngIf="!spinner; else showSpinner">
+		<core-authenticate
+			(signInClicked)="onSignInClicked($event)"
+		></core-authenticate>
+	</div>
+
+	<ng-template #showSpinner>
+		<div class="spinner-wrapper-2">
+			<mat-spinner color="accent"></mat-spinner>
+		</div>
+	</ng-template>
+</div>

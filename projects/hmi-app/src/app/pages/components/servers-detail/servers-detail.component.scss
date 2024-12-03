@@ -1,0 +1,13 @@
+.server-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	div {
+		flex: 0;
+	}
+}
+.server-detail {
+	min-width: 18rem;
+	min-height: 8rem;
+	justify-content: center;
+}

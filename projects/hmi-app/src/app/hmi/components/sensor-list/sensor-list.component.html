@@ -1,0 +1,27 @@
+<mat-list class="container">
+	<div class="control-wrapper">
+		<mat-slide-toggle style="margin: 10px;" (change)="onSlideChange($event)">
+			{{ 'Counter Sort' | translate }}
+		</mat-slide-toggle>
+
+		<core-button [settings]="resetCounterButton"></core-button>
+	</div>
+
+	<cdk-virtual-scroll-viewport class="scroll-container" itemSize="50">
+		<mat-list-item
+			class="scroll-item"
+			*cdkVirtualFor="let l of leds; last as last; index as i"
+		>
+			<div>
+				<div class="label-led-wrapper">
+					<core-label-led [settings]="l.led"></core-label-led>
+					<button [cdkCopyToClipboard]="l.led.label">Copy</button>
+				</div>
+				<p>
+					{{ l.sensor.Comment }} (counter value: {{ l.sensor._Counter.Value }})
+				</p>
+			</div>
+			<mat-divider [inset]="true" *ngIf="!last"></mat-divider>
+		</mat-list-item>
+	</cdk-virtual-scroll-viewport>
+</mat-list>

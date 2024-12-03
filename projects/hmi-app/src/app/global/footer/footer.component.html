@@ -1,0 +1,6 @@
+<div *ngFor="let foot of footer | keyvalue">
+	<button mat-button color="accent" (click)="onFooterNavigate(foot.value)">
+		{{ foot.value.title | translate }}
+	</button>
+	<hr *ngIf="foot.key < footer.length - 1" />
+</div>

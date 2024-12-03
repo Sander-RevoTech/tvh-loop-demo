@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V16" />
+  <DocumentInfo>
+    <Created>2024-12-03T15:41:45.0095413Z</Created>
+    <ExportSetting>WithReadOnly</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V16 Update 2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <CreationDate ReadOnly="true">2021-07-13T07:41:36.2278727Z</CreationDate>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v4">
+  <Section Name="None">
+    <Member Name="Cmd" Datatype="Struct">
+      <Member Name="Reset" Datatype="Bool" />
+      <Member Name="Interlock" Datatype="Bool" />
+      <Member Name="SpeedAuto" Datatype="Int">
+        <Comment>
+          <MultiLanguageText Lang="en-US">mm/sec</MultiLanguageText>
+        </Comment>
+        <StartValue>500</StartValue>
+      </Member>
+      <Member Name="SpeedManual" Datatype="Int"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">mm/sec</MultiLanguageText></Comment><StartValue>500</StartValue></Member>
+      <Member Name="RunAuto" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Run auto</MultiLanguageText></Comment></Member>
+      <Member Name="RunManual" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Run manaul</MultiLanguageText></Comment></Member>
+      <Member Name="DirectionAuto" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Direction auto</MultiLanguageText></Comment></Member>
+      <Member Name="DirectionManual" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Direction manual</MultiLanguageText>
+        </Comment>
+      </Member>
+    </Member>
+    <Member Name="Alarms" Datatype="&quot;ConveyLinxAlarms&quot;"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Alarms</MultiLanguageText></Comment></Member>
+    <Member Name="Status" Datatype="Struct">
+      <Member Name="Interlocked" Datatype="Bool" />
+      <Member Name="ManualModeActive" Datatype="Bool" />
+      <Member Name="ManualCommandsDisabled" Datatype="Bool" />
+      <Member Name="Running" Datatype="Bool" />
+      <Member Name="TeperatureMDR" Datatype="Byte">
+        <Comment>
+          <MultiLanguageText Lang="en-US">The temperature of the MDR in  degrees Celsius</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="TemperatureModule" Datatype="Byte">
+        <Comment>
+          <MultiLanguageText Lang="en-US">The temperature of the module in degrees Celsius</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Status" Datatype="Word">
+        <Comment>
+          <MultiLanguageText Lang="en-US">lsb 0 interlocked | lsb 1 running | lbs2 manual mode active</MultiLanguageText>
+        </Comment>
+      </Member>
+    </Member>
+    <Member Name="Settings" Datatype="Struct">
+      <Member Name="DefaultDirection" Datatype="Bool" />
+      <Member Name="InverseDirectionLabel" Datatype="Bool" />
+      <Member Name="AllowManualDirection" Datatype="Bool" />
+      <Member Name="MaxSpeedManual" Datatype="Real" />
+      <Member Name="MinSpeedManual" Datatype="Real" />
+    </Member>
+    <Member Name="Heartbeat" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Toggles every 2 seconds</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="StopStatus" Datatype="Struct">
+      <Member Name="StopActiveCommandPLC" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Stop active due to stop command from the PLC</MultiLanguageText></Comment></Member>
+      <Member Name="StopActiveOtherModule" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Stop condition is active on a module in the ConveyStop group</MultiLanguageText></Comment></Member>
+      <Member Name="StopActiveLostConn" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Stop is active due to a loss of communication connection</MultiLanguageText></Comment></Member>
+      <Member Name="StopActiveLostPLC" Datatype="Bool"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Stop active due to a loss of connection with the PLC</MultiLanguageText></Comment></Member>
+    </Member>
+    <Member Name="Zone" Datatype="Int" />
+    <Member Name="Info" Datatype="&quot;MotorInfo&quot;"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="Index" Datatype="Int"><AttributeList><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+  </Section>
+</Sections></Interface>
+      <InterfaceModifiedDate ReadOnly="true">2020-10-11T12:18:30.8462676Z</InterfaceModifiedDate>
+      <IsConsistent ReadOnly="true">true</IsConsistent>
+      <LibraryConformanceStatus ReadOnly="true">The object is library-conformant.</LibraryConformanceStatus>
+      <ModifiedDate ReadOnly="true">2021-06-04T14:38:07.3666094Z</ModifiedDate>
+      <Name>ConveyLinx_FullPLC_Single_Mini</Name>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

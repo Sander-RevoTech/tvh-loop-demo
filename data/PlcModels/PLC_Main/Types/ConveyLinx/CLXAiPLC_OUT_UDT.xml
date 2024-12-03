@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V16" />
+  <DocumentInfo>
+    <Created>2024-12-03T15:41:44.9252202Z</Created>
+    <ExportSetting>WithReadOnly</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V16 Update 2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <CreationDate ReadOnly="true">2021-07-13T07:41:36.2278727Z</CreationDate>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v4">
+  <Section Name="None">
+    <Member Name="ConveyStopControl" Datatype="Word"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Writing '1' causes the Stop group to go into STOP state . Writing '2' clears the STOP state</MultiLanguageText></Comment></Member>
+    <Member Name="LeftMDRasDIO" Datatype="Struct">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Use the MDR as a digital IO</MultiLanguageText>
+      </Comment>
+      <Member Name="Reserved0" Datatype="Bool" />
+      <Member Name="Reserved1" Datatype="Bool" />
+      <Member Name="Reserved2" Datatype="Bool" />
+      <Member Name="Reserved3" Datatype="Bool" />
+      <Member Name="Reserved4" Datatype="Bool" />
+      <Member Name="Reserved5" Datatype="Bool" />
+      <Member Name="Reserved6" Datatype="Bool" />
+      <Member Name="SetMotDIO" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Write'1' to set the MDR in Digital IO mode</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Reserved8" Datatype="Bool" />
+      <Member Name="DrivePIN4" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Drive the NMOS Transistor of PIN4 on the motor port</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="DrivePIN3" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Drive the NMOS Transistor of PIN3 on the motor port</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Reserved11" Datatype="Bool" />
+      <Member Name="Reserved12" Datatype="Bool" />
+      <Member Name="Reserved13" Datatype="Bool" />
+      <Member Name="Reserved14" Datatype="Bool" />
+      <Member Name="Reserved15" Datatype="Bool" />
+    </Member>
+    <Member Name="RightMDRasDIO" Datatype="Struct">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Use the MDR as a digital IO</MultiLanguageText>
+      </Comment>
+      <Member Name="Reserved0" Datatype="Bool" />
+      <Member Name="Reserved1" Datatype="Bool" />
+      <Member Name="Reserved2" Datatype="Bool" />
+      <Member Name="Reserved3" Datatype="Bool" />
+      <Member Name="Reserved4" Datatype="Bool" />
+      <Member Name="Reserved5" Datatype="Bool" />
+      <Member Name="Reserved6" Datatype="Bool" />
+      <Member Name="SetMotDIO" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Write'1' to set the MDR in Digital IO mode</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="DrivePIN2" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Drive the NMOS Transistor of PIN2 on the motor port</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Reserved9" Datatype="Bool" />
+      <Member Name="DrivePIN3" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Drive the NMOS Transistor of PIN3 on the motor port</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Reserved11" Datatype="Bool" />
+      <Member Name="Reserved12" Datatype="Bool" />
+      <Member Name="Reserved13" Datatype="Bool" />
+      <Member Name="Reserved14" Datatype="Bool" />
+      <Member Name="Reserved15" Datatype="Bool" />
+    </Member>
+    <Member Name="SensorPortsDO" Datatype="Struct"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The Sensor ports PIN2 as  digital outputs</MultiLanguageText></Comment><Member Name="Reserved[0]" Datatype="Bool" /><Member Name="Reserved[1]" Datatype="Bool" /><Member Name="Reserved[2]" Datatype="Bool" /><Member Name="Reserved[3]" Datatype="Bool" /><Member Name="Reserved[4]" Datatype="Bool" /><Member Name="Reserved[5]" Datatype="Bool" /><Member Name="Reserved[6]" Datatype="Bool" /><Member Name="Reserved[7]" Datatype="Bool" /><Member Name="DriveLeftPIN2" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">Setting this bit drives the Left PIN2 to logical 1</MultiLanguageText></Comment></Member><Member Name="DriveRightPIN2" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">Setting this bit drives the Right PIN2 to logical 1</MultiLanguageText></Comment></Member><Member Name="Reserved[10]" Datatype="Bool" /><Member Name="Reserved[11]" Datatype="Bool" /><Member Name="Reserved[12]" Datatype="Bool" /><Member Name="SetLeftPIN2asDO" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">Setting this bit sets the Left PIN2 to be used as Digital Output / 0 = Digital input</MultiLanguageText></Comment></Member><Member Name="SetRightPIN2asDO" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">Setting this bit sets the Right PIN2 to be used as Digital Output/ 0 = Digital input</MultiLanguageText></Comment></Member><Member Name="Reserved[15]" Datatype="Bool" /></Member>
+    <Member Name="LeftMDRControl" Datatype="Struct"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Run/Stop and Direction control of the Left MDR</MultiLanguageText></Comment><Member Name="MDR_Direction" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">0 = Configured direction /1 = opposite to configured direction</MultiLanguageText></Comment></Member><Member Name="Reserved[1]" Datatype="Bool" /><Member Name="Reserved[2]" Datatype="Bool" /><Member Name="Reserved[3]" Datatype="Bool" /><Member Name="Reserved[4]" Datatype="Bool" /><Member Name="Reserved[5]" Datatype="Bool" /><Member Name="Reserved[6]" Datatype="Bool" /><Member Name="Reserved[7]" Datatype="Bool" /><Member Name="Run_MDR" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">MDR Run = 1 / MDR Stop = 0</MultiLanguageText></Comment></Member><Member Name="Reserved[9]" Datatype="Bool" /><Member Name="Reserved[10]" Datatype="Bool" /><Member Name="Reserved[11]" Datatype="Bool" /><Member Name="Reserved[12]" Datatype="Bool" /><Member Name="Reserved[13]" Datatype="Bool" /><Member Name="Reserved[14]" Datatype="Bool" /><Member Name="Reserved[15]" Datatype="Bool" /></Member>
+    <Member Name="LeftMDRBrakeMode" Datatype="Word"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The Break mode of the Left MDR . 1 = "Normal" / 2 = "Free" / 3 ="Servo break"</MultiLanguageText></Comment></Member>
+    <Member Name="LeftMDR_ServoMode" Datatype="Word"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">2 = Closed loop servo mode</MultiLanguageText></Comment></Member>
+    <Member Name="RightMDRControl" Datatype="Struct"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Run/Stop and Direction control of the Right MDR</MultiLanguageText></Comment><Member Name="MDR_Direction" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">0 = Configured direction /1 = opposite to configured direction</MultiLanguageText></Comment></Member><Member Name="Reserved[1]" Datatype="Bool" /><Member Name="Reserved[2]" Datatype="Bool" /><Member Name="Reserved[3]" Datatype="Bool" /><Member Name="Reserved[4]" Datatype="Bool" /><Member Name="Reserved[5]" Datatype="Bool" /><Member Name="Reserved[6]" Datatype="Bool" /><Member Name="Reserved[7]" Datatype="Bool" /><Member Name="Run_MDR" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">MDR Run = 1 / MDR Stop = 0</MultiLanguageText></Comment></Member><Member Name="Reserved[9]" Datatype="Bool" /><Member Name="Reserved[10]" Datatype="Bool" /><Member Name="Reserved[11]" Datatype="Bool" /><Member Name="Reserved[12]" Datatype="Bool" /><Member Name="Reserved[13]" Datatype="Bool" /><Member Name="Reserved[14]" Datatype="Bool" /><Member Name="Reserved[15]" Datatype="Bool" /></Member>
+    <Member Name="RightMDRBrakeMode" Datatype="Word"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The Break mode of the Right MDR . 1 = "Normal" / 2 = "Free" / 3 ="Servo break"</MultiLanguageText></Comment></Member>
+    <Member Name="RightMDR_ServoMode" Datatype="Word"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">2 = Closed loop servo mode</MultiLanguageText></Comment></Member>
+    <Member Name="LeftMDRSpeed" Datatype="Int"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The speed of the MDR in m/s*1000 .The allowed values depend on the Speed code of the MDR .</MultiLanguageText></Comment></Member>
+    <Member Name="RightMDRSpeed" Datatype="Int"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The speed of the MDR in m/s*1000 .The allowed values depend on the Speed code of the MDR .</MultiLanguageText></Comment></Member>
+    <Member Name="LeftMDRAccel" Datatype="Int"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The Acceleration of the left MDR given in "mm"</MultiLanguageText></Comment></Member>
+    <Member Name="LeftMDRDeccel" Datatype="Int"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The Deceleration of the left MDR given in "mm"</MultiLanguageText></Comment></Member>
+    <Member Name="RightMDRAccel" Datatype="Int"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The Acceleration of the right MDR given in "mm"</MultiLanguageText></Comment></Member>
+    <Member Name="RightMDRDeccel" Datatype="Int"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The Deceleration of the right MDR given in "mm"</MultiLanguageText></Comment></Member>
+    <Member Name="ClearMDRError" Datatype="Word"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Writing '1' to this field clears the MDR error .There needs to be a transition from 0 to 1 in order to clear the error .</MultiLanguageText></Comment></Member>
+    <Member Name="StatusToDownstream" Datatype="Word"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The ZPA status of our Downstream zone can be written here . A ConveyLinx module in ZPA mode can read this and "Wake up " to accept product</MultiLanguageText></Comment></Member>
+    <Member Name="StatusToUpstream" Datatype="Word"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">The ZPA status of our Upstream zone can be written here . A ConveyLinx module in ZPA mode can read this know we have received the product</MultiLanguageText></Comment></Member>
+    <Member Name="SensorPolarity" Datatype="Struct"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">From here the polarity of our Left/Right PIN2/PIN4 can be set</MultiLanguageText></Comment><Member Name="Reserved[0]" Datatype="Bool" /><Member Name="Reserved[1]" Datatype="Bool" /><Member Name="Reserved[2]" Datatype="Bool" /><Member Name="Reserved[3]" Datatype="Bool" /><Member Name="Reserved[4]" Datatype="Bool" /><Member Name="Reserved[5]" Datatype="Bool" /><Member Name="Reserved[6]" Datatype="Bool" /><Member Name="Reserved[7]" Datatype="Bool" /><Member Name="Left_Pin2" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">Normal polarity = 0 / Inverted polarity = 1</MultiLanguageText></Comment></Member><Member Name="Reserved[9]" Datatype="Bool" /><Member Name="Right_Pin2" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">Normal polarity = 0 / Inverted polarity = 1</MultiLanguageText></Comment></Member><Member Name="Reserved[11]" Datatype="Bool" /><Member Name="Left_Pin4" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">Normal polarity = 0 / Inverted polarity = 1</MultiLanguageText></Comment></Member><Member Name="Reserved[13]" Datatype="Bool" /><Member Name="Right_Pin4" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">Normal polarity = 0 / Inverted polarity = 1</MultiLanguageText></Comment></Member></Member>
+    <Member Name="TrackingToDownstream" Datatype="DWord"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">This field can be used to send Tracking data to a downstream ZPA mode ConveyLinx</MultiLanguageText></Comment></Member>
+    <Member Name="Reserved" Datatype="Word"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="ServoControlDistanceLeft" Datatype="Int"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">New MDR distance to be traveled in 'mm'</MultiLanguageText></Comment></Member>
+    <Member Name="ServoControlCommandLeft" Datatype="Struct"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Left MDR servo command</MultiLanguageText></Comment><Member Name="reserve_7" Datatype="Byte" /><Member Name="ResetPulseCount" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">Set pulse count (position) to zero</MultiLanguageText></Comment></Member><Member Name="RunToSetpoint" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">Run motor from current pulse count to setpoint</MultiLanguageText></Comment></Member><Member Name="reserve_1" Datatype="Bool" /><Member Name="reserve_2" Datatype="Bool" /><Member Name="reserve_3" Datatype="Bool" /><Member Name="reserve_4" Datatype="Bool" /><Member Name="reserve_5" Datatype="Bool" /><Member Name="reserve_6" Datatype="Bool" /></Member>
+    <Member Name="ServoControlDistanceRight" Datatype="Int"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">New MDR distance to be traveled in 'mm'</MultiLanguageText></Comment></Member>
+    <Member Name="ServoControlCommandRight" Datatype="Struct"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="en-US">Right MDR servo command</MultiLanguageText></Comment><Member Name="reserve_1" Datatype="Byte" /><Member Name="ResetPulseCount" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">Set pulse count (position) to zero</MultiLanguageText></Comment></Member><Member Name="RunToSetpoint" Datatype="Bool"><Comment><MultiLanguageText Lang="en-US">Run motor from current pulse count to setpoint</MultiLanguageText></Comment></Member><Member Name="reserve_2" Datatype="Bool" /><Member Name="reserve_3" Datatype="Bool" /><Member Name="reserve_4" Datatype="Bool" /><Member Name="reserve_5" Datatype="Bool" /><Member Name="reserve_6" Datatype="Bool" /><Member Name="reserve_7" Datatype="Bool" /></Member>
+    <Member Name="Future" Datatype="Array[27..31] of Word"><AttributeList><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+  </Section>
+</Sections></Interface>
+      <InterfaceModifiedDate ReadOnly="true">2019-12-05T06:54:01.7617053Z</InterfaceModifiedDate>
+      <IsConsistent ReadOnly="true">true</IsConsistent>
+      <LibraryConformanceStatus ReadOnly="true">The object is library-conformant.</LibraryConformanceStatus>
+      <ModifiedDate ReadOnly="true">2021-03-27T07:36:50.6363176Z</ModifiedDate>
+      <Name>CLXAiPLC_OUT_UDT</Name>
+      <Number ReadOnly="true">9</Number>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

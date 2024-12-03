@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V16" />
+  <DocumentInfo>
+    <Created>2024-12-03T15:41:39.3623529Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V16 Update 2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v4">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="FTC_DRV_101_1_I1" Datatype="&quot;SmartBool&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="I_Sensor" Datatype="Bool" /><Member Name="I_Simulate" Datatype="Bool" /><Member Name="HoldOnTIme" Datatype="Time" /><Member Name="DelayOnTime" Datatype="Time" /></Section><Section Name="Output"><Member Name="O_data" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member></Section><Section Name="InOut" /><Section Name="Static"><Member Name="S_Prev_Val" Datatype="Bool" /><Member Name="S_DelayOnTime" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="S_HoldOnTimer" Datatype="TOF_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="S_LE" Datatype="Bool" /><Member Name="S_FE" Datatype="Bool" /><Member Name="S_SensorState" Datatype="Bool" /><Member Name="S_HoldOn" Datatype="Bool" /></Section></Sections></Member>
+    <Member Name="FTC_DRV_101_1_I2" Datatype="&quot;SmartBool&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="I_Sensor" Datatype="Bool" /><Member Name="I_Simulate" Datatype="Bool" /><Member Name="HoldOnTIme" Datatype="Time" /><Member Name="DelayOnTime" Datatype="Time" /></Section><Section Name="Output"><Member Name="O_data" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member></Section><Section Name="InOut" /><Section Name="Static"><Member Name="S_Prev_Val" Datatype="Bool" /><Member Name="S_DelayOnTime" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="S_HoldOnTimer" Datatype="TOF_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="S_LE" Datatype="Bool" /><Member Name="S_FE" Datatype="Bool" /><Member Name="S_SensorState" Datatype="Bool" /><Member Name="S_HoldOn" Datatype="Bool" /></Section></Sections></Member>
+    <Member Name="FTC_DRV_101_1_I3" Datatype="&quot;SmartBool&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="I_Sensor" Datatype="Bool" /><Member Name="I_Simulate" Datatype="Bool" /><Member Name="HoldOnTIme" Datatype="Time" /><Member Name="DelayOnTime" Datatype="Time" /></Section><Section Name="Output"><Member Name="O_data" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member></Section><Section Name="InOut" /><Section Name="Static"><Member Name="S_Prev_Val" Datatype="Bool" /><Member Name="S_DelayOnTime" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="S_HoldOnTimer" Datatype="TOF_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="S_LE" Datatype="Bool" /><Member Name="S_FE" Datatype="Bool" /><Member Name="S_SensorState" Datatype="Bool" /><Member Name="S_HoldOn" Datatype="Bool" /></Section></Sections></Member>
+    <Member Name="FTC_DRV_101_1_I4" Datatype="&quot;SmartBool&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="I_Sensor" Datatype="Bool" /><Member Name="I_Simulate" Datatype="Bool" /><Member Name="HoldOnTIme" Datatype="Time" /><Member Name="DelayOnTime" Datatype="Time" /></Section><Section Name="Output"><Member Name="O_data" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member></Section><Section Name="InOut" /><Section Name="Static"><Member Name="S_Prev_Val" Datatype="Bool" /><Member Name="S_DelayOnTime" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="S_HoldOnTimer" Datatype="TOF_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="S_LE" Datatype="Bool" /><Member Name="S_FE" Datatype="Bool" /><Member Name="S_SensorState" Datatype="Bool" /><Member Name="S_HoldOn" Datatype="Bool" /></Section></Sections></Member>
+    <Member Name="FTC_SKU_101_I1" Datatype="&quot;SmartBool&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="I_Sensor" Datatype="Bool" /><Member Name="I_Simulate" Datatype="Bool" /><Member Name="HoldOnTIme" Datatype="Time" /><Member Name="DelayOnTime" Datatype="Time" /></Section><Section Name="Output"><Member Name="O_data" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member></Section><Section Name="InOut" /><Section Name="Static"><Member Name="S_Prev_Val" Datatype="Bool" /><Member Name="S_DelayOnTime" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="S_HoldOnTimer" Datatype="TOF_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="S_LE" Datatype="Bool" /><Member Name="S_FE" Datatype="Bool" /><Member Name="S_SensorState" Datatype="Bool" /><Member Name="S_HoldOn" Datatype="Bool" /></Section></Sections></Member>
+    <Member Name="FTC_SKU_101_I2" Datatype="&quot;SmartBool&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="I_Sensor" Datatype="Bool" /><Member Name="I_Simulate" Datatype="Bool" /><Member Name="HoldOnTIme" Datatype="Time" /><Member Name="DelayOnTime" Datatype="Time" /></Section><Section Name="Output"><Member Name="O_data" Datatype="&quot;SmartBooldt&quot;"><Sections><Section Name="None"><Member Name="State" Datatype="Bool" /><Member Name="LE" Datatype="Bool" /><Member Name="FE" Datatype="Bool" /><Member Name="sensorTest" Datatype="Bool" /><Member Name="IddleSignal" Datatype="Bool" /><Member Name="testFailed" Datatype="Bool" /><Member Name="Counter" Datatype="UInt" /></Section></Sections></Member></Section><Section Name="InOut" /><Section Name="Static"><Member Name="S_Prev_Val" Datatype="Bool" /><Member Name="S_DelayOnTime" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="S_HoldOnTimer" Datatype="TOF_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="S_LE" Datatype="Bool" /><Member Name="S_FE" Datatype="Bool" /><Member Name="S_SensorState" Datatype="Bool" /><Member Name="S_HoldOn" Datatype="Bool" /></Section></Sections></Member>
+  </Section>
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>InputReaderDrive_FB</Name>
+      <Number>7</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="4" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <Token Text="REGION" UId="21" />
+  <Blank Num="1" UId="22" />
+  <Text UId="23">DRV_101_1 </Text>
+  <NewLine Num="1" UId="24" />
+  <Blank Num="4" UId="25" />
+  <NewLine Num="1" UId="26" />
+  <Blank Num="4" UId="27" />
+  <Access Scope="Call" UId="28">
+    <CallInfo UId="29" BlockType="FB" Name="SmartBool">
+      <Instance Scope="LocalVariable" UId="30">
+        <Component Name="FTC_DRV_101_1_I1" UId="31" />
+      </Instance>
+      <Token Text="(" UId="32" />
+      <Parameter Name="I_Sensor" UId="33">
+        <Blank Num="1" UId="34" />
+        <Token Text=":=" UId="35" />
+        <Blank Num="1" UId="36" />
+        <Token Text="NOT" UId="37" />
+        <Blank Num="1" UId="38" />
+        <Access Scope="GlobalVariable" UId="39">
+          <Symbol UId="40">
+            <Component Name="I_DRV_101_1" UId="41" />
+            <Token Text="." UId="42" />
+            <Component Name="DigitalInputs" UId="43" />
+            <Token Text="." UId="44" />
+            <Component Name="Input_1" UId="45" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="46" />
+      <NewLine Num="1" UId="47" />
+      <Blank Num="21" UId="48" />
+      <Parameter Name="O_data" UId="49">
+        <Blank Num="1" UId="50" />
+        <Token Text="=&gt;" UId="51" />
+        <Blank Num="1" UId="52" />
+        <Access Scope="GlobalVariable" UId="53">
+          <Symbol UId="54">
+            <Component Name="Inputs_DB" UId="55" />
+            <Token Text="." UId="56" />
+            <Component Name="FTC_DRV_101_1_I1" UId="57" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="61" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="62" />
+  <NewLine Num="1" UId="63" />
+  <Blank Num="4" UId="64" />
+  <NewLine Num="1" UId="65" />
+  <Blank Num="4" UId="66" />
+  <Access Scope="Call" UId="67">
+    <CallInfo UId="68" BlockType="FB" Name="SmartBool">
+      <Instance Scope="LocalVariable" UId="69">
+        <Component Name="FTC_DRV_101_1_I2" UId="70" />
+      </Instance>
+      <Token Text="(" UId="71" />
+      <Parameter Name="I_Sensor" UId="72">
+        <Blank Num="1" UId="73" />
+        <Token Text=":=" UId="74" />
+        <Blank Num="1" UId="75" />
+        <Token Text="NOT" UId="76" />
+        <Blank Num="1" UId="77" />
+        <Access Scope="GlobalVariable" UId="78">
+          <Symbol UId="79">
+            <Component Name="I_DRV_101_1" UId="80" />
+            <Token Text="." UId="81" />
+            <Component Name="DigitalInputs" UId="82" />
+            <Token Text="." UId="83" />
+            <Component Name="Input_2" UId="84" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="85" />
+      <NewLine Num="1" UId="86" />
+      <Blank Num="21" UId="87" />
+      <Parameter Name="O_data" UId="88">
+        <Blank Num="1" UId="89" />
+        <Token Text="=&gt;" UId="90" />
+        <Blank Num="1" UId="91" />
+        <Access Scope="GlobalVariable" UId="92">
+          <Symbol UId="93">
+            <Component Name="Inputs_DB" UId="94" />
+            <Token Text="." UId="95" />
+            <Component Name="FTC_DRV_101_1_I2" UId="96" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="100" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="101" />
+  <NewLine Num="1" UId="102" />
+  <Blank Num="4" UId="103" />
+  <NewLine Num="1" UId="104" />
+  <Blank Num="4" UId="105" />
+  <Access Scope="Call" UId="106">
+    <CallInfo UId="107" BlockType="FB" Name="SmartBool">
+      <Instance Scope="LocalVariable" UId="108">
+        <Component Name="FTC_DRV_101_1_I3" UId="109" />
+      </Instance>
+      <Token Text="(" UId="110" />
+      <Parameter Name="I_Sensor" UId="111">
+        <Blank Num="1" UId="112" />
+        <Token Text=":=" UId="113" />
+        <Blank Num="1" UId="114" />
+        <Token Text="NOT" UId="115" />
+        <Blank Num="1" UId="116" />
+        <Access Scope="GlobalVariable" UId="117">
+          <Symbol UId="118">
+            <Component Name="I_DRV_101_1" UId="119" />
+            <Token Text="." UId="120" />
+            <Component Name="DigitalInputs" UId="121" />
+            <Token Text="." UId="122" />
+            <Component Name="Input_3" UId="123" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="124" />
+      <NewLine Num="1" UId="125" />
+      <Blank Num="21" UId="126" />
+      <Parameter Name="O_data" UId="127">
+        <Blank Num="1" UId="128" />
+        <Token Text="=&gt;" UId="129" />
+        <Blank Num="1" UId="130" />
+        <Access Scope="GlobalVariable" UId="131">
+          <Symbol UId="132">
+            <Component Name="Inputs_DB" UId="133" />
+            <Token Text="." UId="134" />
+            <Component Name="FTC_DRV_101_1_I3" UId="135" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="139" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="140" />
+  <NewLine Num="1" UId="141" />
+  <Blank Num="4" UId="142" />
+  <NewLine Num="1" UId="143" />
+  <Blank Num="4" UId="144" />
+  <Access Scope="Call" UId="145">
+    <CallInfo UId="146" BlockType="FB" Name="SmartBool">
+      <Instance Scope="LocalVariable" UId="147">
+        <Component Name="FTC_DRV_101_1_I4" UId="148" />
+      </Instance>
+      <Token Text="(" UId="149" />
+      <Parameter Name="I_Sensor" UId="150">
+        <Blank Num="1" UId="151" />
+        <Token Text=":=" UId="152" />
+        <Blank Num="1" UId="153" />
+        <Token Text="NOT" UId="154" />
+        <Blank Num="1" UId="155" />
+        <Access Scope="GlobalVariable" UId="156">
+          <Symbol UId="157">
+            <Component Name="I_DRV_101_1" UId="158" />
+            <Token Text="." UId="159" />
+            <Component Name="DigitalInputs" UId="160" />
+            <Token Text="." UId="161" />
+            <Component Name="Input_4" UId="162" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="163" />
+      <NewLine Num="1" UId="164" />
+      <Blank Num="21" UId="165" />
+      <Parameter Name="O_data" UId="166">
+        <Blank Num="1" UId="167" />
+        <Token Text="=&gt;" UId="168" />
+        <Blank Num="1" UId="169" />
+        <Access Scope="GlobalVariable" UId="170">
+          <Symbol UId="171">
+            <Component Name="Inputs_DB" UId="172" />
+            <Token Text="." UId="173" />
+            <Component Name="FTC_DRV_101_1_I4" UId="174" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="178" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="179" />
+  <NewLine Num="1" UId="180" />
+  <Blank Num="4" UId="181" />
+  <NewLine Num="1" UId="182" />
+  <Token Text="END_REGION" UId="183" />
+  <NewLine Num="2" UId="184" />
+  <Token Text="REGION" UId="185" />
+  <Blank Num="1" UId="186" />
+  <Text UId="187">SKU_101 </Text>
+  <NewLine Num="1" UId="188" />
+  <Blank Num="4" UId="189" />
+  <NewLine Num="1" UId="190" />
+  <Blank Num="4" UId="191" />
+  <Access Scope="Call" UId="192">
+    <CallInfo UId="193" BlockType="FB" Name="SmartBool">
+      <Instance Scope="LocalVariable" UId="194">
+        <Component Name="FTC_SKU_101_I1" UId="195" />
+      </Instance>
+      <Token Text="(" UId="196" />
+      <Parameter Name="I_Sensor" UId="197">
+        <Blank Num="1" UId="198" />
+        <Token Text=":=" UId="199" />
+        <Blank Num="1" UId="200" />
+        <Token Text="NOT" UId="201" />
+        <Blank Num="1" UId="202" />
+        <Access Scope="GlobalVariable" UId="203">
+          <Symbol UId="204">
+            <Component Name="I_SKU_101" UId="205" />
+            <Token Text="." UId="206" />
+            <Component Name="Input_1" UId="207" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="208" />
+      <NewLine Num="1" UId="209" />
+      <Blank Num="19" UId="210" />
+      <Parameter Name="O_data" UId="211">
+        <Blank Num="1" UId="212" />
+        <Token Text="=&gt;" UId="213" />
+        <Blank Num="1" UId="214" />
+        <Access Scope="GlobalVariable" UId="215">
+          <Symbol UId="216">
+            <Component Name="Inputs_DB" UId="217" />
+            <Token Text="." UId="218" />
+            <Component Name="FTC_SKU_101_I1" UId="219" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="223" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="224" />
+  <NewLine Num="1" UId="225" />
+  <Blank Num="4" UId="226" />
+  <NewLine Num="1" UId="227" />
+  <Blank Num="4" UId="228" />
+  <Access Scope="Call" UId="229">
+    <CallInfo UId="230" BlockType="FB" Name="SmartBool">
+      <Instance Scope="LocalVariable" UId="231">
+        <Component Name="FTC_SKU_101_I2" UId="232" />
+      </Instance>
+      <Token Text="(" UId="233" />
+      <Parameter Name="I_Sensor" UId="234">
+        <Blank Num="1" UId="235" />
+        <Token Text=":=" UId="236" />
+        <Blank Num="1" UId="237" />
+        <Token Text="NOT" UId="238" />
+        <Blank Num="1" UId="239" />
+        <Access Scope="GlobalVariable" UId="240">
+          <Symbol UId="241">
+            <Component Name="I_SKU_101" UId="242" />
+            <Token Text="." UId="243" />
+            <Component Name="Input_2" UId="244" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="245" />
+      <NewLine Num="1" UId="246" />
+      <Blank Num="19" UId="247" />
+      <Parameter Name="O_data" UId="248">
+        <Blank Num="1" UId="249" />
+        <Token Text="=&gt;" UId="250" />
+        <Blank Num="1" UId="251" />
+        <Access Scope="GlobalVariable" UId="252">
+          <Symbol UId="253">
+            <Component Name="Inputs_DB" UId="254" />
+            <Token Text="." UId="255" />
+            <Component Name="FTC_SKU_101_I2" UId="256" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="260" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="261" />
+  <NewLine Num="1" UId="262" />
+  <Blank Num="4" UId="263" />
+  <NewLine Num="1" UId="264" />
+  <Token Text="END_REGION" UId="265" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="5" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-BE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="8" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-BE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="B" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

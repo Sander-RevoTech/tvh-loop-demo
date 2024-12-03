@@ -1,0 +1,794 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V16" />
+  <DocumentInfo>
+    <Created>2024-12-03T15:41:40.7984089Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V16 Update 2</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Teamcenter Gateway</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V16 Update 5</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V16</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced / Unified PC</DisplayName>
+        <DisplayVersion>V16 Update 6</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v4">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="EMG_MAIN" Datatype="&quot;EMG_STATUS_FB&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="I_BTTN_STATUS_OK" Datatype="Bool" /><Member Name="I_AlarmInfoBttnPressed" Datatype="String[100]" /><Member Name="I_EMG_ACTIVATED" Datatype="Bool" /><Member Name="I_EmgName" Datatype="String[100]" /><Member Name="I_UseBttnPressedALarm" Datatype="Bool" /><Member Name="I_UseEmgNotActiveAlarm" Datatype="Bool" /></Section><Section Name="Output"><Member Name="O_AlarmActive" Datatype="Bool" /></Section><Section Name="InOut"><Member Name="IO_STATUS" Datatype="&quot;EMG_Status_UDT&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="alarmBTNNPRessed" Datatype="Program_Alarm" Version="1.0"><Sections><Section Name="Base"><Sections Datatype="ALARM_BASE" Version="1.0"><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="Alarm_ID" Datatype="Event_ID" Version="1.0"><Sections><Section Name="None"><Member Name="ALID" Datatype="Word" /><Member Name="ARID" Datatype="Word" /></Section></Sections></Member><Member Name="HANDLE" Datatype="DWord" /></Section></Sections></Section><Section Name="Input"><Member Name="SIG" Datatype="Bool" /><Member Name="TIMESTAMP" Datatype="LDT" /><Member Name="SD_1" Datatype="Variant" /><Member Name="SD_2" Datatype="Variant" /><Member Name="SD_3" Datatype="Variant" /><Member Name="SD_4" Datatype="Variant" /><Member Name="SD_5" Datatype="Variant" /><Member Name="SD_6" Datatype="Variant" /><Member Name="SD_7" Datatype="Variant" /><Member Name="SD_8" Datatype="Variant" /><Member Name="SD_9" Datatype="Variant" /><Member Name="SD_10" Datatype="Variant" /></Section><Section Name="Output"><Member Name="Error" Datatype="Bool" /><Member Name="Status" Datatype="Word" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="SD_0" Datatype="AssocValue_0" Version="1.0"><Sections><Section Name="None"><Member Name="Syntax" Datatype="UInt" /><Member Name="Aap" Datatype="Byte" /></Section></Sections></Member><Member Name="SIG_Edge_History" Datatype="Bool" /><Member Name="INIT_FB_State" Datatype="DWord" /></Section></Sections></Member><Member Name="alarmEmgNotActive" Datatype="Program_Alarm" Version="1.0"><Sections><Section Name="Base"><Sections Datatype="ALARM_BASE" Version="1.0"><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="Alarm_ID" Datatype="Event_ID" Version="1.0"><Sections><Section Name="None"><Member Name="ALID" Datatype="Word" /><Member Name="ARID" Datatype="Word" /></Section></Sections></Member><Member Name="HANDLE" Datatype="DWord" /></Section></Sections></Section><Section Name="Input"><Member Name="SIG" Datatype="Bool" /><Member Name="TIMESTAMP" Datatype="LDT" /><Member Name="SD_1" Datatype="Variant" /><Member Name="SD_2" Datatype="Variant" /><Member Name="SD_3" Datatype="Variant" /><Member Name="SD_4" Datatype="Variant" /><Member Name="SD_5" Datatype="Variant" /><Member Name="SD_6" Datatype="Variant" /><Member Name="SD_7" Datatype="Variant" /><Member Name="SD_8" Datatype="Variant" /><Member Name="SD_9" Datatype="Variant" /><Member Name="SD_10" Datatype="Variant" /></Section><Section Name="Output"><Member Name="Error" Datatype="Bool" /><Member Name="Status" Datatype="Word" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="SD_0" Datatype="AssocValue_0" Version="1.0"><Sections><Section Name="None"><Member Name="Syntax" Datatype="UInt" /><Member Name="Aap" Datatype="Byte" /></Section></Sections></Member><Member Name="SIG_Edge_History" Datatype="Bool" /><Member Name="INIT_FB_State" Datatype="DWord" /></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="EMG_ZONE_1" Datatype="&quot;EMG_STATUS_FB&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="I_BTTN_STATUS_OK" Datatype="Bool" /><Member Name="I_AlarmInfoBttnPressed" Datatype="String[100]" /><Member Name="I_EMG_ACTIVATED" Datatype="Bool" /><Member Name="I_EmgName" Datatype="String[100]" /><Member Name="I_UseBttnPressedALarm" Datatype="Bool" /><Member Name="I_UseEmgNotActiveAlarm" Datatype="Bool" /></Section><Section Name="Output"><Member Name="O_AlarmActive" Datatype="Bool" /></Section><Section Name="InOut"><Member Name="IO_STATUS" Datatype="&quot;EMG_Status_UDT&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="alarmBTNNPRessed" Datatype="Program_Alarm" Version="1.0"><Sections><Section Name="Base"><Sections Datatype="ALARM_BASE" Version="1.0"><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="Alarm_ID" Datatype="Event_ID" Version="1.0"><Sections><Section Name="None"><Member Name="ALID" Datatype="Word" /><Member Name="ARID" Datatype="Word" /></Section></Sections></Member><Member Name="HANDLE" Datatype="DWord" /></Section></Sections></Section><Section Name="Input"><Member Name="SIG" Datatype="Bool" /><Member Name="TIMESTAMP" Datatype="LDT" /><Member Name="SD_1" Datatype="Variant" /><Member Name="SD_2" Datatype="Variant" /><Member Name="SD_3" Datatype="Variant" /><Member Name="SD_4" Datatype="Variant" /><Member Name="SD_5" Datatype="Variant" /><Member Name="SD_6" Datatype="Variant" /><Member Name="SD_7" Datatype="Variant" /><Member Name="SD_8" Datatype="Variant" /><Member Name="SD_9" Datatype="Variant" /><Member Name="SD_10" Datatype="Variant" /></Section><Section Name="Output"><Member Name="Error" Datatype="Bool" /><Member Name="Status" Datatype="Word" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="SD_0" Datatype="AssocValue_0" Version="1.0"><Sections><Section Name="None"><Member Name="Syntax" Datatype="UInt" /><Member Name="Aap" Datatype="Byte" /></Section></Sections></Member><Member Name="SIG_Edge_History" Datatype="Bool" /><Member Name="INIT_FB_State" Datatype="DWord" /></Section></Sections></Member><Member Name="alarmEmgNotActive" Datatype="Program_Alarm" Version="1.0"><Sections><Section Name="Base"><Sections Datatype="ALARM_BASE" Version="1.0"><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="Alarm_ID" Datatype="Event_ID" Version="1.0"><Sections><Section Name="None"><Member Name="ALID" Datatype="Word" /><Member Name="ARID" Datatype="Word" /></Section></Sections></Member><Member Name="HANDLE" Datatype="DWord" /></Section></Sections></Section><Section Name="Input"><Member Name="SIG" Datatype="Bool" /><Member Name="TIMESTAMP" Datatype="LDT" /><Member Name="SD_1" Datatype="Variant" /><Member Name="SD_2" Datatype="Variant" /><Member Name="SD_3" Datatype="Variant" /><Member Name="SD_4" Datatype="Variant" /><Member Name="SD_5" Datatype="Variant" /><Member Name="SD_6" Datatype="Variant" /><Member Name="SD_7" Datatype="Variant" /><Member Name="SD_8" Datatype="Variant" /><Member Name="SD_9" Datatype="Variant" /><Member Name="SD_10" Datatype="Variant" /></Section><Section Name="Output"><Member Name="Error" Datatype="Bool" /><Member Name="Status" Datatype="Word" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="SD_0" Datatype="AssocValue_0" Version="1.0"><Sections><Section Name="None"><Member Name="Syntax" Datatype="UInt" /><Member Name="Aap" Datatype="Byte" /></Section></Sections></Member><Member Name="SIG_Edge_History" Datatype="Bool" /><Member Name="INIT_FB_State" Datatype="DWord" /></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="EMG_ZONE_2" Datatype="&quot;EMG_STATUS_FB&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="I_BTTN_STATUS_OK" Datatype="Bool" /><Member Name="I_AlarmInfoBttnPressed" Datatype="String[100]" /><Member Name="I_EMG_ACTIVATED" Datatype="Bool" /><Member Name="I_EmgName" Datatype="String[100]" /><Member Name="I_UseBttnPressedALarm" Datatype="Bool" /><Member Name="I_UseEmgNotActiveAlarm" Datatype="Bool" /></Section><Section Name="Output"><Member Name="O_AlarmActive" Datatype="Bool" /></Section><Section Name="InOut"><Member Name="IO_STATUS" Datatype="&quot;EMG_Status_UDT&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="alarmBTNNPRessed" Datatype="Program_Alarm" Version="1.0"><Sections><Section Name="Base"><Sections Datatype="ALARM_BASE" Version="1.0"><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="Alarm_ID" Datatype="Event_ID" Version="1.0"><Sections><Section Name="None"><Member Name="ALID" Datatype="Word" /><Member Name="ARID" Datatype="Word" /></Section></Sections></Member><Member Name="HANDLE" Datatype="DWord" /></Section></Sections></Section><Section Name="Input"><Member Name="SIG" Datatype="Bool" /><Member Name="TIMESTAMP" Datatype="LDT" /><Member Name="SD_1" Datatype="Variant" /><Member Name="SD_2" Datatype="Variant" /><Member Name="SD_3" Datatype="Variant" /><Member Name="SD_4" Datatype="Variant" /><Member Name="SD_5" Datatype="Variant" /><Member Name="SD_6" Datatype="Variant" /><Member Name="SD_7" Datatype="Variant" /><Member Name="SD_8" Datatype="Variant" /><Member Name="SD_9" Datatype="Variant" /><Member Name="SD_10" Datatype="Variant" /></Section><Section Name="Output"><Member Name="Error" Datatype="Bool" /><Member Name="Status" Datatype="Word" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="SD_0" Datatype="AssocValue_0" Version="1.0"><Sections><Section Name="None"><Member Name="Syntax" Datatype="UInt" /><Member Name="Aap" Datatype="Byte" /></Section></Sections></Member><Member Name="SIG_Edge_History" Datatype="Bool" /><Member Name="INIT_FB_State" Datatype="DWord" /></Section></Sections></Member><Member Name="alarmEmgNotActive" Datatype="Program_Alarm" Version="1.0"><Sections><Section Name="Base"><Sections Datatype="ALARM_BASE" Version="1.0"><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="Alarm_ID" Datatype="Event_ID" Version="1.0"><Sections><Section Name="None"><Member Name="ALID" Datatype="Word" /><Member Name="ARID" Datatype="Word" /></Section></Sections></Member><Member Name="HANDLE" Datatype="DWord" /></Section></Sections></Section><Section Name="Input"><Member Name="SIG" Datatype="Bool" /><Member Name="TIMESTAMP" Datatype="LDT" /><Member Name="SD_1" Datatype="Variant" /><Member Name="SD_2" Datatype="Variant" /><Member Name="SD_3" Datatype="Variant" /><Member Name="SD_4" Datatype="Variant" /><Member Name="SD_5" Datatype="Variant" /><Member Name="SD_6" Datatype="Variant" /><Member Name="SD_7" Datatype="Variant" /><Member Name="SD_8" Datatype="Variant" /><Member Name="SD_9" Datatype="Variant" /><Member Name="SD_10" Datatype="Variant" /></Section><Section Name="Output"><Member Name="Error" Datatype="Bool" /><Member Name="Status" Datatype="Word" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="SD_0" Datatype="AssocValue_0" Version="1.0"><Sections><Section Name="None"><Member Name="Syntax" Datatype="UInt" /><Member Name="Aap" Datatype="Byte" /></Section></Sections></Member><Member Name="SIG_Edge_History" Datatype="Bool" /><Member Name="INIT_FB_State" Datatype="DWord" /></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="EMG_ZONE_3_4" Datatype="&quot;EMG_STATUS_FB&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="I_BTTN_STATUS_OK" Datatype="Bool" /><Member Name="I_AlarmInfoBttnPressed" Datatype="String[100]" /><Member Name="I_EMG_ACTIVATED" Datatype="Bool" /><Member Name="I_EmgName" Datatype="String[100]" /><Member Name="I_UseBttnPressedALarm" Datatype="Bool" /><Member Name="I_UseEmgNotActiveAlarm" Datatype="Bool" /></Section><Section Name="Output"><Member Name="O_AlarmActive" Datatype="Bool" /></Section><Section Name="InOut"><Member Name="IO_STATUS" Datatype="&quot;EMG_Status_UDT&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="alarmBTNNPRessed" Datatype="Program_Alarm" Version="1.0"><Sections><Section Name="Base"><Sections Datatype="ALARM_BASE" Version="1.0"><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="Alarm_ID" Datatype="Event_ID" Version="1.0"><Sections><Section Name="None"><Member Name="ALID" Datatype="Word" /><Member Name="ARID" Datatype="Word" /></Section></Sections></Member><Member Name="HANDLE" Datatype="DWord" /></Section></Sections></Section><Section Name="Input"><Member Name="SIG" Datatype="Bool" /><Member Name="TIMESTAMP" Datatype="LDT" /><Member Name="SD_1" Datatype="Variant" /><Member Name="SD_2" Datatype="Variant" /><Member Name="SD_3" Datatype="Variant" /><Member Name="SD_4" Datatype="Variant" /><Member Name="SD_5" Datatype="Variant" /><Member Name="SD_6" Datatype="Variant" /><Member Name="SD_7" Datatype="Variant" /><Member Name="SD_8" Datatype="Variant" /><Member Name="SD_9" Datatype="Variant" /><Member Name="SD_10" Datatype="Variant" /></Section><Section Name="Output"><Member Name="Error" Datatype="Bool" /><Member Name="Status" Datatype="Word" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="SD_0" Datatype="AssocValue_0" Version="1.0"><Sections><Section Name="None"><Member Name="Syntax" Datatype="UInt" /><Member Name="Aap" Datatype="Byte" /></Section></Sections></Member><Member Name="SIG_Edge_History" Datatype="Bool" /><Member Name="INIT_FB_State" Datatype="DWord" /></Section></Sections></Member><Member Name="alarmEmgNotActive" Datatype="Program_Alarm" Version="1.0"><Sections><Section Name="Base"><Sections Datatype="ALARM_BASE" Version="1.0"><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="Alarm_ID" Datatype="Event_ID" Version="1.0"><Sections><Section Name="None"><Member Name="ALID" Datatype="Word" /><Member Name="ARID" Datatype="Word" /></Section></Sections></Member><Member Name="HANDLE" Datatype="DWord" /></Section></Sections></Section><Section Name="Input"><Member Name="SIG" Datatype="Bool" /><Member Name="TIMESTAMP" Datatype="LDT" /><Member Name="SD_1" Datatype="Variant" /><Member Name="SD_2" Datatype="Variant" /><Member Name="SD_3" Datatype="Variant" /><Member Name="SD_4" Datatype="Variant" /><Member Name="SD_5" Datatype="Variant" /><Member Name="SD_6" Datatype="Variant" /><Member Name="SD_7" Datatype="Variant" /><Member Name="SD_8" Datatype="Variant" /><Member Name="SD_9" Datatype="Variant" /><Member Name="SD_10" Datatype="Variant" /></Section><Section Name="Output"><Member Name="Error" Datatype="Bool" /><Member Name="Status" Datatype="Word" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="SD_0" Datatype="AssocValue_0" Version="1.0"><Sections><Section Name="None"><Member Name="Syntax" Datatype="UInt" /><Member Name="Aap" Datatype="Byte" /></Section></Sections></Member><Member Name="SIG_Edge_History" Datatype="Bool" /><Member Name="INIT_FB_State" Datatype="DWord" /></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="EMG_ZONE_5" Datatype="&quot;EMG_STATUS_FB&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="I_BTTN_STATUS_OK" Datatype="Bool" /><Member Name="I_AlarmInfoBttnPressed" Datatype="String[100]" /><Member Name="I_EMG_ACTIVATED" Datatype="Bool" /><Member Name="I_EmgName" Datatype="String[100]" /><Member Name="I_UseBttnPressedALarm" Datatype="Bool" /><Member Name="I_UseEmgNotActiveAlarm" Datatype="Bool" /></Section><Section Name="Output"><Member Name="O_AlarmActive" Datatype="Bool" /></Section><Section Name="InOut"><Member Name="IO_STATUS" Datatype="&quot;EMG_Status_UDT&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="alarmBTNNPRessed" Datatype="Program_Alarm" Version="1.0"><Sections><Section Name="Base"><Sections Datatype="ALARM_BASE" Version="1.0"><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="Alarm_ID" Datatype="Event_ID" Version="1.0"><Sections><Section Name="None"><Member Name="ALID" Datatype="Word" /><Member Name="ARID" Datatype="Word" /></Section></Sections></Member><Member Name="HANDLE" Datatype="DWord" /></Section></Sections></Section><Section Name="Input"><Member Name="SIG" Datatype="Bool" /><Member Name="TIMESTAMP" Datatype="LDT" /><Member Name="SD_1" Datatype="Variant" /><Member Name="SD_2" Datatype="Variant" /><Member Name="SD_3" Datatype="Variant" /><Member Name="SD_4" Datatype="Variant" /><Member Name="SD_5" Datatype="Variant" /><Member Name="SD_6" Datatype="Variant" /><Member Name="SD_7" Datatype="Variant" /><Member Name="SD_8" Datatype="Variant" /><Member Name="SD_9" Datatype="Variant" /><Member Name="SD_10" Datatype="Variant" /></Section><Section Name="Output"><Member Name="Error" Datatype="Bool" /><Member Name="Status" Datatype="Word" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="SD_0" Datatype="AssocValue_0" Version="1.0"><Sections><Section Name="None"><Member Name="Syntax" Datatype="UInt" /><Member Name="Aap" Datatype="Byte" /></Section></Sections></Member><Member Name="SIG_Edge_History" Datatype="Bool" /><Member Name="INIT_FB_State" Datatype="DWord" /></Section></Sections></Member><Member Name="alarmEmgNotActive" Datatype="Program_Alarm" Version="1.0"><Sections><Section Name="Base"><Sections Datatype="ALARM_BASE" Version="1.0"><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="Alarm_ID" Datatype="Event_ID" Version="1.0"><Sections><Section Name="None"><Member Name="ALID" Datatype="Word" /><Member Name="ARID" Datatype="Word" /></Section></Sections></Member><Member Name="HANDLE" Datatype="DWord" /></Section></Sections></Section><Section Name="Input"><Member Name="SIG" Datatype="Bool" /><Member Name="TIMESTAMP" Datatype="LDT" /><Member Name="SD_1" Datatype="Variant" /><Member Name="SD_2" Datatype="Variant" /><Member Name="SD_3" Datatype="Variant" /><Member Name="SD_4" Datatype="Variant" /><Member Name="SD_5" Datatype="Variant" /><Member Name="SD_6" Datatype="Variant" /><Member Name="SD_7" Datatype="Variant" /><Member Name="SD_8" Datatype="Variant" /><Member Name="SD_9" Datatype="Variant" /><Member Name="SD_10" Datatype="Variant" /></Section><Section Name="Output"><Member Name="Error" Datatype="Bool" /><Member Name="Status" Datatype="Word" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="SD_0" Datatype="AssocValue_0" Version="1.0"><Sections><Section Name="None"><Member Name="Syntax" Datatype="UInt" /><Member Name="Aap" Datatype="Byte" /></Section></Sections></Member><Member Name="SIG_Edge_History" Datatype="Bool" /><Member Name="INIT_FB_State" Datatype="DWord" /></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="DataCollectorConnection" Datatype="&quot;ConnectionChecker_FB&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="I_Beat" Datatype="Word" /><Member Name="I_Name" Datatype="String[50]" /><Member Name="I_delay" Datatype="Time" /></Section><Section Name="Output"><Member Name="O_alarmActive" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="prevBeat" Datatype="Word" /><Member Name="delay" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="alarm" Datatype="Program_Alarm" Version="1.0"><Sections><Section Name="Base"><Sections Datatype="ALARM_BASE" Version="1.0"><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="Alarm_ID" Datatype="Event_ID" Version="1.0"><Sections><Section Name="None"><Member Name="ALID" Datatype="Word" /><Member Name="ARID" Datatype="Word" /></Section></Sections></Member><Member Name="HANDLE" Datatype="DWord" /></Section></Sections></Section><Section Name="Input"><Member Name="SIG" Datatype="Bool" /><Member Name="TIMESTAMP" Datatype="LDT" /><Member Name="SD_1" Datatype="Variant" /><Member Name="SD_2" Datatype="Variant" /><Member Name="SD_3" Datatype="Variant" /><Member Name="SD_4" Datatype="Variant" /><Member Name="SD_5" Datatype="Variant" /><Member Name="SD_6" Datatype="Variant" /><Member Name="SD_7" Datatype="Variant" /><Member Name="SD_8" Datatype="Variant" /><Member Name="SD_9" Datatype="Variant" /><Member Name="SD_10" Datatype="Variant" /></Section><Section Name="Output"><Member Name="Error" Datatype="Bool" /><Member Name="Status" Datatype="Word" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="SD_0" Datatype="AssocValue_0" Version="1.0"><Sections><Section Name="None"><Member Name="Syntax" Datatype="UInt" /><Member Name="Aap" Datatype="Byte" /></Section></Sections></Member><Member Name="SIG_Edge_History" Datatype="Bool" /><Member Name="INIT_FB_State" Datatype="DWord" /></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="Cmb24VNOK_1" Datatype="Program_Alarm" Version="1.0" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Base"><Sections Datatype="ALARM_BASE" Version="1.0"><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="Alarm_ID" Datatype="Event_ID" Version="1.0"><Sections><Section Name="None"><Member Name="ALID" Datatype="Word" /><Member Name="ARID" Datatype="Word" /></Section></Sections></Member><Member Name="HANDLE" Datatype="DWord" /></Section></Sections></Section><Section Name="Input"><Member Name="SIG" Datatype="Bool" /><Member Name="TIMESTAMP" Datatype="LDT" /><Member Name="SD_1" Datatype="Variant" /><Member Name="SD_2" Datatype="Variant" /><Member Name="SD_3" Datatype="Variant" /><Member Name="SD_4" Datatype="Variant" /><Member Name="SD_5" Datatype="Variant" /><Member Name="SD_6" Datatype="Variant" /><Member Name="SD_7" Datatype="Variant" /><Member Name="SD_8" Datatype="Variant" /><Member Name="SD_9" Datatype="Variant" /><Member Name="SD_10" Datatype="Variant" /></Section><Section Name="Output"><Member Name="Error" Datatype="Bool" /><Member Name="Status" Datatype="Word" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="SD_0" Datatype="AssocValue_0" Version="1.0"><Sections><Section Name="None"><Member Name="Syntax" Datatype="UInt" /><Member Name="Aap" Datatype="Byte" /></Section></Sections></Member><Member Name="SIG_Edge_History" Datatype="Bool" /><Member Name="INIT_FB_State" Datatype="DWord" /></Section></Sections></Member>
+  </Section>
+  <Section Name="Temp">
+    <Member Name="T_Condition" Datatype="Bool" />
+  </Section>
+  <Section Name="Constant" />
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <MemoryLayout>Standard</MemoryLayout>
+      <Name>AlarmMain</Name>
+      <Number>43</Number>
+      <ProgrammingLanguage>SCL</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="4" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <Token Text="REGION" UId="21" />
+  <Blank Num="1" UId="22" />
+  <Text UId="23">EMG MAIN NOK</Text>
+  <NewLine Num="1" UId="24" />
+  <Blank Num="4" UId="25" />
+  <NewLine Num="1" UId="26" />
+  <Blank Num="4" UId="27" />
+  <Access Scope="LocalVariable" UId="28">
+    <Symbol UId="29">
+      <Component Name="T_Condition" UId="30" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="31" />
+  <Token Text=":=" UId="32" />
+  <NewLine Num="1" UId="33" />
+  <Blank Num="4" UId="34" />
+  <Access Scope="GlobalVariable" UId="35">
+    <Symbol UId="36">
+      <Component Name="I_EMG_MAIN" UId="37" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="38" />
+  <Token Text="AND" UId="39" />
+  <Blank Num="1" UId="40" />
+  <Access Scope="GlobalVariable" UId="41">
+    <Symbol UId="42">
+      <Component Name="I_EMG_ZONE_5B" UId="43" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="44" />
+  <Token Text="AND" UId="45" />
+  <NewLine Num="1" UId="46" />
+  <Blank Num="4" UId="47" />
+  <Access Scope="GlobalVariable" UId="48">
+    <Symbol UId="49">
+      <Component Name="I_EMG_ZONE_2A" UId="50" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="51" />
+  <Token Text="AND" UId="52" />
+  <NewLine Num="1" UId="53" />
+  <Blank Num="4" UId="54" />
+  <Access Scope="GlobalVariable" UId="55">
+    <Symbol UId="56">
+      <Component Name="I_EMG_ZONE_2B" UId="57" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="58" />
+  <Token Text="AND" UId="59" />
+  <NewLine Num="1" UId="60" />
+  <Blank Num="4" UId="61" />
+  <Access Scope="GlobalVariable" UId="62">
+    <Symbol UId="63">
+      <Component Name="I_EMG_ZONE_3_4" UId="64" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="65" />
+  <Token Text="AND" UId="66" />
+  <NewLine Num="1" UId="67" />
+  <Blank Num="4" UId="68" />
+  <Access Scope="GlobalVariable" UId="69">
+    <Symbol UId="70">
+      <Component Name="I_EMG_ZONE_5" UId="71" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="72" />
+  <NewLine Num="1" UId="73" />
+  <Blank Num="4" UId="74" />
+  <NewLine Num="1" UId="75" />
+  <Blank Num="4" UId="76" />
+  <Access Scope="Call" UId="77">
+    <CallInfo UId="78" BlockType="FB" Name="EMG_STATUS_FB">
+      <Instance Scope="LocalVariable" UId="79">
+        <Component Name="EMG_MAIN" UId="80" />
+      </Instance>
+      <Token Text="(" UId="81" />
+      <Parameter Name="I_BTTN_STATUS_OK" UId="82">
+        <Blank Num="1" UId="83" />
+        <Token Text=":=" UId="84" />
+        <Blank Num="1" UId="85" />
+        <Access Scope="LocalVariable" UId="86">
+          <Symbol UId="87">
+            <Component Name="T_Condition" UId="88" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="89" />
+      <NewLine Num="1" UId="90" />
+      <Blank Num="14" UId="91" />
+      <Parameter Name="I_EMG_ACTIVATED" UId="92">
+        <Blank Num="1" UId="93" />
+        <Token Text=":=" UId="94" />
+        <Blank Num="1" UId="95" />
+        <Access Scope="GlobalVariable" UId="96">
+          <Symbol UId="97">
+            <Component Name="I_EMG_MAIN" UId="98" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="99" />
+      <NewLine Num="1" UId="100" />
+      <Blank Num="14" UId="101" />
+      <Parameter Name="I_UseEmgNotActiveAlarm" UId="102">
+        <Blank Num="1" UId="103" />
+        <Token Text=":=" UId="104" />
+        <Blank Num="1" UId="105" />
+        <Access Scope="LiteralConstant" UId="106">
+          <Constant UId="107">
+            <ConstantValue UId="109">TRUE</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="110" />
+      <NewLine Num="1" UId="111" />
+      <Blank Num="14" UId="112" />
+      <Parameter Name="I_UseBttnPressedALarm" UId="113">
+        <Blank Num="1" UId="114" />
+        <Token Text=":=" UId="115" />
+        <Blank Num="1" UId="116" />
+        <Access Scope="LiteralConstant" UId="117">
+          <Constant UId="118">
+            <ConstantValue UId="120">TRUE</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="121" />
+      <NewLine Num="1" UId="122" />
+      <Blank Num="14" UId="123" />
+      <Parameter Name="I_EmgName" UId="124">
+        <Blank Num="1" UId="125" />
+        <Token Text=":=" UId="126" />
+        <Blank Num="1" UId="127" />
+        <Access Scope="LiteralConstant" UId="128">
+          <Constant UId="129">
+            <ConstantValue UId="131">'EMG MAIN'</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="132" />
+      <NewLine Num="1" UId="133" />
+      <Blank Num="14" UId="134" />
+      <Parameter Name="IO_STATUS" UId="135">
+        <Blank Num="1" UId="136" />
+        <Token Text=":=" UId="137" />
+        <Blank Num="1" UId="138" />
+        <Access Scope="GlobalVariable" UId="139">
+          <Symbol UId="140">
+            <Component Name="EMG_STATUS_DB" UId="141" />
+            <Token Text="." UId="142" />
+            <Component Name="EMG_MAIN" UId="143" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="146" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="147" />
+  <NewLine Num="1" UId="148" />
+  <Blank Num="4" UId="149" />
+  <NewLine Num="1" UId="150" />
+  <Token Text="END_REGION" UId="151" />
+  <NewLine Num="2" UId="152" />
+  <Token Text="REGION" UId="153" />
+  <Blank Num="1" UId="154" />
+  <Text UId="155">EMG MAIN ZONES</Text>
+  <NewLine Num="1" UId="156" />
+  <Blank Num="4" UId="157" />
+  <NewLine Num="1" UId="158" />
+  <Blank Num="4" UId="159" />
+  <Access Scope="Call" UId="160">
+    <CallInfo UId="161" BlockType="FB" Name="EMG_STATUS_FB">
+      <Instance Scope="LocalVariable" UId="162">
+        <Component Name="EMG_ZONE_1" UId="163" />
+      </Instance>
+      <Token Text="(" UId="164" />
+      <Parameter Name="I_BTTN_STATUS_OK" UId="165">
+        <Blank Num="1" UId="166" />
+        <Token Text=":=" UId="167" />
+        <Blank Num="1" UId="168" />
+        <Access Scope="GlobalVariable" UId="169">
+          <Symbol UId="170">
+            <Component Name="I_EMG_ZONE_5B" UId="171" />
+          </Symbol>
+        </Access>
+        <Blank Num="1" UId="172" />
+        <Token Text="OR" UId="173" />
+        <Blank Num="1" UId="174" />
+        <Access Scope="LiteralConstant" UId="175">
+          <Constant UId="176">
+            <ConstantValue UId="178">TRUE</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="179" />
+      <NewLine Num="1" UId="180" />
+      <Blank Num="16" UId="181" />
+      <Parameter Name="I_EMG_ACTIVATED" UId="182">
+        <Blank Num="1" UId="183" />
+        <Token Text=":=" UId="184" />
+        <Blank Num="1" UId="185" />
+        <Access Scope="LiteralConstant" UId="186">
+          <Constant UId="187">
+            <ConstantValue UId="189">FALSE</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="190" />
+      <NewLine Num="1" UId="191" />
+      <Blank Num="16" UId="192" />
+      <Parameter Name="I_UseEmgNotActiveAlarm" UId="193">
+        <Blank Num="1" UId="194" />
+        <Token Text=":=" UId="195" />
+        <Blank Num="1" UId="196" />
+        <Access Scope="LiteralConstant" UId="197">
+          <Constant UId="198">
+            <ConstantValue UId="200">FALSE</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="201" />
+      <NewLine Num="1" UId="202" />
+      <Blank Num="16" UId="203" />
+      <Parameter Name="I_EmgName" UId="204">
+        <Blank Num="1" UId="205" />
+        <Token Text=":=" UId="206" />
+        <Blank Num="1" UId="207" />
+        <Access Scope="LiteralConstant" UId="208">
+          <Constant UId="209">
+            <ConstantValue UId="211">'EMG ZONE 1'</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="212" />
+      <NewLine Num="1" UId="213" />
+      <Blank Num="16" UId="214" />
+      <Parameter Name="IO_STATUS" UId="215">
+        <Blank Num="1" UId="216" />
+        <Token Text=":=" UId="217" />
+        <Blank Num="1" UId="218" />
+        <Access Scope="GlobalVariable" UId="219">
+          <Symbol UId="220">
+            <Component Name="EMG_STATUS_DB" UId="221" />
+            <Token Text="." UId="222" />
+            <Component Name="EMG_ZONE_1" UId="223" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="227" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="228" />
+  <NewLine Num="1" UId="229" />
+  <Blank Num="4" UId="230" />
+  <NewLine Num="1" UId="231" />
+  <Blank Num="4" UId="232" />
+  <Access Scope="Call" UId="233">
+    <CallInfo UId="234" BlockType="FB" Name="EMG_STATUS_FB">
+      <Instance Scope="LocalVariable" UId="235">
+        <Component Name="EMG_ZONE_2" UId="236" />
+      </Instance>
+      <Token Text="(" UId="237" />
+      <Parameter Name="I_BTTN_STATUS_OK" UId="238">
+        <Blank Num="1" UId="239" />
+        <Token Text=":=" UId="240" />
+        <Blank Num="1" UId="241" />
+        <Access Scope="GlobalVariable" UId="242">
+          <Symbol UId="243">
+            <Component Name="I_EMG_ZONE_2A" UId="244" />
+          </Symbol>
+        </Access>
+        <Blank Num="1" UId="245" />
+        <Token Text="AND" UId="246" />
+        <Blank Num="1" UId="247" />
+        <Access Scope="GlobalVariable" UId="248">
+          <Symbol UId="249">
+            <Component Name="I_EMG_ZONE_2B" UId="250" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="251" />
+      <NewLine Num="1" UId="252" />
+      <Blank Num="16" UId="253" />
+      <Parameter Name="I_EMG_ACTIVATED" UId="254">
+        <Blank Num="1" UId="255" />
+        <Token Text=":=" UId="256" />
+        <Blank Num="1" UId="257" />
+        <Access Scope="LiteralConstant" UId="258">
+          <Constant UId="259">
+            <ConstantValue UId="261">FALSE</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="262" />
+      <NewLine Num="1" UId="263" />
+      <Blank Num="16" UId="264" />
+      <Parameter Name="I_UseEmgNotActiveAlarm" UId="265">
+        <Blank Num="1" UId="266" />
+        <Token Text=":=" UId="267" />
+        <Blank Num="1" UId="268" />
+        <Access Scope="LiteralConstant" UId="269">
+          <Constant UId="270">
+            <ConstantValue UId="272">FALSE</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="273" />
+      <NewLine Num="1" UId="274" />
+      <Blank Num="16" UId="275" />
+      <Parameter Name="I_EmgName" UId="276">
+        <Blank Num="1" UId="277" />
+        <Token Text=":=" UId="278" />
+        <Blank Num="1" UId="279" />
+        <Access Scope="LiteralConstant" UId="280">
+          <Constant UId="281">
+            <ConstantValue UId="283">'EMG ZONE 2'</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="284" />
+      <NewLine Num="1" UId="285" />
+      <Blank Num="16" UId="286" />
+      <Parameter Name="IO_STATUS" UId="287">
+        <Blank Num="1" UId="288" />
+        <Token Text=":=" UId="289" />
+        <Blank Num="1" UId="290" />
+        <Access Scope="GlobalVariable" UId="291">
+          <Symbol UId="292">
+            <Component Name="EMG_STATUS_DB" UId="293" />
+            <Token Text="." UId="294" />
+            <Component Name="EMG_ZONE_2" UId="295" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="299" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="300" />
+  <NewLine Num="1" UId="301" />
+  <Blank Num="4" UId="302" />
+  <NewLine Num="1" UId="303" />
+  <Blank Num="4" UId="304" />
+  <Access Scope="Call" UId="305">
+    <CallInfo UId="306" BlockType="FB" Name="EMG_STATUS_FB">
+      <Instance Scope="LocalVariable" UId="307">
+        <Component Name="EMG_ZONE_3_4" UId="308" />
+      </Instance>
+      <Token Text="(" UId="309" />
+      <Parameter Name="I_BTTN_STATUS_OK" UId="310">
+        <Blank Num="1" UId="311" />
+        <Token Text=":=" UId="312" />
+        <Blank Num="1" UId="313" />
+        <Access Scope="GlobalVariable" UId="314">
+          <Symbol UId="315">
+            <Component Name="I_EMG_ZONE_3_4" UId="316" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="317" />
+      <NewLine Num="1" UId="318" />
+      <Blank Num="18" UId="319" />
+      <Parameter Name="I_EMG_ACTIVATED" UId="320">
+        <Blank Num="1" UId="321" />
+        <Token Text=":=" UId="322" />
+        <Blank Num="1" UId="323" />
+        <Access Scope="LiteralConstant" UId="324">
+          <Constant UId="325">
+            <ConstantValue UId="327">FALSE</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="328" />
+      <NewLine Num="1" UId="329" />
+      <Blank Num="18" UId="330" />
+      <Parameter Name="I_UseEmgNotActiveAlarm" UId="331">
+        <Blank Num="1" UId="332" />
+        <Token Text=":=" UId="333" />
+        <Blank Num="1" UId="334" />
+        <Access Scope="LiteralConstant" UId="335">
+          <Constant UId="336">
+            <ConstantValue UId="338">FALSE</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="339" />
+      <NewLine Num="1" UId="340" />
+      <Blank Num="18" UId="341" />
+      <Parameter Name="I_EmgName" UId="342">
+        <Blank Num="1" UId="343" />
+        <Token Text=":=" UId="344" />
+        <Blank Num="1" UId="345" />
+        <Access Scope="LiteralConstant" UId="346">
+          <Constant UId="347">
+            <ConstantValue UId="349">'EMG ZONE 3, ZONE 4'</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="350" />
+      <NewLine Num="1" UId="351" />
+      <Blank Num="18" UId="352" />
+      <Parameter Name="IO_STATUS" UId="353">
+        <Blank Num="1" UId="354" />
+        <Token Text=":=" UId="355" />
+        <Blank Num="1" UId="356" />
+        <Access Scope="GlobalVariable" UId="357">
+          <Symbol UId="358">
+            <Component Name="EMG_STATUS_DB" UId="359" />
+            <Token Text="." UId="360" />
+            <Component Name="EMG_ZONE_3_4" UId="361" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="365" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="366" />
+  <NewLine Num="1" UId="367" />
+  <Blank Num="4" UId="368" />
+  <NewLine Num="1" UId="369" />
+  <Blank Num="4" UId="370" />
+  <Access Scope="Call" UId="371">
+    <CallInfo UId="372" BlockType="FB" Name="EMG_STATUS_FB">
+      <Instance Scope="LocalVariable" UId="373">
+        <Component Name="EMG_ZONE_5" UId="374" />
+      </Instance>
+      <Token Text="(" UId="375" />
+      <Parameter Name="I_BTTN_STATUS_OK" UId="376">
+        <Blank Num="1" UId="377" />
+        <Token Text=":=" UId="378" />
+        <Blank Num="1" UId="379" />
+        <Access Scope="GlobalVariable" UId="380">
+          <Symbol UId="381">
+            <Component Name="I_EMG_ZONE_5" UId="382" />
+          </Symbol>
+        </Access>
+        <Blank Num="1" UId="383" />
+        <Token Text="AND" UId="384" />
+        <Blank Num="1" UId="385" />
+        <Access Scope="GlobalVariable" UId="386">
+          <Symbol UId="387">
+            <Component Name="I_EMG_ZONE_5B" UId="388" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="389" />
+      <NewLine Num="1" UId="390" />
+      <Blank Num="16" UId="391" />
+      <Parameter Name="I_EMG_ACTIVATED" UId="392">
+        <Blank Num="1" UId="393" />
+        <Token Text=":=" UId="394" />
+        <Blank Num="1" UId="395" />
+        <Access Scope="LiteralConstant" UId="396">
+          <Constant UId="397">
+            <ConstantValue UId="399">FALSE</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="400" />
+      <NewLine Num="1" UId="401" />
+      <Blank Num="16" UId="402" />
+      <Parameter Name="I_UseEmgNotActiveAlarm" UId="403">
+        <Blank Num="1" UId="404" />
+        <Token Text=":=" UId="405" />
+        <Blank Num="1" UId="406" />
+        <Access Scope="LiteralConstant" UId="407">
+          <Constant UId="408">
+            <ConstantValue UId="410">FALSE</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="411" />
+      <NewLine Num="1" UId="412" />
+      <Blank Num="16" UId="413" />
+      <Parameter Name="I_EmgName" UId="414">
+        <Blank Num="1" UId="415" />
+        <Token Text=":=" UId="416" />
+        <Blank Num="1" UId="417" />
+        <Access Scope="LiteralConstant" UId="418">
+          <Constant UId="419">
+            <ConstantValue UId="421">'EMG ZONE 5'</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="422" />
+      <NewLine Num="1" UId="423" />
+      <Blank Num="16" UId="424" />
+      <Parameter Name="IO_STATUS" UId="425">
+        <Blank Num="1" UId="426" />
+        <Token Text=":=" UId="427" />
+        <Blank Num="1" UId="428" />
+        <Access Scope="GlobalVariable" UId="429">
+          <Symbol UId="430">
+            <Component Name="EMG_STATUS_DB" UId="431" />
+            <Token Text="." UId="432" />
+            <Component Name="EMG_ZONE_5" UId="433" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="437" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="438" />
+  <NewLine Num="1" UId="439" />
+  <Blank Num="4" UId="440" />
+  <NewLine Num="1" UId="441" />
+  <Token Text="END_REGION" UId="442" />
+  <NewLine Num="2" UId="443" />
+  <Token Text="REGION" UId="444" />
+  <Blank Num="1" UId="445" />
+  <Text UId="446">24V OK</Text>
+  <NewLine Num="1" UId="447" />
+  <Blank Num="4" UId="448" />
+  <NewLine Num="1" UId="449" />
+  <Blank Num="4" UId="450" />
+  <Access Scope="LocalVariable" UId="451">
+    <Symbol UId="452">
+      <Component Name="Cmb24VNOK_1" UId="453" />
+    </Symbol>
+  </Access>
+  <Access Scope="Call" UId="454">
+    <Instruction UId="455">
+      <Token Text="(" UId="456" />
+      <Parameter Name="SIG" UId="457">
+        <Blank Num="1" UId="458" />
+        <Token Text=":=" UId="459" />
+        <Blank Num="1" UId="460" />
+        <Token Text="NOT" UId="461" />
+        <Blank Num="1" UId="462" />
+        <Access Scope="GlobalVariable" UId="463">
+          <Symbol UId="464">
+            <Component Name="I_EMG_MAIN" UId="465" />
+          </Symbol>
+        </Access>
+        <Blank Num="1" UId="466" />
+        <Token Text="OR" UId="467" />
+        <Blank Num="1" UId="468" />
+        <Token Text="NOT" UId="469" />
+        <Blank Num="1" UId="470" />
+        <Access Scope="GlobalVariable" UId="471">
+          <Symbol UId="472">
+            <Component Name="I_EMG_ZONE_5B" UId="473" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="474" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="475" />
+  <NewLine Num="1" UId="476" />
+  <Blank Num="4" UId="477" />
+  <NewLine Num="1" UId="478" />
+  <Token Text="END_REGION" UId="479" />
+  <NewLine Num="3" UId="480" />
+  <Token Text="REGION" UId="481" />
+  <Blank Num="1" UId="482" />
+  <Text UId="483">Alarm actvie shared</Text>
+  <NewLine Num="1" UId="484" />
+  <Blank Num="4" UId="485" />
+  <NewLine Num="1" UId="486" />
+  <Blank Num="4" UId="487" />
+  <Access Scope="GlobalVariable" UId="488">
+    <Symbol UId="489">
+      <Component Name="Alarms_DB" UId="490" />
+      <Token Text="." UId="491" />
+      <Component Name="AlarmActiveShared" UId="492" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="493" />
+  <Token Text=":=" UId="494" />
+  <NewLine Num="1" UId="495" />
+  <Blank Num="4" UId="496" />
+  <Access Scope="LocalVariable" UId="497">
+    <Symbol UId="498">
+      <Component Name="DataCollectorConnection" UId="499" />
+      <Token Text="." UId="500" />
+      <Component Name="O_alarmActive" UId="501" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="502" />
+  <Token Text="OR" UId="503" />
+  <NewLine Num="1" UId="504" />
+  <Blank Num="4" UId="505" />
+  <Access Scope="LocalVariable" UId="506">
+    <Symbol UId="507">
+      <Component Name="EMG_MAIN" UId="508" />
+      <Token Text="." UId="509" />
+      <Component Name="O_AlarmActive" UId="510" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="511" />
+  <Token Text="OR" UId="512" />
+  <NewLine Num="1" UId="513" />
+  <Blank Num="4" UId="514" />
+  <Access Scope="GlobalVariable" UId="515">
+    <Symbol UId="516">
+      <Component Name="Alarms_DB" UId="517" />
+      <Token Text="." UId="518" />
+      <Component Name="IPC_NotConnected" UId="519" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="520" />
+  <NewLine Num="1" UId="521" />
+  <Blank Num="4" UId="522" />
+  <NewLine Num="1" UId="523" />
+  <Token Text="END_REGION" UId="524" />
+  <NewLine Num="2" UId="525" />
+  <Token Text="REGION" UId="526" />
+  <Blank Num="1" UId="527" />
+  <Text UId="528">Alarm active</Text>
+  <NewLine Num="1" UId="529" />
+  <Blank Num="4" UId="530" />
+  <NewLine Num="1" UId="531" />
+  <Blank Num="4" UId="532" />
+  <Access Scope="GlobalVariable" UId="533">
+    <Symbol UId="534">
+      <Component Name="Alarms_DB" UId="535" />
+      <Token Text="." UId="536" />
+      <Component Name="AlarmActive" UId="537" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="538" />
+  <Token Text=":=" UId="539" />
+  <Blank Num="1" UId="540" />
+  <Access Scope="GlobalVariable" UId="541">
+    <Symbol UId="542">
+      <Component Name="Alarms_DB" UId="543" />
+      <Token Text="." UId="544" />
+      <Component Name="AlarmActiveShared" UId="545" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="546" />
+  <NewLine Num="1" UId="547" />
+  <Blank Num="4" UId="548" />
+  <NewLine Num="1" UId="549" />
+  <Token Text="END_REGION" UId="550" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="5" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-BE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="8" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-BE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="B" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-BE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>
